@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Roman Poimtsev](https://up.htmlacademy.ru/htmlcss-individual/1/user/2426581).
-* Наставник: `Неизвестно`.
+* Наставник: `Михаил Данюшин`.
 
 ---
 
