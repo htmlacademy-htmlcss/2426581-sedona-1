@@ -7,27 +7,22 @@
   <body>
 <header class="page-header">
   <nav class="navigation">
+  <a class="navigation-logo" href="index.html">
+    <img class="logo" src="#" alt="логотип городка Седона">
+  </a>
 <ul class="navigation-list">
-  <li class="navigation-item">
-    <!--если логотип является ссылкой на главную страницу, то верно ли оформляю первый <li>?-->
-    <span class="visually-hidden">
-    City of Sedona
-  </span>
-  <img src="#" alt="логотип городка Седона" class="logo">
-  </li>
   <li class="navigation-item">
     <a class="navigation-link" href="index.html">
       Главная
     </a>
   </li>
   <li class="navigation-item">
-    <!--Корректные ли мои ссылки? заменить на заглушки #?-->
-    <a class="navigation-link" href="about.html">
+    <a class="navigation-link" href="#">
       О Седоне
     </a>
   </li>
   <li class="navigation-item">
-    <a class="navigation-link" href="#">
+    <a class="navigation-link" href="hotels.html">
       Гостиницы
     </a>
   </li>
@@ -43,25 +38,24 @@
     </li>
     <li class="navigation-item">
       <a class="navigation-link" href="#">
-        <!--не понимаю значение символа в макете - "корзина"? "понравилось"? "избранное"?-->
         <span class="visually-hidden">
-          Корзина
+          Избранное
         </span>
       </a>
     </li>
     <li class="navigation-item">
+      <!--не должно ли у <a> быть класса <button>?-->
       <a class="navigation-link" href="#">
-        <!--наверняка нужно оборачивать текст в тег <button>?-->
           Хочу сюда!
       </a>
     </li>
 </ul>
   </nav>
 </header>
-<main class="page-main">
+<main class="main-index">
 <h1 class="visually-hidden">Городок Седона</h1>
-<!--сомневаюсь в именовани заголовка и atl-текста, поскольку выше уже есть ситуация с треугольником-логотипом, которая мне не ясна-->
-<img src="#" alt="добро пожаловать в великолепную Седону" class="???">
+<!--у тега <img> должен быть какой-то класс?-->
+<img class="???" src="#" alt="добро пожаловать в великолепную Седону">
 <section class="advantages">
   <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
   <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -110,55 +104,51 @@
 <div>
   <h2>Заинтересовались?</h2>
   <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-  <a class="button" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+  <a class="button" href="hotels.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
 </div>
-
-
-
 </main>
 <footer class="page-footer">
-  <section class="newsletter"><h2>Подпишитесь на рассылку</h2>
+  <section class="newsletter">
+    <h2>Подпишитесь на рассылку</h2>
     <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="newsletter-form" action="https:/echo.html.ru/" method="post">
       <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
-      <button class="button newsletter-button" type="submit"><span class="visually-hidden">Подписаться</span>
+      <button class="button newsletter-button" type="submit">
+        Подписаться
       </button>
     </form>
   </section>
   <section class="footer-social">
 <ul class="footer-social-list">
+  <!--в этом списке придумать другой класс вместо <button>-->
   <li class="footer-social-item">
-    <a class="button" href="#">
-    <span class="visually-hidden">ВКонтакте</span>
+    <a class="button" href="https://vk.com/htmlacademy">
+    <span class="visually-hidden">VKontakte</span>
     </a>
   </li>
   <li class="footer-social-item">
-    <a class="button" href="#">
-    <span class="visually-hidden">Телеграм</span>
+    <a class="button" href="https://t.me/htmlacademy">
+    <span class="visually-hidden">Telegram</span>
     </a>
   </li>
   <li class="footer-social-item">
-    <a class="button" href="#">
-    <span class="visually-hidden">YouTube</span>
+    <a class="button" href="https://youtube.com/user/htmlacademyru">
+    <span class="visually-hidden">Youtube</span>
     </a>
   </li>
 </ul>
   </section>
-  <section class="footer-contacts">
+  <!--если не <section> (заимствовал из барбершопа), то сойдет <div>?-->
+  <div class="footer-contacts">
   <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-  <p>
-    <!--вставить ссылку на "".html academy" не сумел-->
+  </div>
+    <!--корректный ли класс для <a>?-->
+    <a class="footer-logo" href="https://htmlacademy.ru/">
+      <img class="logo" src="#" alt="логотип HTML-Академии">
+    </a>
   </p>
-</section>
-
+</div>
 </footer>
-
-
-
-
-
-
     <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
   </body>
 </html>
