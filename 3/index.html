@@ -28,7 +28,6 @@
     </a>
   </li>
   </ul>
-  <ul>
   <ul class="navigation-list navigation-user">
     <li class="navigation-item">
       <a class="navigation-link" href="#">
@@ -45,18 +44,25 @@
       </a>
     </li>
     <li class="navigation-item">
-      <!--не должно ли у <a> быть класса <button>?-->
-      <a class="navigation-link" href="#">
+      <a class="navigation-link button" href="#">
           Хочу сюда!
       </a>
     </li>
 </ul>
   </nav>
 </header>
+<!--
+  копирую новую инфу из ретро-скринкаста
+<section class="hero">
+  <h2 class=visually-hidden"> О Седоне </h2>
+  <img src="#" alt="горы.">
+  <img src="#" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks">
+</section>
+-->
 <main class="main-index">
 <h1 class="visually-hidden">Городок Седона</h1>
 <!--у тега <img> должен быть какой-то класс?-->
-<img class="???" src="#" alt="добро пожаловать в великолепную Седону">
+<img class="###" src="#" alt="добро пожаловать в великолепную Седону">
 <section class="advantages">
   <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
   <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -112,7 +118,7 @@
   <section class="newsletter">
     <h2>Подпишитесь на рассылку</h2>
     <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-    <form class="newsletter-form" action="https:/echo.html.ru/" method="post">
+    <form class="newsletter-form" action="https://echo.html.ru" method="post">
       <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
       <button class="button newsletter-button" type="submit">
         Подписаться
@@ -120,35 +126,36 @@
     </form>
   </section>
   <section class="footer-social">
+    <h2 class="visually-hidden">Социальные сети</h2>
 <ul class="footer-social-list">
-  <!--в этом списке придумать другой класс вместо <button>-->
   <li class="footer-social-item">
-    <a class="button" href="https://vk.com/htmlacademy">
+    <a href="https://vk.com/htmlacademy">
+      <img src="#" alt="#">
+    </a>
     <span class="visually-hidden">VKontakte</span>
-    </a>
   </li>
   <li class="footer-social-item">
-    <a class="button" href="https://t.me/htmlacademy">
+    <a href="https://t.me/htmlacademy">
+      <img src="#" alt="#">
+    </a>
     <span class="visually-hidden">Telegram</span>
-    </a>
   </li>
   <li class="footer-social-item">
-    <a class="button" href="https://youtube.com/user/htmlacademyru">
-    <span class="visually-hidden">Youtube</span>
+    <a href="https://youtube.com/user/htmlacademyru">
+      <img src="#" alt="#">
     </a>
+    <span class="visually-hidden">Youtube</span>
   </li>
 </ul>
   </section>
-  <!--если не <section> (заимствовал из барбершопа), то сойдет <div>?-->
   <div class="footer-contacts">
   <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
   </div>
-    <!--корректный ли класс для <a>?-->
+  <div>
     <a class="footer-logo" href="https://htmlacademy.ru/">
       <img class="logo" src="#" alt="логотип HTML-Академии">
     </a>
-  </p>
-</div>
+  </div>
 </footer>
     <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
   </body>
