@@ -157,7 +157,15 @@
     <span class="hotel-card-price">От 4000 ₽</span>
     <button class="hotel-card-button button" type="button">подробнее</button>
     <button class="hotel-card-button button" type="button">в избранное</button>
-    <!--как разметить секцию рейтинга? Рейтинг: 8,5-->
+    <!--
+    образец разметки области рейтинга взял из сети, добавил актуальные данные + тег <img>
+    ВОПРОС: нужен ли мне инпут типа радио?
+    -->
+    <div class="rating-area">
+	<input type="radio" id="star-4" name="rating" value="4">
+	<label for="star-4" title="Оценка «4»">Рейтинг: 8,5</label>
+  <img src="#" alt="оценка - четыре звезды">
+  </div>
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
@@ -169,6 +177,11 @@
   <button class="hotel-card-button button" type="button">подробнее</button>
   <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 9,2-->
+  <div class="rating-area">
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-4" title="Оценка «4»">Рейтинг: 9,2</label>
+    <img src="#" alt="оценка - четыре звезды">
+    </div>
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
@@ -180,6 +193,11 @@
   <button class="hotel-card-button button" type="button">подробнее</button>
   <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 6,9-->
+  <div class="rating-area">
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-3" title="Оценка «3»">Рейтинг: 6,9</label>
+    <img src="#" alt="оценка - три звезды">
+    </div>
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
@@ -191,6 +209,11 @@
   <button class="hotel-card-button button" type="button">подробнее</button>
   <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 5,0-->
+  <div class="rating-area">
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-2" title="Оценка «2»">Рейтинг: 5,0</label>
+    <img src="#" alt="оценка - две звезды">
+    </div>
 </li>
 </ul>
 <ul class="pagination">
