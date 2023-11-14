@@ -243,7 +243,10 @@
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <!--уточнить post или get-->
       <form class="newsletter-form" action="https://echo.html.ru/" method="post">
-        <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
+        <!--внедряю пропущенный тег lael (оборачиваю им input). не очень понимаю как с ним работать-->
+        <label>
+          <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
+        </label>
         <button class="button newsletter-button" type="submit">
           Подписаться
         </button>
