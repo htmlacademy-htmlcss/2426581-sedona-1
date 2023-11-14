@@ -8,10 +8,15 @@
 </head>
 <body>
   <header class="page-header">
+    <!--переоформил лого под образец в Ретроспективе-->
+      <a class="page-area" href="index.html">
+      <img class="logo" src="#" alt="логотип Sedona">
+    </a>
     <nav class="navigation">
-      <a class="navigation-logo" href="index.html">
-        <img class="logo" src="#" alt="логотип городка Седона">
-      </a>
+      <!--старый блок с лого оборачиваю в коммент,чтобы не потерять
+    <a class="navigation-logo" href="index.html">
+      <img class="logo-header" src="#" alt="логотип городка Седона">
+    </a>-->
     <ul class="navigation-list">
       <li class="navigation-item">
         <a class="navigation-link" href="index.html">
@@ -23,7 +28,8 @@
           О Седоне
         </a>
       </li>
-      <li class="navigation-item">
+      <!--добавил классу имя current, тк мы находимся на этой странице-->
+      <li class="navigation-item-current">
         <a class="navigation-link" href="hotels.html">
           Гостиницы
         </a>
@@ -53,6 +59,7 @@
       </nav>
   </header>
   <main class="main-inner">
+    <!--Блок с фильтрами-->
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
@@ -68,12 +75,11 @@
     </header>
 <section class="catalog-hotels">
   <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-  <form class="catalog-filter" action="https://echo.html.ru/" method="get">
+  <form class="catalog-filter" action="https://echo.html.ru/" method="post">
 <fieldset class="catalog-filter-group">
   <legend class="catalog-filter-title">Инфраструктура:</legend>
     <ul class="catalog-filter-list">
       <li class="catalog-filter-item">
-  <!--"связать" лейбл и инпут!-->
   <label class="control">
     <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн
   </label>
@@ -115,13 +121,10 @@
   <label for="price">Стоимость, <span>₽:</span></label>
   <input class="price-range" type="range" id="price" name="price" min="0" max="9000"/>
 </section>-->
-<ul class="###">
-  <li>
+<div class="###">
     <button class="button" type="submit">Применить</button>
-  </li>
-  <li><button class="button" type="reset">Сбросить</button>
-  </li>
-</ul>
+  <button class="button" type="reset">Сбросить</button>
+</div>
 </form>
 </section>
 <section>
@@ -132,62 +135,86 @@
     <option value="#">#</option>
     <option value="#">#</option>
   </select>
-  <!--почему у первой ссылки есть второй класс, у остальных - нет?-->
-<a href="#" class="button button-light">
+  <!--почему у первой кнопки есть второй класс (баттон-лайт), у остальных - нет?-->
+<button class="button button-light" type="button">
 <span class="visually-hidden">Показать мелкие значки</span>
-</a>
-<a href="#" class="button">
+</button>
+<button class="button" type="button">
 <span class="visually-hidden">Показать карточки</span>
-</a>
-<a href="#" class="button">
+</button>
+<button class="button" type="button">
 <span class="visually-hidden">Показать список</span>
-</a>
+</button>
 </form>
 </section>
+<!--в "ретро" речь идет о том, что карточки товаров обернуты в <div>. Что выбрать мне?-->
   <ul class="hotel-list">
 <li class="hotel-card">
     <a class="hotel-card-link" href="hotel.html">
-      <img class="hotel-card-image" src="#" alt="">
+      <img class="hotel-card-image" src="#" alt="ночные звезды через устье пещеры">
       <h3 class="hotel-card-title">Amara Resort & Spa</h3>
     </a>
     <span class="hotel-card-subscription">Гостиница</span>
     <span class="hotel-card-price">От 4000 ₽</span>
-    <a class="hotel-card-button button" href="#">подробнее</a>
-    <a class="hotel-card-button button" href="#">в избранное</a>
-    <!--как разметить секцию рейтинга? Рейтинг: 8,5-->
+    <button class="hotel-card-button button" type="button">подробнее</button>
+    <button class="hotel-card-button button" type="button">в избранное</button>
+    <!--
+    образец разметки области рейтинга взял из сети, добавил актуальные данные + тег <img>
+    ВОПРОС: нужен ли мне инпут типа радио?
+    -->
+    <div class="rating-area">
+	<input type="radio" id="star-4" name="rating" value="4">
+	<label for="star-4" title="Оценка «4»">Рейтинг: 8,5</label>
+  <img src="#" alt="оценка - четыре звезды">
+  </div>
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
-    <img class="hotel-card-image" src="#" alt="">
+    <img class="hotel-card-image" src="#" alt="Радуга в грозовом небе над скалами">
     <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
   </a>
   <span class="hotel-card-subscription">Гостиница</span>
   <span class="hotel-card-price">От 5000 ₽</span>
-  <a class="hotel-card-button button" href="#">подробнее</a>
-  <a class="hotel-card-button button" href="#">в избранном</a>
+  <button class="hotel-card-button button" type="button">подробнее</button>
+  <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 9,2-->
+  <div class="rating-area">
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-4" title="Оценка «4»">Рейтинг: 9,2</label>
+    <img src="#" alt="оценка - четыре звезды">
+    </div>
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
-    <img class="hotel-card-image" src="#" alt="">
+    <img class="hotel-card-image" src="#" alt="красная скала и голубое небо ясным днем">
     <h3 class="hotel-card-title">Desert Quail Inn</h3>
   </a>
   <span class="hotel-card-subscription">Гостиница</span>
   <span class="hotel-card-price">От 2500 ₽</span>
-  <a class="hotel-card-button button" href="#">подробнее</a>
-  <a class="hotel-card-button button" href="#">в избранное</a>
+  <button class="hotel-card-button button" type="button">подробнее</button>
+  <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 6,9-->
+  <div class="rating-area">
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-3" title="Оценка «3»">Рейтинг: 6,9</label>
+    <img src="#" alt="оценка - три звезды">
+    </div>
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
-    <img class="hotel-card-image" src="#" alt="">
+    <img class="hotel-card-image" src="#" alt="ночное небо над скалами, усеянное звездами">
     <h3 class="hotel-card-title">GreenTree Inn</h3>
   </a>
   <span class="hotel-card-subscription">Гостиница</span>
   <span class="hotel-card-price">От 1500 ₽</span>
-  <a class="hotel-card-button button" href="#">подробнее</a>
-  <a class="hotel-card-button button" href="#">в избранное</a>
+  <button class="hotel-card-button button" type="button">подробнее</button>
+  <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 5,0-->
+  <div class="rating-area">
+    <input type="radio" id="star-4" name="rating" value="4">
+    <label for="star-2" title="Оценка «2»">Рейтинг: 5,0</label>
+    <img src="#" alt="оценка - две звезды">
+    </div>
 </li>
 </ul>
 <ul class="pagination">
@@ -217,7 +244,10 @@
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <!--уточнить post или get-->
       <form class="newsletter-form" action="https://echo.html.ru/" method="post">
-        <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
+        <!--внедряю пропущенный тег lael (оборачиваю им input). не очень понимаю как с ним работать-->
+        <label>
+          <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
+        </label>
         <button class="button newsletter-button" type="submit">
           Подписаться
         </button>
@@ -227,28 +257,33 @@
       <h2 class="visually-hidden">Социальные сети</h2>
   <ul class="footer-social-list">
     <li class="footer-social-item">
-      <a class="button" href="https://vk.com/htmlacademy">
-      <span class="visually-hidden">VKontakte</span>
-      </a>
-    </li>
-    <li class="footer-social-item">
-      <a class="button" href="https://t.me/htmlacademy">
-      <span class="visually-hidden">Telegram</span>
-      </a>
-    </li>
-    <li class="footer-social-item">
-      <a class="button" href="https://youtube.com/user/htmlacademyru">
-      <span class="visually-hidden">Youtube</span>
-      </a>
-    </li>
-  </ul>
-    </section>
-    <div class="footer-contacts">
-    <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    </div>
-      <a class="footer-logo" href="https://htmlacademy.ru/">
-        <img class="logo" src="#" alt="логотип HTML-Академии">
-      </a>
-  </footer>
-</body>
-</html>
+      <!--тегу а добавлен класс-->
+    <a class="social-link" href="https://vk.com/htmlacademy">
+      <img src="#" alt="#">
+    </a>
+    <span class="visually-hidden">VKontakte</span>
+  </li>
+  <li class="footer-social-item">
+    <a class="social-link" href="https://t.me/htmlacademy">
+      <img src="#" alt="#">
+    </a>
+    <span class="visually-hidden">Telegram</span>
+  </li>
+  <li class="footer-social-item">
+    <a class="social-link" href="https://youtube.com/user/htmlacademyru">
+      <img src="#" alt="#">
+    </a>
+    <span class="visually-hidden">Youtube</span>
+  </li>
+</ul>
+  </section>
+  <div class="footer-contacts">
+  <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+  </div>
+  <div>
+    <!--поменял в <a> класс с "footer-logo" на "copyright"-->
+      <a class="copyright" href="https://htmlacademy.ru/">
+      <img class="logo" src="#" alt="логотип HTML-Академии">
+    </a>
+  </div>
+</footer>
