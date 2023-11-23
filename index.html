@@ -8,7 +8,7 @@
 <header class="page-header">
   <!--переоформил лого под образец в Ретроспективе-->
     <a class="page-area">
-    <img class="logo" src="images/logo.svg" width="140" height="70" alt="логотип Sedona">
+    <img class="logo" src="images/icons/logo-header.svg" alt="логотип Sedona">
   </a>
   <nav class="navigation">
     <!--старый блок с лого оборачиваю в коммент,чтобы не потерять
@@ -45,7 +45,7 @@
     <li class="navigation-item">
       <!--добавил вектор для избранного-->
       <a class="navigation-link" href="#">
-        <img src="images/icons/Vector.svg" alt="#">
+        <img src="images/icons/chosen.svg" alt="#">
         <span class="visually-hidden">
           Избранное
         </span>
@@ -54,7 +54,7 @@
     <li class="navigation-item">
       <!--поставить кнопку еще не знаю как-->
       <a class="navigation-link button" href="#">
-          <img src="images/Button.png" alt="">
+          <img src="images/icons/button-header.png" alt="">
           Хочу сюда!
       </a>
     </li>
@@ -133,11 +133,12 @@
     <h2>Подпишитесь на рассылку</h2>
     <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="newsletter-form" action="https://echo.html.ru" method="post">
-      <!--внедряю пропущенный тег lael (оборачиваю им input). не очень понимаю как с ним работать-->
+      <!--внедряю пропущенный тег label (оборачиваю им input). не очень понимаю как с ним работать-->
       <label>
         <input class="field" placeholder="Ваш e-mail"  type="email" name="newsletter-email" id="newsletter-email" required>
       </label>
       <button class="button newsletter-button" type="submit">
+        <img src="images/icons/button-subscribe.png" alt="">
         Подписаться
       </button>
     </form>
@@ -148,19 +149,19 @@
   <li class="footer-social-item">
     <!--тегу а добавлен класс-->
     <a class="social-link" href="https://vk.com/htmlacademy">
-      <img src="#" alt="#">
+      <img src="images/icons/social-vk.svg" alt="#">
     </a>
     <span class="visually-hidden">VKontakte</span>
   </li>
   <li class="footer-social-item">
     <a class="social-link" href="https://t.me/htmlacademy">
-      <img src="#" alt="#">
+      <img src="images/icons/social-tg.svg" alt="#">
     </a>
     <span class="visually-hidden">Telegram</span>
   </li>
   <li class="footer-social-item">
     <a class="social-link" href="https://youtube.com/user/htmlacademyru">
-      <img src="#" alt="#">
+      <img src="images/icons/social-yt.svg" alt="#">
     </a>
     <span class="visually-hidden">Youtube</span>
   </li>
@@ -172,7 +173,7 @@
   <div>
     <!--поменял в <a> класс с "footer-logo" на "copyright"-->
       <a class="copyright" href="https://htmlacademy.ru/">
-      <img class="logo" src="#" alt="логотип HTML-Академии">
+      <img class="logo" src="images/icons/HTML Academy.svg" alt="логотип HTML-Академии">
     </a>
   </div>
 </footer>
