@@ -9,7 +9,7 @@
   <header class="page-header">
     <!--переоформил лого под образец в Ретроспективе-->
       <a class="page-area" href="index.html">
-      <img class="logo" src="#" alt="логотип Sedona">
+        <img class="logo" src="images/icons/logo-header.svg" alt="логотип Sedona">
     </a>
     <nav class="navigation">
       <!--старый блок с лого оборачиваю в коммент,чтобы не потерять
@@ -37,6 +37,7 @@
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
+            <img src="images/icons/search.svg">
             <span class="visually-hidden">
               Поиск
             </span>
@@ -44,6 +45,7 @@
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
+            <img src="images/icons/chosen.svg" alt="#">
             <span class="visually-hidden">
               Избранное
             </span>
@@ -51,6 +53,7 @@
         </li>
         <li class="navigation-item">
           <a class="navigation-link button" href="#">
+            <img src="images/icons/button-header.png" alt="">
               Хочу сюда!
           </a>
         </li>
@@ -65,10 +68,15 @@
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html">
+          <img src="images/icons/breadcrumbs-home.svg" alt="#">
           <span class="visually-hidden">Главная</span>
         </a>
       </li>
+        <!--как оформляется стрелка хлебной крошки?
+          <img src="images/icons/breadcrumbs-arrow.svg" alt="#">
+        -->
       <li class="breadcrumbs-item">
+        <img src="images/icons/breadcrumbs-item.svg" alt="#">
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
       </ul>
@@ -123,7 +131,9 @@
 </section>-->
 <div class="###">
     <button class="button" type="submit">Применить</button>
+    <img src="images/icons/button-submit.png" alt="#">
   <button class="button" type="reset">Сбросить</button>
+  <img src="images/icons/button-reset.png" alt="#">
 </div>
 </form>
 </section>
@@ -132,18 +142,22 @@
   <!--h2 ниже называется "Счетчик результатов"-->
   <h2>Найдено гостиниц: 38</h2>
   <select class="select-control" aria-label="сортировка">
+    <img src="images/icons/select.svg" alt="#">
     <option value="cheap">Сначала дешевые</option>
     <option value="#">#</option>
     <option value="#">#</option>
   </select>
   <!--почему у первой кнопки есть второй класс (баттон-лайт), у остальных - нет?-->
 <button class="button button-light" type="button">
+  <img src="images/icons/view-1.png" alt="#">
 <span class="visually-hidden">Показать мелкие значки</span>
 </button>
 <button class="button" type="button">
+  <img src="images/icons/view-2.png" alt="#">
 <span class="visually-hidden">Показать карточки</span>
 </button>
 <button class="button" type="button">
+  <img src="images/icons/view-3.png" alt="#">
 <span class="visually-hidden">Показать список</span>
 </button>
 </form>
@@ -152,12 +166,14 @@
   <ul class="hotel-list">
 <li class="hotel-card">
     <a class="hotel-card-link" href="hotel.html">
-      <img class="hotel-card-image" src="#" alt="ночные звезды через устье пещеры">
+      <img class="hotel-card-image" src="images/hotel-1.jpg" alt="ночные звезды через устье пещеры">
       <h3 class="hotel-card-title">Amara Resort & Spa</h3>
     </a>
     <span class="hotel-card-subscription">Гостиница</span>
     <span class="hotel-card-price">От 4000 ₽</span>
+    <img src="images/button-details-1.png" alt="#">
     <button class="hotel-card-button button" type="button">подробнее</button>
+    <img src="images/button-change-1.png" alt="#">
     <button class="hotel-card-button button" type="button">в избранное</button>
     <!--
     образец разметки области рейтинга взял из сети, добавил актуальные данные + тег <img>
@@ -171,13 +187,15 @@
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
-    <img class="hotel-card-image" src="#" alt="Радуга в грозовом небе над скалами">
+    <img class="hotel-card-image" src="images/hotel-2.jpg" alt="Радуга в грозовом небе над скалами">
     <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
   </a>
   <span class="hotel-card-subscription">Гостиница</span>
   <span class="hotel-card-price">От 5000 ₽</span>
+  <img src="images/button-details-1.png" alt="#">
   <button class="hotel-card-button button" type="button">подробнее</button>
-  <button class="hotel-card-button button" type="button">в избранное</button>
+  <!--нужно будет выделить эту кнопку как "в избранНОМ"-->
+  <button class="hotel-card-button button" type="button">в избранном</button>
   <!--Рейтинг: 9,2-->
   <div class="rating-area">
     <input type="radio" id="star-4" name="rating" value="4">
@@ -187,12 +205,14 @@
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
-    <img class="hotel-card-image" src="#" alt="красная скала и голубое небо ясным днем">
+    <img class="hotel-card-image" src="images/hotel-3.jpg" alt="красная скала и голубое небо ясным днем">
     <h3 class="hotel-card-title">Desert Quail Inn</h3>
   </a>
   <span class="hotel-card-subscription">Гостиница</span>
   <span class="hotel-card-price">От 2500 ₽</span>
+  <img src="images/button-details-1.png" alt="#">
   <button class="hotel-card-button button" type="button">подробнее</button>
+  <img src="images/button-change-1.png" alt="#">
   <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 6,9-->
   <div class="rating-area">
@@ -203,12 +223,14 @@
 </li>
 <li class="hotel-card">
   <a class="hotel-card-link" href="hotel.html">
-    <img class="hotel-card-image" src="#" alt="ночное небо над скалами, усеянное звездами">
+    <img class="hotel-card-image" src="images/hotel-4.jpg" alt="ночное небо над скалами, усеянное звездами">
     <h3 class="hotel-card-title">GreenTree Inn</h3>
   </a>
   <span class="hotel-card-subscription">Гостиница</span>
   <span class="hotel-card-price">От 1500 ₽</span>
+  <img src="images/button-details-1.png" alt="#">
   <button class="hotel-card-button button" type="button">подробнее</button>
+  <img src="images/button-change-1.png" alt="#">
   <button class="hotel-card-button button" type="button">в избранное</button>
   <!--Рейтинг: 5,0-->
   <div class="rating-area">
