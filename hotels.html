@@ -7,7 +7,7 @@
 </head>
 <body>
   <header class="page-header">
-    <!--переоформил лого под образец в Ретроспективе-->
+    <!--подумать о применении атрибутов ленивой загрузки decoding=async и loading="lazy"-->
       <a class="page-area" href="index.html">
         <img class="logo" src="images/icons/logo-header.svg" width="140" height="70" alt="логотип Sedona">
     </a>
@@ -61,22 +61,19 @@
       </nav>
   </header>
   <main class="main-inner">
-    <!--Блок с фильтрами-->
+    <!--этот раздел называется "Блок с фильтрами"-->
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
-      <!--хлебные крошки все таки - ol или ul? в данном случае порядок ведь имеет значение-->
+      <!--хлебные крошки все таки - ol или ul?
+        в данном случае порядок ведь имеет значение-->
       <ul class="breadcrumbs">
-        <li class="breadcrumbs-item">
+        <!--класс отсюда уберем, оформим потом через селектор CSS
+          <li class="breadcrumbs-item">-->
         <a class="breadcrumbs-link" href="index.html">
-          <img src="images/icons/breadcrumbs-home.svg" alt="#">
           <span class="visually-hidden">Главная</span>
         </a>
       </li>
-        <!--как оформляется стрелка хлебной крошки?
-          <img src="images/icons/breadcrumbs-arrow.svg" alt="#">
-        -->
-      <li class="breadcrumbs-item">
-        <img src="images/icons/breadcrumbs-item.svg" alt="#">
+      <!--<li class="breadcrumbs-item">-->
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
       </ul>
@@ -124,16 +121,15 @@
 </li>
 </ul>
 </fieldset>
-<!--не знаю в какой тег обернуть секцию рэйндж. скопировал форму из Сети. Не знаю, как сверстать этот раздел. Кажется, это тема будущих скринкастов
+<!--не знаю в какой тег обернуть секцию рэйндж. скопировал форму из Сети.
+  Не знаю, как сверстать этот раздел. Кажется, это тема будет раскрыта в будущих скринкастах
 <section class="catalog-price-range">
   <label for="price">Стоимость, <span>₽:</span></label>
   <input class="price-range" type="range" id="price" name="price" min="0" max="9000"/>
 </section>-->
 <div class="form-buttons">
     <button class="button" type="submit">Применить</button>
-    <img src="images/icons/button-submit.png" width="191" height="36"  alt="#">
   <button class="button" type="reset">Сбросить</button>
-  <img src="images/icons/button-reset.png" width="191" height="36" alt="#">
 </div>
 </form>
 </section>
@@ -147,7 +143,6 @@
     <option value="#">#</option>
     <option value="#">#</option>
   </select>
-  <!--почему у первой кнопки есть второй класс (баттон-лайт), у остальных - нет?-->
 <button class="button button-light" type="button">
   <img src="images/icons/view-1.svg" width="48" height="48" alt="#">
 <span class="visually-hidden">Показать мелкие значки</span>
@@ -162,7 +157,8 @@
 </button>
 </form>
 </section>
-<!--в "ретро" речь идет о том, что карточки товаров обернуты в <div>. Что выбрать мне?-->
+<!--в "ретро" речь идет о том, что карточки товаров обернуты в <div>.
+  еще можно в <article> обернуть.Что выбрать мне?-->
   <ul class="hotel-list">
 <li class="hotel-card">
     <a class="hotel-card-link" href="hotel.html">
@@ -194,7 +190,6 @@
   <span class="hotel-card-price">От 5000 ₽</span>
   <img src="images/button-details-1.png" width="140" height="36" alt="#">
   <button class="hotel-card-button button" type="button">подробнее</button>
-  <!--нужно будет выделить эту кнопку как "в избранНОМ"-->
   <img src="images/icons/button-in-chosen.png" width="140" height="36" alt="#">
   <button class="hotel-card-button button" type="button">в избранном</button>
   <!--Рейтинг: 9,2-->
