@@ -17,7 +17,8 @@
 body {
 font-family: 'PT Sans', sans-serif; /* здесь указываю основной и резервный шрифты */
 font-size: 16px;
-line-height: 24px; /* это универсальное правило для начала верстки - задавать такие значения?*/
+line-height: 24px;
+/* ВОПРОС: это универсальное правило для начала верстки - задавать такие значения?*/
 color:#242424; /* или #000 */
 background-color: #fff;
 }
@@ -44,7 +45,7 @@ text-align: center;
 text-decoration: none;
 }
 
-/* hero-блок*/
+/* hero-блок надо сделать */
 
 /* Преимущества */
 
@@ -54,4 +55,35 @@ text-decoration: none;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.advantages-list {
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+text-align: center;
+text-transform: uppercase;
+}
+
+.advantages-description {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-transform: lowercase;
+}
+
+/* рекомендации */
+
+.recommendations-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+}
+
+.recommendations-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
 }
