@@ -58,11 +58,12 @@
           <li class="navigation-item">
             <!--в ретро 3 (38.14) интересный код в этом месте-->
             <a class="navigation-link button" href="#">
-              <img
+              <!--<img
                 src="images/icons/button-header.png"
                 width="160"
                 height="36"
-                alt="#" />
+                alt="#" />-->
+              <!--ВОПРОС: нужно ли мне подружать img для кнопок или мы их всегда стилизуем (background color, border color и тд)?-->
               Хочу сюда!
             </a>
           </li>
@@ -92,9 +93,11 @@
         <p class="lead">
           Седона — небольшой городок в Аризоне, заслуживающий большего!
         </p>
-        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <!--временный класс для строки ниже-->
+        <p class="cool-advantages">Рассмотрим причины, по которым Седона круче,
+          чем Гранд-Каньон!</p>
         <ul class="advantages-list">
-          <li class="advantages-item">
+          <li class="advantages-item-outer">
             <h3>Настоящий городок</h3>
             <p class="advantages-description">
               Седона — не аттракцион для туристов, там течёт своя жизнь
@@ -124,7 +127,7 @@
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item-outer">
             <h3>Там есть мост дьявола</h3>
             <p class="advantages-description">
               Да, по нему можно пройти! Если вы осмелитесь, разумеется
@@ -139,8 +142,9 @@
         </ul>
       </section>
       <section class="recommendations">
-        <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-        <p class="recommendations-description">Опытный персонал и качественное
+        <h2 class="recommendations-heading">Приезжайте в Седону отдохнуть в
+          комфорте и уюте!</h2>
+        <p class="recommendations-service">Опытный персонал и качественное
           обслуживание!</p>
         <ul class="recommendations-list">
           <li class="recommendations-item">
@@ -162,17 +166,18 @@
         </ul>
       </section>
       <div>
-        <h2>Заинтересовались?</h2>
-        <p>
+        <h2 class="housing">Заинтересовались?</h2>
+        <p class="housing-data">
           Укажите предполагаемые даты поездки,и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
         <a class="button" href="hotels.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
-        <img
+        <!--ЗАМОРАЖИВАЮ (пока что) ссылку на картинку, тк кнопку буду стилизовать
+          <img
           src="images/icons/button_search_hotel.svg"
           width="376"
           height="52"
-          alt />
+          alt />-->
       </div>
     </main>
     <footer class="page-footer">
