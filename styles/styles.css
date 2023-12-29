@@ -215,3 +215,72 @@ text-align: center;
 text-transform: uppercase;
 text-decoration: none;
   }
+
+  /* ВОПРОС: стили второй/последующих страниц пишу ниже текстом или группировать вместе main к main'у и тд ? */
+
+.inner-header-title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  color: #FFF;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFF;
+  text-transform: capitalize;}
+
+.catalog-filter-item {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  color: #FFF;
+}
+
+.hotels-numbers {
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+color: #000;
+text-transform: uppercase;
+}
+
+.select-control {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
+
+.hotel-card-title h3 { /* ВОПРОС: не удается устранить подчеркивание у названий гостиниц */
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+color: #000;
+text-decoration: none;
+}
+
+.hotel-card-subscription,
+.hotel-card-price {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
