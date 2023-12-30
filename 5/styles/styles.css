@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "PT Sans"; /* здесь никогда не нужно писать sans-serif*/
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: 'PT Sans', 'Arial', sans-serif; /* здесь указываю основной и резервный шрифты */
+  font-size: 16px;
+  line-height: 24px;
+/* Здесь всегда подбираю для size и height наиболее употребимые значения из макета */
+  color: #000;
+  background-color: #fff;
+}
+
+/* Раздел "header" */
+
+.navigation-list a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFF; /* ВОПРОС: после многих попыток не получилось в кнопке хедера добиться белого цвета. что не так?*/
+  background-color: #756157;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0px; /* ВОПРОС:что не так со строкой (здесь и далее)?  Подчеркнуто красным (no unit for zero needed) */
+  border-radius: 4px;
+  padding-left: 50px;
+  padding-top: 8px;
+}
+
+.button-big {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* ВОПРОС: достаточно ли указать только свойства, отличающиеся от основного класса?*/
+}
+
+.newsletter-button {
+  border-radius: 0px 4px 4px 0px; /* ВОПРОС: почему редактор кода ругается на нулевые значения? */
+  background:#82B3D3;
+}
+/* ВОПРОС: сейчас замылил голову с разнообразием уточняющих классов для кнопок, но в макете есть такое деление как кнопки big и small.
+Есть ли смысл сделать две такие обобщающие стилизации для групп кнопок по размеру или лучше стремиться к точечной стилизации под каждый случай? */
+
+/* Раздел "hero" пока не трогал, только добавил фон */
+
+/* Раздел "Преимущества" */
+
+.main-index {
+  color: #000; /* ВОПРОС: если цвет текста и фона указан в body - для обоих значений пишу inherit или вообще их можно опустить? */
+  background-color: inherit;
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.lead {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cool-advantages {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333; /* почему-то в макете указан коричневый цвет текста */
+}
+/* назначил отдельный класс чтобы обособить 1 и 5 преимущество с белым цветом шрифта */
+.advantages-item-outer {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color:#FFFFFF;
+  text-transform: uppercase;
+}
+
+.advantages-item {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.advantages-description {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-transform: none;
+}
+
+/* Раздел "Рекомендации" */
+
+.recommendations-heading {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: Center;
+  color:#000000;
+  text-transform: uppercase;
+}
+
+.recommendations-service {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.recommendations-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+}
+
+.recommendations-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+  background-color: #fff;
+}
+
+.housing {
+  background-image: url();
+}
+
+.housing-interest {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+  background-color: #fff;
+}
+
+.housing-data {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  background-color: #fff;
+  }
+
+/* Раздел "footer" */
+
+.newsletter {
+  background-image: url(../images/Subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+
+.newsletter-subscribe {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  }
+
+.newsletter-quality {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  }
+
+.newsletter-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  }
+
+.contacts-phone {
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+color: #000;
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+  }
+
+  /* ВОПРОС: стили второй/последующих страниц пишу ниже текстом или группировать вместе main к main'у и тд ? */
+
+.inner-header-title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  color: #FFF;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFF;
+  text-transform: capitalize;}
+
+.catalog-filter-item {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  color: #FFF;
+}
+
+.hotels-numbers {
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+color: #000;
+text-transform: uppercase;
+}
+
+.select-control {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
+
+.hotel-card-title h3 { /* ВОПРОС: не удается устранить подчеркивание у названий гостиниц */
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+color: #000;
+text-decoration: none;
+}
+
+.hotel-card-subscription,
+.hotel-card-price {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
