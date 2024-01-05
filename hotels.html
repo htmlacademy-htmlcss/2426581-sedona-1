@@ -57,6 +57,7 @@
     </header>
     <main class="main-inner">
       <header class="inner-header">
+        <!--НЕ УДАЕТСЯ подгрузить фоновое изображение - не могу извлечь из фигмы почему от отдельно от текста-->
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <a class="breadcrumbs-link" href="index.html">
@@ -126,8 +127,8 @@
   <input class="price-range" type="range" id="price" name="price" min="0" max="9000"/>
 </section>-->
         <div class="form-buttons">
-          <button class="button" type="submit">Применить</button>
-          <button class="button" type="reset">Сбросить</button>
+          <button class="button button-blue" type="submit">Применить</button>
+          <button class="button button-reset" type="reset">Сбросить</button>
         </div>
       </form>
     </section>
@@ -142,15 +143,16 @@
           <option value="#">#</option>
           <option value="#">#</option>
         </select>
-        <button class="button button-light" type="button">
+        <button class="button button-icon button-light" type="button">
+          <!--ЗДЕСЬ нужно подумать с классом, чтобы общая стилизация button здесь не проявлялась-->
           <img src="images/icons/view-1.svg" width="48" height="48" alt="#">
           <span class="visually-hidden">Показать мелкие значки</span>
         </button>
-        <button class="button" type="button">
+        <button class="button button-icon" type="button">
           <img src="images/icons/view-2.svg" width="48" height="48" alt="#">
           <span class="visually-hidden">Показать карточки</span>
         </button>
-        <button class="button" type="button">
+        <button class="button button-icon" type="button">
           <img src="images/icons/view-3.svg" width="48" height="48" alt="#">
           <span class="visually-hidden">Показать список</span>
         </button>
@@ -171,7 +173,7 @@
         <button class="hotel-card-button button"
           type="button">подробнее</button>
         <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
-        <button class="hotel-card-button button" type="button">в
+        <button class="hotel-card-button button button-blue" type="button">в
           избранное</button>
         <div class="rating-area">
           <span>Рейтинг: 8,5</span>
@@ -190,7 +192,7 @@
         <button class="hotel-card-button button"
           type="button">подробнее</button>
         <!-- <img src="images/icons/button-in-chosen.png" width="140" height="36" alt="#"> -->
-        <button class="hotel-card-button button" type="button">в
+        <button class="hotel-card-button button button-green" type="button">в
           избранном</button>
         <!--Рейтинг: 9,2-->
         <div class="rating-area">
@@ -210,7 +212,7 @@
         <button class="hotel-card-button button"
           type="button">подробнее</button>
         <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
-        <button class="hotel-card-button button" type="button">в
+        <button class="hotel-card-button button button-blue" type="button">в
           избранное</button>
         <!--Рейтинг: 6,9-->
         <div class="rating-area">
@@ -230,7 +232,7 @@
         <button class="hotel-card-button button"
           type="button">подробнее</button>
         <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
-        <button class="hotel-card-button button" type="button">в
+        <button class="hotel-card-button button button-blue" type="button">в
           избранное</button>
         <!--Рейтинг: 5,0-->
         <div class="rating-area">
@@ -282,7 +284,7 @@
           Подписаться
         </button>
       </form>
-      <img src="images/Subscribe.jpg" width="1,200px" height="414,86px">
+      <img src="images/subscribe.jpg" width="1,200px" height="414,86px">
     </section>
     <section class="footer-social">
       <h2 class="visually-hidden">Социальные сети</h2>

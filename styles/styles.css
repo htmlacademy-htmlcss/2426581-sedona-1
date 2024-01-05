@@ -15,10 +15,9 @@
 }
 
 body {
-  font-family: 'PT Sans', 'Arial', sans-serif; /* здесь указываю основной и резервный шрифты */
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 24px;
-/* Здесь всегда подбираю для size и height наиболее употребимые значения из макета */
   color: #000;
   background-color: #fff;
 }
@@ -38,12 +37,12 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  color: #FFF; /* ВОПРОС: после многих попыток не получилось в кнопке хедера добиться белого цвета. что не так?*/
+  color: #FFF;
   background-color: #756157;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  border: 0px; /* ВОПРОС:что не так со строкой (здесь и далее)?  Подчеркнуто красным (no unit for zero needed) */
+  border: 0;
   border-radius: 4px;
   padding-left: 50px;
   padding-top: 8px;
@@ -53,23 +52,44 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px; /* ВОПРОС: достаточно ли указать только свойства, отличающиеся от основного класса?*/
+  line-height: 36px;
+}
+
+.button-icon {
+  color: #000000;
+  background-color: #FFF;
+}
+
+button.button-reset {
+  background-color: transparent;  /*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
+- я правильно сделал кнопку прозрачной?*/
+border: transparent;
+}
+
+/* РЕШИЛ проблему специфичности следующим образом: подглядел в режиме разработчика, что кнопка "хочу сюда" подсвечивается в браузере как класс,
+который я тут и применил, изменив параметр цвета */
+a.navigation-link.button {
+  color:#FFF;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
 }
 
 .newsletter-button {
-  border-radius: 0px 4px 4px 0px; /* ВОПРОС: почему редактор кода ругается на нулевые значения? */
+  border-radius: 0 4px 4px 0;
   background:#82B3D3;
 }
-/* ВОПРОС: сейчас замылил голову с разнообразием уточняющих классов для кнопок, но в макете есть такое деление как кнопки big и small.
-Есть ли смысл сделать две такие обобщающие стилизации для групп кнопок по размеру или лучше стремиться к точечной стилизации под каждый случай? */
 
 /* Раздел "hero" пока не трогал, только добавил фон */
 
 /* Раздел "Преимущества" */
 
 .main-index {
-  color: #000; /* ВОПРОС: если цвет текста и фона указан в body - для обоих значений пишу inherit или вообще их можно опустить? */
-  background-color: inherit;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -178,7 +198,7 @@ text-transform: none;
 /* Раздел "footer" */
 
 .newsletter {
-  background-image: url(../images/Subscribe.jpg);
+  background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
@@ -267,7 +287,7 @@ line-height: 21px;
 color: #333;
 }
 
-.hotel-card-title h3 { /* ВОПРОС: не удается устранить подчеркивание у названий гостиниц */
+.hotel-card-title h3 { /* ВОПРОС: как устранить подчеркивание у названий гостиниц? */
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
