@@ -2,7 +2,7 @@
   font-family: "PT Sans"; /* здесь никогда не нужно писать sans-serif*/
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("./../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,10 +10,13 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("./../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
 body {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 16px;
@@ -77,7 +80,8 @@ a.navigation-link.button {
 }
 
 .button-green {
-  background-color: #7DB54F;
+  background-color: #7DB54F; /* полагаю, здесь значение кнопки не является константным и зависит от состояния (hover, focus, active),
+  поэтому этот раздел позже будем дорабатывать*/
 }
 
 .newsletter-button {
