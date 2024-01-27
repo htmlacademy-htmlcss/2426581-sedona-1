@@ -17,7 +17,12 @@
 html {
   height: 100%;
 }
+
 body {
+  margin: 0; /* ДЛЯ СЕБЯ: таким образом убираем браузерные отступы по умолчанию*/
+  display: flex; /* ДЛЯ СЕБЯ: т-обр. разместил все блоки body на оси */
+  flex-direction: column; /* ДЛЯ СЕБЯ: ось направляем сверху вниз*/
+  min-height: 100%;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -25,8 +30,26 @@ body {
   background-color: #fff;
 }
 
-/* Раздел "header" */
+.page-container { /*ПЭЙДЖ_КОНТЕЙНЕР*/
+  width: 1200px;
+  margin: 0 auto; /* ВОПРОС: я могу далее не указывать ширину любого блока, если она равна ширине макета? */
+}
 
+/* ХЕДЕР */
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  /*ДЛЯ СЕБЯ: это свойство/значение применяются для отцентровки блока на странице
+    ВОПРОС: в Седоне нужны другие значения margin? у меня же не по центру навигация расположена */
+}
+
+.navigation-list{
+  width: 459px;
+  margin: 0;
+  padding: 0;
+}
 .navigation-list a {
   font-size: 20px;
   font-weight: 700;
@@ -34,6 +57,33 @@ body {
   text-align: left;
   color: inherit;
   text-decoration: none;
+}
+
+.navigation-user {
+  max-width: 348px;
+  margin-left: auto;
+}
+
+/*.logo {
+  display:block;
+  margin: 0 auto; ВОПРОС: нужны ли моему Лого такие свойства? (взято из БШ)
+}*/
+
+.hero-top {
+  width: 1200px;
+  min-height: 485px; /* ТАКИМ образом разделил картинку и текст под ней в блоке хиро */
+}
+
+.hero-bottom {
+  width: 1200px;
+  min-height: hug; /* ВОПРОС - в макете есть точная цифра, но не знаю как указать усредненный вариант (или мин/макс) */
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  display: flex;
+  min-height: 385px;
 }
 
 .button {
@@ -99,6 +149,10 @@ a.navigation-link.button {
   background-repeat: no-repeat;
 }
 
+.main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы)*/
+  flex-grow: 1;
+}
+
 .lead {
   font-size: 30px;
   font-weight: 700;
@@ -106,6 +160,13 @@ a.navigation-link.button {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
+}
+
+.advantages-list {
+  display: flex;
+  /*width: */
+  margin: 0;
+  padding: 0;
 }
 
 .cool-advantages {
@@ -122,7 +183,10 @@ a.navigation-link.button {
   line-height: 28px;
   text-align: center;
   color:#FFFFFF;
+  background-color: #82B3D3;
   text-transform: uppercase;
+  width: 400px;
+  margin: auto;
 }
 
 .advantages-item {
@@ -131,7 +195,19 @@ a.navigation-link.button {
   line-height: 28px;
   text-align: center;
   color: #000000;
+  /*background-color: #82B3D3; ВОПРОС: в макете цвет фона для всех квадратиков одинаковый, но различается по оттенкам в процентах. Как мне это применить? */
   text-transform: uppercase;
+  width: 400px;
+  margin: auto;
+}
+
+.advantages-item-1,
+.advantages-item-3 {
+  background-color: #83B3D31F;
+}
+
+.advantages-item-2 {
+  background-color: #FFF;
 }
 
 .advantages-description {
@@ -141,7 +217,17 @@ line-height: 21px;
 text-transform: none;
 }
 
+.true-town-image,
+.devil-bridge-image {
+  flex: 0 0 800px;
+}
 /* Раздел "Рекомендации" */
+
+.rest-in-sedona {
+  width: 1200px;
+  min-height: 246px;
+  padding: 64px, 0, 64px, 0;
+}
 
 .recommendations-heading {
   font-weight: 700;
@@ -150,6 +236,26 @@ text-transform: none;
   text-align: Center;
   color:#000000;
   text-transform: uppercase;
+}
+
+.recommendations-list {
+  display: flex;
+}
+
+.recommendations-item {
+  width: 400px;
+  min-height: 385;
+  margin: auto;
+  padding: 80px, 85px, 80px, 85px;
+}
+
+.recommendations-item-1,
+.recommendations-item-3 {
+background-color: #82B3D3;
+}
+
+.recommendations-item-2 {
+  background-color: #FFF;
 }
 
 .recommendations-service {
@@ -174,7 +280,7 @@ text-transform: none;
   line-height: 21px;
   text-align: center;
   color: #333333;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 .housing {
@@ -240,7 +346,7 @@ text-transform: uppercase;
 text-decoration: none;
   }
 
-  /* ВОПРОС: как корректно отделить стилизацию разных страниц? Ниже - стили внутренней страницы */
+  /* ВОПРОС: как корректно отделить стилизацию разных страниц в css-файле? Ниже - идут стили внутренней страницы */
 
 .inner-header-title {
   font-size: 60px;
