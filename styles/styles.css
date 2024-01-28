@@ -284,7 +284,9 @@ background-color: #82B3D3;
 }
 
 .housing {
-  background-image: url();
+  width: 1200px;
+  min-height: 406px;
+  padding: 96px, 304px, 96px, 304px;
 }
 
 .housing-interest {
