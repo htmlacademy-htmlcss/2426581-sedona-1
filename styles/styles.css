@@ -70,13 +70,22 @@ body {
 }*/
 
 .hero-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 1200px;
   min-height: 485px; /* ТАКИМ образом разделил картинку и текст под ней в блоке хиро */
+  margin: 0 auto;
 }
 
 .hero-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 1200px;
-  min-height: hug; /* ВОПРОС - в макете есть точная цифра, но не знаю как указать усредненный вариант (или мин/макс) */
+  min-height: hug; /* ВОПРОС - в макете есть точная цифра,
+  но не знаю как указать усредненный вариант (или мин/макс) */
+  margin: 0 auto;
 }
 
 .row-1,
@@ -84,6 +93,7 @@ body {
 .row-3 {
   display: flex;
   min-height: 385px;
+  padding: 85px, 103px, 85px;
 }
 
 .button {
@@ -284,9 +294,13 @@ background-color: #82B3D3;
 }
 
 .housing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 1200px;
   min-height: 406px;
   padding: 96px, 304px, 96px, 304px;
+  margin: auto;
 }
 
 .housing-interest {
@@ -310,10 +324,15 @@ background-color: #82B3D3;
 /* Раздел "footer" */
 
 .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .newsletter-subscribe {
