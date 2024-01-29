@@ -321,7 +321,7 @@ background-color: #82B3D3;
   background-color: #fff;
   }
 
-/* Раздел "footer" */
+/* FOOTER */
 
 .newsletter {
   display: flex;
@@ -335,6 +335,12 @@ background-color: #82B3D3;
   text-align: center;
 }
 
+.footer-bottom-container {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  max-width: 0 auto;
+}
 .newsletter-subscribe {
   font-size: 30px;
   font-weight: 700;
