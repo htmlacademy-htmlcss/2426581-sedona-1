@@ -336,7 +336,7 @@ background-color: #82B3D3;
 
 /* FOOTER */
 
-.newsletter {
+.newsletter-index {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,6 +346,17 @@ background-color: #82B3D3;
   background-repeat: no-repeat;
   color: #FFFFFF;
   text-align: center;
+}
+
+.newsletter-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 414.86px;
+  margin: 0 auto;
+  background-color: #FFF;
+  /*background-size: 100% auto;* ЭТОТ ПАРАМЕТР нужен?*/
 }
 
 .newsletter-subscribe {
@@ -400,6 +411,10 @@ text-decoration: none;
 
   /* ВОПРОС: как корректно отделить стилизацию разных страниц в css-файле?
   Ниже - идут стили внутренней страницы */
+
+..inner-header {
+  background-image: image;
+}
 
 .inner-header-title {
   font-size: 60px;

@@ -9,7 +9,7 @@
   <body>
     <div class="page-container">
       <header class="page-header">
-        <!--подумать о применении атрибутов ленивой загрузки decoding=async и loading="lazy"-->
+        <!--ДЛЯ СЕБЯ - подумать о применении атрибутов ленивой загрузки decoding=async и loading="lazy"-->
         <a class="page-area" href="index.html">
           <img class="logo" src="images/icons/logo-header.svg" width="140"
             height="70" alt="логотип Sedona">
@@ -60,7 +60,12 @@
       </header>
       <main class="main-inner">
         <header class="inner-header">
-          <!--НЕ УДАЕТСЯ подгрузить фоновое изображение - не могу извлечь из фигмы почему от отдельно от текста-->
+          <!--НЕ УДАЕТСЯ подгрузить фоновое изображение -
+            не могу извлечь из фигмы почему-то отдельно от текста-->
+          <div class="inner-header-image">
+            <img src="/images/background-1.png" alt>
+
+          </div>
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <a class="breadcrumbs-link" href="index.html">
@@ -275,23 +280,25 @@
       </ol>
     </main>
     <footer class="page-footer">
-      <section class="newsletter">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное
-          бойскаутское!</p>
-        <form class="newsletter-form" action="https://echo.html.ru/"
-          method="post">
-          <!--тегом label оборачиваю input.  но не очень понимаю как с ним работать-->
-          <label>
-            <input class="field" placeholder="Ваш e-mail" type="email"
-              name="newsletter-email" id="newsletter-email" required>
-          </label>
-          <button class="button newsletter-button" type="submit">
-            Подписаться
-          </button>
-        </form>
-        <img src="images/subscribe.jpg" width="1,200px" height="414,86px">
-      </section>
+      <div class="newsletter-inner">
+        <section class="newsletter">
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама, честное
+            бойскаутское!</p>
+          <form class="newsletter-form" action="https://echo.html.ru/"
+            method="post">
+            <!--тегом label оборачиваю input.  но не очень понимаю как с ним работать-->
+            <label>
+              <input class="field" placeholder="Ваш e-mail" type="email"
+                name="newsletter-email" id="newsletter-email" required>
+            </label>
+            <button class="button newsletter-button" type="submit">
+              Подписаться
+            </button>
+          </form>
+          <!--<img src="images/subscribe.jpg" width="1,200px" height="414,86px"> BACKGROUND IMG ЗДЕСЬ НЕ НУЖЕН-->
+        </section>
+      </div>
       <div class="footer-bottom-container">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
