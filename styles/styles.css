@@ -263,7 +263,6 @@ text-transform: none;
 
 .recommendations-list {
   display: flex;
-  margin: 0 auto;
 }
 
 .recommendations-item {
@@ -510,4 +509,26 @@ color: #333;
   margin: 0 auto;
   width: 1060px;
   min-height: 49px;
+}
+
+.hotel-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1060px;
+  min-height: 896px;
+  margin: 0 auto;
+}
+
+.hotel-row-1,
+.hotel-row-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1060px;
+  min-height: 438px;
+}
+
+.hotel-card {
+  padding: 20px;
 }
