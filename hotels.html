@@ -64,7 +64,6 @@
             не могу извлечь из фигмы почему-то отдельно от текста-->
           <div class="inner-header-image">
             <img src="/images/background-1.png" alt>
-
           </div>
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -77,58 +76,63 @@
           </li>
         </ul>
       </header>
-      <section class="catalog-hotels">
-        <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-        <form class="catalog-filter" action="https://echo.html.ru/"
-          method="post">
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox"
-                    name="swimming-pool" checked>
-                  Бассейн
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="parking"
-                    checked>Парковка
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox"
-                    name="wi-fi">Wi-Fi
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Тип жилья:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="housing-type"
-                    value="hotel" checked>Гостиница
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="housing-type"
-                    value="motel">Мотель
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="housing-type"
-                    value="apartments">Апартаменты
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <!--ВОПРОС по верстке:
+      <!--ДИВ СЕКЦИЯ для всего каталога-->
+      <div class="catalog-box">
+        <section class="catalog-hotels">
+          <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+          <form class="catalog-filter" action="https://echo.html.ru/"
+            method="post">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox"
+                      name="swimming-pool" checked>
+                    Бассейн
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="parking"
+                      checked>Парковка
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox"
+                      name="wi-fi">Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Тип жилья:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio"
+                      name="housing-type"
+                      value="hotel" checked>Гостиница
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio"
+                      name="housing-type"
+                      value="motel">Мотель
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio"
+                      name="housing-type"
+                      value="apartments">Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <!--ВОПРОС по верстке:
   не знаю в какой тег обернуть секцию рэйндж. скопировал форму из Сети.
   Не знаю, как сверстать этот раздел.
   Кажется, это тема будет раскрыта в будущих скринкастах
@@ -136,149 +140,153 @@
   <label for="price">Стоимость, <span>₽:</span></label>
   <input class="price-range" type="range" id="price" name="price" min="0" max="9000"/>
 </section>-->
-          <div class="form-buttons">
-            <button class="button button-blue" type="submit">Применить</button>
-            <button class="button button-reset" type="reset">Сбросить</button>
-          </div>
-        </form>
-      </section>
-      <section>
-        <form class="hotels-search-result">
-          <!--h2 ниже называется "Счетчик результатов"-->
-          <h2 class="hotels-numbers">Найдено гостиниц: 38</h2>
-          <select class="select-control" aria-label="сортировка">
-            <img src="images/icons/select.svg" width="11,93" height="7,02"
-              alt="#">
-            <option value="cheap">Сначала дешевые</option>
-            <option value="#">#</option>
-            <option value="#">#</option>
-          </select>
-          <button class="button button-icon button-light" type="button">
-            <!--ЗДЕСЬ нужно подумать с классом, чтобы общая стилизация button здесь не проявлялась-->
-            <img src="images/icons/view-1.svg" width="48" height="48" alt="#">
-            <span class="visually-hidden">Показать мелкие значки</span>
-          </button>
-          <button class="button button-icon" type="button">
-            <img src="images/icons/view-2.svg" width="48" height="48" alt="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </button>
-          <button class="button button-icon" type="button">
-            <img src="images/icons/view-3.svg" width="48" height="48" alt="#">
-            <span class="visually-hidden">Показать список</span>
-          </button>
-        </form>
-      </section>
-      <!--карточки товаров можно обернуть в <div> или <article>, но то выбрать мне - пока что так и не понимаю-->
-      <ul class="hotel-list">
-        <li class="hotel-card">
-          <a class="hotel-card-link" href="hotel.html">
-            <img class="hotel-card-image" src="images/hotel-1.jpg"
-              alt="ночные звезды через устье пещеры">
-            <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-          </a>
-          <span class="hotel-card-subscription">Гостиница</span>
-          <span class="hotel-card-price">От 4000 ₽</span>
-          <!--закомментил все имгэшки к кнопкам, потом удалю
+            <div class="form-buttons">
+              <button class="button button-blue"
+                type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
+          </form>
+        </section>
+        <section>
+          <form class="hotels-search-result">
+            <!--h2 ниже называется "Счетчик результатов"-->
+            <h2 class="hotels-numbers">Найдено гостиниц: 38</h2>
+            <select class="select-control" aria-label="сортировка">
+              <img src="images/icons/select.svg" width="11,93" height="7,02"
+                alt="#">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="#">#</option>
+              <option value="#">#</option>
+            </select>
+            <button class="button button-icon button-light" type="button">
+              <!--ЗДЕСЬ нужно подумать с классом, чтобы общая стилизация button здесь не проявлялась-->
+              <img src="images/icons/view-1.svg" width="48" height="48" alt="#">
+              <span class="visually-hidden">Показать мелкие значки</span>
+            </button>
+            <button class="button button-icon" type="button">
+              <img src="images/icons/view-2.svg" width="48" height="48" alt="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </button>
+            <button class="button button-icon" type="button">
+              <img src="images/icons/view-3.svg" width="48" height="48" alt="#">
+              <span class="visually-hidden">Показать список</span>
+            </button>
+          </form>
+        </section>
+        <!--карточки товаров можно обернуть в <div> или <article>, но то выбрать мне - пока что так и не понимаю-->
+        <ul class="hotel-list">
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-1.jpg"
+                alt="ночные звезды через устье пещеры">
+              <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 4000 ₽</span>
+            <!--закомментил все имгэшки к кнопкам, потом удалю
       <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button"
-            type="button">подробнее</button>
-          <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button button-blue" type="button">в
-            избранное</button>
-          <div class="rating-area">
-            <span>Рейтинг: 8,5</span>
-            <img src="#" alt="оценка - четыре звезды из пяти">
-          </div>F
-        </li>
-        <li class="hotel-card">
-          <a class="hotel-card-link" href="hotel.html">
-            <img class="hotel-card-image" src="images/hotel-2.jpg"
-              alt="Радуга в грозовом небе над скалами">
-            <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
-          </a>
-          <span class="hotel-card-subscription">Гостиница</span>
-          <span class="hotel-card-price">От 5000 ₽</span>
-          <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button"
-            type="button">подробнее</button>
-          <!-- <img src="images/icons/button-in-chosen.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button button-green" type="button">в
-            избранном</button>
-          <!--Рейтинг: 9,2-->
-          <div class="rating-area">
-            <span>Рейтинг: 9,2</span>
-            <img src="#" alt="оценка - четыре звезды из пяти">
-          </div>
-        </li>
-        <li class="hotel-card">
-          <a class="hotel-card-link" href="hotel.html">
-            <img class="hotel-card-image" src="images/hotel-3.jpg"
-              alt="красная скала и голубое небо ясным днем">
-            <h3 class="hotel-card-title">Desert Quail Inn</h3>
-          </a>
-          <span class="hotel-card-subscription">Гостиница</span>
-          <span class="hotel-card-price">От 2500 ₽</span>
-          <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button"
-            type="button">подробнее</button>
-          <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button button-blue" type="button">в
-            избранное</button>
-          <!--Рейтинг: 6,9-->
-          <div class="rating-area">
-            <span>Рейтинг: 6,9</span>>
-            <img src="#" alt="оценка - три звезды из пяти">
-          </div>
-        </li>
-        <li class="hotel-card">
-          <a class="hotel-card-link" href="hotel.html">
-            <img class="hotel-card-image" src="images/hotel-4.jpg"
-              alt="ночное небо над скалами, усеянное звездами">
-            <h3 class="hotel-card-title">GreenTree Inn</h3>
-          </a>
-          <span class="hotel-card-subscription">Гостиница</span>
-          <span class="hotel-card-price">От 1500 ₽</span>
-          <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button"
-            type="button">подробнее</button>
-          <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
-          <button class="hotel-card-button button button-blue" type="button">в
-            избранное</button>
-          <!--Рейтинг: 5,0-->
-          <div class="rating-area">
-            <span>Рейтинг: 5,0</span>
-            <img src="#" alt="оценка - две звезды из пяти">
-          </div>
-        </li>
-      </ul>
-      <!--для пагинации меняю ul на ol!-->
-      <ol class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
-          <!-- <img src="images/pagination-1.png" width="60" height="60" alt=""> -->
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a>
-          <!-- <img src="images/pagination-2.png" width="60" height="60" alt="#"> -->
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a>
-          <!-- <img src="images/pagination-3.png" width="60" height="60" alt="#"> -->
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">4</a>
-          <!-- <img src="images/pagination-4.png" width="60" height="60" alt="#"> -->
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">...</a>
-          <!-- <img src="images/pagination-#.png" width="60" height="60" alt="###"> -->
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">10</a>
-          <!-- <img src="images/pagination-10.png" width="60" height="60" alt="#"> -->
-        </li>
-      </ol>
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-blue" type="button">в
+              избранное</button>
+            <div class="rating-area">
+              <span>Рейтинг: 8,5</span>
+              <img src="#" alt="оценка - четыре звезды из пяти">
+            </div>F
+          </li>
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-2.jpg"
+                alt="Радуга в грозовом небе над скалами">
+              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 5000 ₽</span>
+            <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/icons/button-in-chosen.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-green"
+              type="button">в
+              избранном</button>
+            <!--Рейтинг: 9,2-->
+            <div class="rating-area">
+              <span>Рейтинг: 9,2</span>
+              <img src="#" alt="оценка - четыре звезды из пяти">
+            </div>
+          </li>
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-3.jpg"
+                alt="красная скала и голубое небо ясным днем">
+              <h3 class="hotel-card-title">Desert Quail Inn</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 2500 ₽</span>
+            <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-blue" type="button">в
+              избранное</button>
+            <!--Рейтинг: 6,9-->
+            <div class="rating-area">
+              <span>Рейтинг: 6,9</span>>
+              <img src="#" alt="оценка - три звезды из пяти">
+            </div>
+          </li>
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-4.jpg"
+                alt="ночное небо над скалами, усеянное звездами">
+              <h3 class="hotel-card-title">GreenTree Inn</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 1500 ₽</span>
+            <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-blue" type="button">в
+              избранное</button>
+            <!--Рейтинг: 5,0-->
+            <div class="rating-area">
+              <span>Рейтинг: 5,0</span>
+              <img src="#" alt="оценка - две звезды из пяти">
+            </div>
+          </li>
+        </ul>
+        <!--для пагинации меняю ul на ol!-->
+        <ol class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current">1</a>
+            <!-- <img src="images/pagination-1.png" width="60" height="60" alt=""> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+            <!-- <img src="images/pagination-2.png" width="60" height="60" alt="#"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+            <!-- <img src="images/pagination-3.png" width="60" height="60" alt="#"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+            <!-- <img src="images/pagination-4.png" width="60" height="60" alt="#"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+            <!-- <img src="images/pagination-#.png" width="60" height="60" alt="###"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+            <!-- <img src="images/pagination-10.png" width="60" height="60" alt="#"> -->
+          </li>
+        </ol>
+      </div>
     </main>
+    <!--FOOTER-->
     <footer class="page-footer">
       <div class="newsletter-inner">
         <section class="newsletter">
