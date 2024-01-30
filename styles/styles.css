@@ -433,11 +433,8 @@ text-decoration: none;
 }
 
 .catalog-box {
-  width: 1200px;
-  min-height: 1285px;
-  padding: 50px, 70px, 60px, 70px;
-}
 
+}
 
 .catalog-filter-title {
   font-size: 20px;
@@ -489,4 +486,10 @@ font-style: normal;
 font-weight: 400;
 line-height: 21px;
 color: #333;
+}
+
+.hotels-searching {
+  width: 1200px;
+  min-height: 1285px;
+  padding: 50px, 70px, 60px, 70px;
 }
