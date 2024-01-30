@@ -1,0 +1,512 @@
+@font-face {
+  font-family: "PT Sans"; /* здесь никогда не нужно писать sans-serif*/
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0; /* ДЛЯ СЕБЯ: таким образом убираем браузерные отступы по умолчанию*/
+  display: flex; /* ДЛЯ СЕБЯ: т-обр. разместил все блоки body на оси */
+  flex-direction: column; /* ДЛЯ СЕБЯ: ось направляем сверху вниз*/
+  min-height: 100%;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  background-color: #fff;
+}
+
+.page-container { /*ПЭЙДЖ_КОНТЕЙНЕР*/
+  /*ВОПРОС: для контейнера нежелательно задавать направление флекса - ведь ось расположения элементов на странице и горизонтальная, и вертикальная?
+  В барбершопе, по моему, направление задано изначально для всего контейнера*/
+  width: 1200px;
+  margin: 0 auto; /* ВОПРОС: я могу далее не указывать ширину любого блока, если она равна ширине макета? */
+}
+
+/* ХЕДЕР */
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 64px;
+}
+/*БЛОК НАВИГАЦИИ*/
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  /*ДЛЯ СЕБЯ: это свойство/значение применяются для отцентровки блока на странице
+    ВОПРОС!: в Седоне нужны другие значения margin? у меня же не по центру (страницы) элементы навигации расположены */
+}
+
+.navigation-list{
+  width: 459px;
+  margin: 0;
+  padding: 0;
+}
+.navigation-list a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation-user {
+  max-width: 348px;
+  margin-left: auto;
+}
+
+/*.logo {
+  display:block;
+  margin: 0 auto; ВОПРОС: нужны ли моему Лого такие свойства? (взято из Барб-Шопа)
+}*/
+
+.hero-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 485px;
+  margin: 0 auto;
+}
+/* СОЗДАЛ отдельные классы для разделения картинки и текста под ней в блоке хиро */
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: hug; /* ВОПРОС - в макете есть точная цифра,
+  но не знаю как указать усредненный вариант (или мин/макс) */
+  margin: 0 auto;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  display: flex;
+  min-height: 385px;
+  padding: 85px, 103px, 85px;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFF;
+  background-color: #756157;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 50px;
+  padding-top: 8px;
+}
+
+.button-big {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.button-icon {
+  color: #000000;
+  background-color: #FFF;
+}
+
+button.button-reset {
+  background-color: transparent;
+  /*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
+- я правильно сделал кнопку прозрачной?*/
+border: transparent;
+}
+
+/* РЕШИЛ проблему специфичности следующим образом: подглядел в режиме разработчика, что кнопка "хочу сюда"
+подсвечивается в браузере как класс, который я тут и применил, изменив параметр цвета */
+a.navigation-link.button {
+  color:#FFF;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
+  и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
+}
+
+.newsletter-button {
+  border-radius: 0 4px 4px 0;
+  background:#82B3D3;
+}
+
+/* Раздел "hero" пока не трогал, только добавил фон */
+
+/* Раздел "Преимущества" */
+
+.main-index {
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы)*/
+  flex-grow: 1;
+}
+
+.lead {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  display: flex;
+  /*width: */
+  margin: 0;
+  padding: 0;
+}
+
+.cool-advantages {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333; /* почему-то в макете указан коричневый цвет текста */
+}
+/* назначил отдельный класс чтобы обособить 1 и 5 преимущество с белым цветом шрифта */
+.advantages-item-outer {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color:#FFFFFF;
+  background-color: #82B3D3;
+  text-transform: uppercase;
+  width: 400px;
+  margin: auto;
+}
+
+.advantages-item {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  /*background-color: #82B3D3; ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
+  но различается по оттенкам в процентах. Как мне это применить? */
+  text-transform: uppercase;
+  width: 400px;
+  margin: auto;
+}
+
+.advantages-item-1,
+.advantages-item-3 {
+  background-color: #83B3D31F;
+}
+
+.advantages-item-2 {
+  background-color: #FFF;
+}
+
+.advantages-description {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-transform: none;
+}
+
+.true-town-image,
+.devil-bridge-image {
+  flex: 0 0 800px;
+}
+/* Раздел "Рекомендации" */
+
+.rest-in-sedona {
+  width: 1200px;
+  min-height: 246px;
+  padding: 64px, 0, 64px, 0;
+}
+
+.recommendations-heading {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: Center;
+  color:#000000;
+  text-transform: uppercase;
+}
+
+.recommendations-list {
+  display: flex;
+}
+
+.recommendations-item {
+  width: 400px;
+  min-height: 385;
+  margin: auto;
+  padding: 80px, 85px, 80px, 85px;
+}
+
+.recommendations-item-1,
+.recommendations-item-3 {
+background-color: #82B3D3;
+}
+
+.recommendations-item-2 {
+  background-color: #FFF;
+}
+
+.recommendations-service {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.recommendations-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+}
+
+.recommendations-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+  /*background-color: #fff;*/
+}
+
+.housing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 406px;
+  padding: 96px, 304px, 96px, 304px;
+  margin: auto;
+}
+
+.housing-interest {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+  background-color: #fff;
+}
+
+.housing-data {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  background-color: #fff;
+  }
+
+/* FOOTER */
+
+.newsletter-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-image: url("../images/subscribe.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.newsletter-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 414.86px;
+  margin: 0 auto;
+  background-color: #FFF;
+  /*background-size: 100% auto;* ЭТОТ ПАРАМЕТР нужен?*/
+}
+
+.newsletter-subscribe {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  }
+
+.newsletter-quality {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  }
+
+.newsletter-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  }
+
+  .footer-bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 1200px;
+    max-width: 0 auto;
+  }
+
+  .footer-social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 142px;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 0, 10px, 0, 10px;
+  }
+
+.contacts-phone {
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+color: #000;
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+  }
+
+  /* ВОПРОС: как корректно отделить стилизацию разных страниц в css-файле?
+  Ниже - идут стили внутренней страницы */
+
+/*.inner-header {
+  background-image: image;
+}*/
+
+.inner-header-title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  color: #FFF;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+}
+
+/*.catalog-box {
+
+}*/
+
+.button-icon-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 160px;
+  min-height: 48px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFF;
+  text-transform: capitalize;}
+
+.catalog-filter-item {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  color: #FFF;
+}
+
+.hotels-numbers {
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+color: #000;
+text-transform: uppercase;
+}
+
+.select-control {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
+
+a, h3, .hotel-card-title { /* ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
+  сделал наугад, получилось удалить подчеркивание в названиях гостиниц, но не уверен, что оформление корректно */
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+color: #000;
+text-decoration: none;
+}
+
+.hotel-card-subscription,
+.hotel-card-price {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
+
+.hotels-searching {
+  width: 1200px;
+  min-height: 1285px;
+  padding: 50px, 70px, 60px, 70px;
+}
+
+.result-counter {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 1060px;
+  min-height: 49px;
+}

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиницы Седоны</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <base href="https://htmlacademy-htmlcss.github.io/2426581-sedona-1/6/">
+</head>
+  <body>
+    <div class="page-container">
+      <header class="page-header">
+        <!--ДЛЯ СЕБЯ - подумать о применении атрибутов ленивой загрузки decoding=async и loading="lazy"-->
+        <a class="page-area" href="index.html">
+          <img class="logo" src="images/icons/logo-header.svg" width="140"
+            height="70" alt="логотип Sedona">
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                О Седоне
+              </a>
+            </li>
+            <li class="navigation-item-current">
+              <a class="navigation-link" href="hotels.html">
+                Гостиницы
+              </a>
+            </li>
+          </ul>
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link navigation-user-link-search"
+                href="#">
+                <img src="images/icons/search.svg" width="20" height="20"
+                  alt="#">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="navigation-user-link navigation-user-link-favorite"
+                href="#">
+                <img src="images/icons/chosen.svg" width="18" height="17"
+                  alt="#">
+                <span class="visually-hidden">Избранное</span>
+                <span class="notification-badge">12</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link button button-small" href="#">
+                Хочу сюда!
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-inner">
+        <header class="inner-header">
+          <!--НЕ УДАЕТСЯ подгрузить фоновое изображение -
+            не могу извлечь из фигмы почему-то отдельно от текста-->
+          <div class="inner-header-image">
+            <img src="/images/background-1.png" alt>
+          </div>
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
+            <a class="breadcrumbs-link" href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Гостиницы</a>
+          </li>
+        </ul>
+      </header>
+      <!--ДИВ СЕКЦИЯ для всего каталога-->
+      <div class="catalog-box">
+        <section class="catalog-hotels">
+          <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+          <form class="catalog-filter" action="https://echo.html.ru/"
+            method="post">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox"
+                      name="swimming-pool" checked>
+                    Бассейн
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="parking"
+                      checked>Парковка
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox"
+                      name="wi-fi">Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Тип жилья:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio"
+                      name="housing-type"
+                      value="hotel" checked>Гостиница
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio"
+                      name="housing-type"
+                      value="motel">Мотель
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio"
+                      name="housing-type"
+                      value="apartments">Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <!--ВОПРОС по верстке:
+  не знаю в какой тег обернуть секцию рэйндж. скопировал форму из Сети.
+  Не знаю, как сверстать этот раздел.
+  Кажется, это тема будет раскрыта в будущих скринкастах
+<section class="catalog-price-range">
+  <label for="price">Стоимость, <span>₽:</span></label>
+  <input class="price-range" type="range" id="price" name="price" min="0" max="9000"/>
+</section>-->
+            <div class="form-buttons">
+              <button class="button button-blue"
+                type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class="hotels-searching">
+        <div class="result-counter">
+          <section>
+            <form class="hotels-search-result">
+              <!--h2 ниже называется "Счетчик результатов"-->
+              <span class="hotels-numbers">Найдено гостиниц: 38</span>
+              <select class="select-control" aria-label="сортировка">
+                <img src="images/icons/select.svg" width="11,93" height="7,02"
+                  alt="#">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="#">#</option>
+                <option value="#">#</option>
+              </select>
+              <!--ВОПРОС:
+                какой тег должен быть у блока с тремя иконками, чтобы он был на одной строке со счетчиком результатов?-->
+              <div class="button-icon-view">
+                <button class="button button-icon button-light" type="button">
+                  <!--ЗДЕСЬ нужно подумать с классом, чтобы общая стилизация button здесь не проявлялась-->
+                  <img src="images/icons/view-1.svg" width="48" height="48"
+                    alt="#">
+                  <span class="visually-hidden">Показать мелкие значки</span>
+                </button>
+                <button class="button button-icon" type="button">
+                  <img src="images/icons/view-2.svg" width="48" height="48"
+                    alt="#">
+                  <span class="visually-hidden">Показать карточки</span>
+                </button>
+                <button class="button button-icon" type="button">
+                  <img src="images/icons/view-3.svg" width="48" height="48"
+                    alt="#">
+                  <span class="visually-hidden">Показать список</span>
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+        <!--карточки товаров можно обернуть в <div> или <article>, но то выбрать мне - пока что так и не понимаю-->
+        <!--div-->
+        <ul class="hotel-list">
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-1.jpg"
+                alt="ночные звезды через устье пещеры">
+              <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 4000 ₽</span>
+            <!--закомментил все имгэшки к кнопкам, потом удалю
+      <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-blue" type="button">в
+              избранное</button>
+            <div class="rating-area">
+              <span>Рейтинг: 8,5</span>
+              <img src="#" alt="оценка - четыре звезды из пяти">
+            </div>F
+          </li>
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-2.jpg"
+                alt="Радуга в грозовом небе над скалами">
+              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 5000 ₽</span>
+            <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/icons/button-in-chosen.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-green"
+              type="button">в
+              избранном</button>
+            <!--Рейтинг: 9,2-->
+            <div class="rating-area">
+              <span>Рейтинг: 9,2</span>
+              <img src="#" alt="оценка - четыре звезды из пяти">
+            </div>
+          </li>
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-3.jpg"
+                alt="красная скала и голубое небо ясным днем">
+              <h3 class="hotel-card-title">Desert Quail Inn</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 2500 ₽</span>
+            <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-blue" type="button">в
+              избранное</button>
+            <!--Рейтинг: 6,9-->
+            <div class="rating-area">
+              <span>Рейтинг: 6,9</span>>
+              <img src="#" alt="оценка - три звезды из пяти">
+            </div>
+          </li>
+          <li class="hotel-card">
+            <a class="hotel-card-link" href="hotel.html">
+              <img class="hotel-card-image" src="images/hotel-4.jpg"
+                alt="ночное небо над скалами, усеянное звездами">
+              <h3 class="hotel-card-title">GreenTree Inn</h3>
+            </a>
+            <span class="hotel-card-subscription">Гостиница</span>
+            <span class="hotel-card-price">От 1500 ₽</span>
+            <!-- <img src="images/button-details-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button"
+              type="button">подробнее</button>
+            <!-- <img src="images/button-change-1.png" width="140" height="36" alt="#"> -->
+            <button class="hotel-card-button button button-blue" type="button">в
+              избранное</button>
+            <!--Рейтинг: 5,0-->
+            <div class="rating-area">
+              <span>Рейтинг: 5,0</span>
+              <img src="#" alt="оценка - две звезды из пяти">
+            </div>
+          </li>
+        </ul>
+        <!--для пагинации меняю ul на ol!-->
+        <ol class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current">1</a>
+            <!-- <img src="images/pagination-1.png" width="60" height="60" alt=""> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+            <!-- <img src="images/pagination-2.png" width="60" height="60" alt="#"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+            <!-- <img src="images/pagination-3.png" width="60" height="60" alt="#"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+            <!-- <img src="images/pagination-4.png" width="60" height="60" alt="#"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+            <!-- <img src="images/pagination-#.png" width="60" height="60" alt="###"> -->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+            <!-- <img src="images/pagination-10.png" width="60" height="60" alt="#"> -->
+          </li>
+        </ol>
+      </div>
+    </main>
+    <!--FOOTER-->
+    <footer class="page-footer">
+      <div class="newsletter-inner">
+        <section class="newsletter">
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама, честное
+            бойскаутское!</p>
+          <form class="newsletter-form" action="https://echo.html.ru/"
+            method="post">
+            <!--тегом label оборачиваю input.  но не очень понимаю как с ним работать-->
+            <label>
+              <input class="field" placeholder="Ваш e-mail" type="email"
+                name="newsletter-email" id="newsletter-email" required>
+            </label>
+            <button class="button newsletter-button" type="submit">
+              Подписаться
+            </button>
+          </form>
+          <!--<img src="images/subscribe.jpg" width="1,200px" height="414,86px"> BACKGROUND IMG ЗДЕСЬ НЕ НУЖЕН-->
+        </section>
+      </div>
+      <div class="footer-bottom-container">
+        <section class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="social-link" href="https://vk.com/htmlacademy">
+                <img src="images/icons/social-vk.svg" width="24" height="14"
+                  alt="#">
+              </a>
+              <span class="visually-hidden">мы во VKontakte</span>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-link" href="https://t.me/htmlacademy">
+                <img src="images/icons/social-tg.svg" width="18" height="16"
+                  alt="#">
+              </a>
+              <span class="visually-hidden">мы в Telegram</span>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-link"
+                href="https://youtube.com/user/htmlacademyru">
+                <img src="images/icons/social-yt.svg" width="22" height="17"
+                  alt="#">
+              </a>
+              <span class="visually-hidden">мы на Youtube</span>
+            </li>
+          </ul>
+        </section>
+        <div class="footer-contacts">
+          <a class="contacts-phone" href="tel:+78128121212">+7 (812)
+            812-12-12</a>
+        </div>
+        <div>
+          <a class="copyright" href="https://htmlacademy.ru/">
+            <img class="logo" src="images/icons/HTML Academy.svg" width="115"
+              height="33" alt="логотип HTML-Академии">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
