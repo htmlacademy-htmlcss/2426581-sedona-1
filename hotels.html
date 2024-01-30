@@ -149,32 +149,38 @@
         </section>
       </div>
       <div class="hotels-searching">
-        <section>
-          <form class="hotels-search-result">
-            <!--h2 ниже называется "Счетчик результатов"-->
-            <h2 class="hotels-numbers">Найдено гостиниц: 38</h2>
-            <select class="select-control" aria-label="сортировка">
-              <img src="images/icons/select.svg" width="11,93" height="7,02"
-                alt="#">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="#">#</option>
-              <option value="#">#</option>
-            </select>
-            <button class="button button-icon button-light" type="button">
-              <!--ЗДЕСЬ нужно подумать с классом, чтобы общая стилизация button здесь не проявлялась-->
-              <img src="images/icons/view-1.svg" width="48" height="48" alt="#">
-              <span class="visually-hidden">Показать мелкие значки</span>
-            </button>
-            <button class="button button-icon" type="button">
-              <img src="images/icons/view-2.svg" width="48" height="48" alt="#">
-              <span class="visually-hidden">Показать карточки</span>
-            </button>
-            <button class="button button-icon" type="button">
-              <img src="images/icons/view-3.svg" width="48" height="48" alt="#">
-              <span class="visually-hidden">Показать список</span>
-            </button>
-          </form>
-        </section>
+        <div class="result-counter">
+          <section>
+            <form class="hotels-search-result">
+              <!--h2 ниже называется "Счетчик результатов"-->
+              <h2 class="hotels-numbers">Найдено гостиниц: 38</h2>
+              <select class="select-control" aria-label="сортировка">
+                <img src="images/icons/select.svg" width="11,93" height="7,02"
+                  alt="#">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="#">#</option>
+                <option value="#">#</option>
+              </select>
+              <button class="button button-icon button-light" type="button">
+                <!--ЗДЕСЬ нужно подумать с классом, чтобы общая стилизация button здесь не проявлялась-->
+                <img src="images/icons/view-1.svg" width="48" height="48"
+                  alt="#">
+                <span class="visually-hidden">Показать мелкие значки</span>
+              </button>
+              <button class="button button-icon" type="button">
+                <img src="images/icons/view-2.svg" width="48" height="48"
+                  alt="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </button>
+              <button class="button button-icon" type="button">
+                <img src="images/icons/view-3.svg" width="48" height="48"
+                  alt="#">
+                <span class="visually-hidden">Показать список</span>
+              </button>
+            </form>
+          </section>
+        </div>
+
         <!--карточки товаров можно обернуть в <div> или <article>, но то выбрать мне - пока что так и не понимаю-->
         <ul class="hotel-list">
           <li class="hotel-card">
