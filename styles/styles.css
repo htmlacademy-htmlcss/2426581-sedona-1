@@ -412,9 +412,9 @@ text-decoration: none;
   /* ВОПРОС: как корректно отделить стилизацию разных страниц в css-файле?
   Ниже - идут стили внутренней страницы */
 
-..inner-header {
+/*.inner-header {
   background-image: image;
-}
+}*/
 
 .inner-header-title {
   font-size: 60px;
@@ -432,8 +432,17 @@ text-decoration: none;
   color: #FFF;
 }
 
-.catalog-box {
+/*.catalog-box {
 
+}*/
+
+.button-icon-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 160px;
+  min-height: 48px;
 }
 
 .catalog-filter-title {
