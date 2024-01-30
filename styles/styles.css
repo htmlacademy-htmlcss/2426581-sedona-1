@@ -493,3 +493,11 @@ color: #333;
   min-height: 1285px;
   padding: 50px, 70px, 60px, 70px;
 }
+
+.result-counter {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 1060px;
+  min-height: 49px;
+}
