@@ -405,6 +405,7 @@ background-color: #82B3D3;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+    align-items: center;
     width: 1200px;
     min-height: 120px;
     /*max-width: 0 auto;*/
@@ -414,6 +415,7 @@ background-color: #82B3D3;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+    align-items: center;
     width: 1050px;
     min-height: 60px;
     margin: 40px 70px;
@@ -423,6 +425,7 @@ background-color: #82B3D3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     width: 142px;
     min-height: 50px;
     margin: 0 auto;
@@ -438,6 +441,7 @@ color: #000;
 text-align: center;
 text-transform: uppercase;
 text-decoration: none;
+align-items: center;
   }
 
 /*.inner-header {
@@ -450,6 +454,7 @@ text-decoration: none;
   font-weight: 700;
   line-height: 78px;
   color: #FFF;
+  align-items: center;
 }
 
 .breadcrumbs {
