@@ -63,7 +63,7 @@
           <!--НЕ УДАЕТСЯ подгрузить фоновое изображение -
             не могу извлечь из фигмы почему-то отдельно от текста-->
           <div class="inner-header-image">
-            <img src="/images/background-1.png" alt>
+            <img src="/images/Фильтр.jpg" alt>
           </div>
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -186,8 +186,7 @@
           </section>
         </div>
         <!--оборачиваю секцию hotel-list в див (ul пока в комменты)-->
-        <div class="hotel-list">
-          <div class="hotel-row-1">
+          <div class="hotel-list">
             <div class="hotel-card">
               <a class="hotel-card-link" href="hotel.html">
                 <img class="hotel-card-image" src="images/hotel-1.jpg"
@@ -199,8 +198,7 @@
               <button class="hotel-card-button button"
                 type="button">подробнее</button>
               <button class="hotel-card-button button button-blue"
-                type="button">в
-                избранное</button>
+                type="button">в избранное</button>
               <div class="rating-area">
                 <span>Рейтинг: 8,5</span>
                 <img src="#" alt="оценка - четыре звезды из пяти">
@@ -244,8 +242,6 @@
                 <img src="#" alt="оценка - три звезды из пяти">
               </div>
             </div>
-          </div>
-          <div class="hotel-row-2">
             <div class="hotel-card">
               <a class="hotel-card-link" href="hotel.html">
                 <img class="hotel-card-image" src="images/hotel-4.jpg"
@@ -265,8 +261,7 @@
                 <img src="#" alt="оценка - две звезды из пяти">
               </div>
             </div>
-          </div> <!--ЗДЕСЬ Я ОСТАНОВЛЮСЬ 30.01 - ТРУДНОСТИ с сеткой-->
-        </div>
+          </div>
 
         <!--<ul class="hotel-list">
           <li class="hotel-card">
@@ -342,7 +337,7 @@
             </div>
           </li>
         </ul>-->
-        <!--для пагинации меняю ul на ol!-->
+        </ul>-->
         <ol class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -364,29 +359,28 @@
           </li>
         </ol>
       </div>
+      <section class="newsletter-inner">
+        <div class="newsletter-subscribe-area">
+          <h2 class="newsletter-subscribe">Подпишитесь на рассылку</h2>
+          <p class="newsletter-quality">
+            Только полезная информация и никакого спама,<br> честное
+            бойскаутское!
+          </p>
+        <form class="newsletter-form" action="https://echo.html.ru/"
+          method="post">
+          <label>
+            <input class="field" placeholder="Ваш e-mail" type="email"
+              name="newsletter-email" id="newsletter-email" required>
+          </label>
+          <button class="button newsletter-button" type="submit">
+            Подписаться
+          </button>
+        </form>
+        </div>
+      </section>
     </main>
     <!--FOOTER-->
-    <footer class="page-footer">
-      <div class="newsletter-inner">
-        <section class="newsletter">
-          <h2>Подпишитесь на рассылку</h2>
-          <p>Только полезная информация и никакого спама, честное
-            бойскаутское!</p>
-          <form class="newsletter-form" action="https://echo.html.ru/"
-            method="post">
-            <!--тегом label оборачиваю input.  но не очень понимаю как с ним работать-->
-            <label>
-              <input class="field" placeholder="Ваш e-mail" type="email"
-                name="newsletter-email" id="newsletter-email" required>
-            </label>
-            <button class="button newsletter-button" type="submit">
-              Подписаться
-            </button>
-          </form>
-          <!--<img src="images/subscribe.jpg" width="1,200px" height="414,86px"> BACKGROUND IMG ЗДЕСЬ НЕ НУЖЕН-->
-        </section>
-      </div>
-      <div class="footer-bottom-container">
+      <footer class="footer-bottom-container">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
@@ -425,7 +419,6 @@
               height="33" alt="логотип HTML-Академии">
           </a>
         </div>
-      </div>
     </footer>
   </div>
 </body>

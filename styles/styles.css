@@ -41,8 +41,6 @@ body {
 
 .page-header {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
   width: 1200px;
   min-height: 64px;
 }
@@ -51,7 +49,6 @@ body {
 .navigation {
   display: flex;
   width: 1200px;
-  margin: 0 auto;
   /*ДЛЯ СЕБЯ: это свойство/значение применяются для отцентровки блока на странице
     ВОПРОС!: в Седоне нужны другие значения margin? у меня же не по центру (страницы) элементы навигации расположены */
 }
@@ -208,7 +205,6 @@ a.navigation-link.button {
   background-color: #82B3D3;
   text-transform: uppercase;
   width: 400px;
-  margin: auto;
 }
 
 .advantages-item {
@@ -221,7 +217,6 @@ a.navigation-link.button {
   но различается по оттенкам в процентах. Как мне это применить? */
   text-transform: uppercase;
   width: 400px;
-  margin: auto;
 }
 
 .advantages-item-1,
@@ -268,7 +263,6 @@ text-transform: none;
 .recommendations-item {
   width: 400px;
   min-height: 385;
-  margin: auto;
   padding: 80px, 85px, 80px, 85px;
 }
 
@@ -334,18 +328,21 @@ background-color: #82B3D3;
   background-color: #fff;
   }
 
-/* FOOTER */
 
 .newsletter-index {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  /*align-content:space-evenly;*/
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
   text-align: center;
+  width: 1200px;
+  min-height: 414,86px;
+  padding: 96px, 258px, 104px, 258px;
+  margin: auto;
 }
 
 .newsletter-inner {
@@ -354,9 +351,18 @@ background-color: #82B3D3;
   align-items: center;
   width: 1200px;
   min-height: 414.86px;
-  margin: 0 auto;
+  padding: 96px, 258px, 104px, 258px;
+  margin: auto;
   background-color: #FFF;
   /*background-size: 100% auto;* ЭТОТ ПАРАМЕТР нужен?*/
+}
+
+.newsletter-subscribe-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 684px;
+  min-height: 214,86px;
 }
 
 .newsletter-subscribe {
@@ -379,6 +385,8 @@ background-color: #82B3D3;
   line-height: 36px;
   text-align: center;
   }
+
+  /* FOOTER */
 
   .footer-bottom-container {
     display: flex;
@@ -408,9 +416,6 @@ text-align: center;
 text-transform: uppercase;
 text-decoration: none;
   }
-
-  /* ВОПРОС: как корректно отделить стилизацию разных страниц в css-файле?
-  Ниже - идут стили внутренней страницы */
 
 /*.inner-header {
   background-image: image;
@@ -498,37 +503,32 @@ color: #333;
 }
 
 .hotels-searching {
-  width: 1200px;
   min-height: 1285px;
   padding: 50px, 70px, 60px, 70px;
 }
 
+.hotels-search-result {
+  display: flex;
+  justify-content: space-between;
+
+}
 .result-counter {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
   width: 1060px;
   min-height: 49px;
 }
 
 .hotel-list {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 1060px;
   min-height: 896px;
-  margin: 0 auto;
-}
-
-.hotel-row-1,
-.hotel-row-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1060px;
-  min-height: 438px;
+  margin: auto;
 }
 
 .hotel-card {
+  width: 340px;
+  min-height: 438px;
   padding: 20px;
 }
