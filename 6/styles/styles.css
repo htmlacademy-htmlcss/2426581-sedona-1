@@ -37,12 +37,23 @@ body {
   margin: 0 auto; /* ВОПРОС: я могу далее не указывать ширину любого блока, если она равна ширине макета? */
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* ХЕДЕР */
 
 .page-header {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
   width: 1200px;
   min-height: 64px;
 }
@@ -51,7 +62,6 @@ body {
 .navigation {
   display: flex;
   width: 1200px;
-  margin: 0 auto;
   /*ДЛЯ СЕБЯ: это свойство/значение применяются для отцентровки блока на странице
     ВОПРОС!: в Седоне нужны другие значения margin? у меня же не по центру (страницы) элементы навигации расположены */
 }
@@ -208,7 +218,6 @@ a.navigation-link.button {
   background-color: #82B3D3;
   text-transform: uppercase;
   width: 400px;
-  margin: auto;
 }
 
 .advantages-item {
@@ -221,7 +230,6 @@ a.navigation-link.button {
   но различается по оттенкам в процентах. Как мне это применить? */
   text-transform: uppercase;
   width: 400px;
-  margin: auto;
 }
 
 .advantages-item-1,
@@ -268,7 +276,6 @@ text-transform: none;
 .recommendations-item {
   width: 400px;
   min-height: 385;
-  margin: auto;
   padding: 80px, 85px, 80px, 85px;
 }
 
@@ -334,18 +341,21 @@ background-color: #82B3D3;
   background-color: #fff;
   }
 
-/* FOOTER */
 
 .newsletter-index {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  /*align-content:space-evenly;*/
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
   text-align: center;
+  width: 1200px;
+  min-height: 414,86px;
+  padding: 96px, 258px, 104px, 258px;
+  margin: auto;
 }
 
 .newsletter-inner {
@@ -354,9 +364,18 @@ background-color: #82B3D3;
   align-items: center;
   width: 1200px;
   min-height: 414.86px;
-  margin: 0 auto;
+  padding: 96px, 258px, 104px, 258px;
+  margin: auto;
   background-color: #FFF;
   /*background-size: 100% auto;* ЭТОТ ПАРАМЕТР нужен?*/
+}
+
+.newsletter-subscribe-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 684px;
+  min-height: 214,86px;
 }
 
 .newsletter-subscribe {
@@ -380,21 +399,35 @@ background-color: #82B3D3;
   text-align: center;
   }
 
-  .footer-bottom-container {
+  /* FOOTER */
+
+  .footer-container {
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content:space-between;
+    align-items: center;
     width: 1200px;
-    max-width: 0 auto;
+    min-height: 120px;
+    /*max-width: 0 auto;*/
+  }
+
+  .footer-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 1050px;
+    min-height: 60px;
+    margin: 40px 70px;
   }
 
   .footer-social-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     width: 142px;
     min-height: 50px;
-    margin: 0 auto;
     padding: 0, 10px, 0, 10px;
   }
 
@@ -407,12 +440,10 @@ color: #000;
 text-align: center;
 text-transform: uppercase;
 text-decoration: none;
+align-items: center;
   }
 
-  /* ВОПРОС: как корректно отделить стилизацию разных страниц в css-файле?
-  Ниже - идут стили внутренней страницы */
-
-/*.inner-header {
+/*.filter-header {
   background-image: image;
 }*/
 
@@ -422,6 +453,7 @@ text-decoration: none;
   font-weight: 700;
   line-height: 78px;
   color: #FFF;
+  align-items: center;
 }
 
 .breadcrumbs {
@@ -432,10 +464,32 @@ text-decoration: none;
   color: #FFF;
 }
 
-/*.catalog-box {
+/*.filter {
 
 }*/
 
+.catalog-hotels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  min-height: 412px;
+  padding: 35px, 70px, 70px, 70px;
+  /*align-content:space-evenly;*/
+  background-image: url("../images/filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+}
+
+.sorting {
+  display: flex;
+  width: 1060px;
+  min-height: 49px;
+  justify-content: space-between;
+  align-items: center;
+}
 .button-icon-view {
   display: flex;
   flex-direction: row;
@@ -498,15 +552,32 @@ color: #333;
 }
 
 .hotels-searching {
-  width: 1200px;
   min-height: 1285px;
   padding: 50px, 70px, 60px, 70px;
 }
 
+.hotels-search-result {
+  display: flex;
+  justify-content: space-between;
+
+}
 .result-counter {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
   width: 1060px;
   min-height: 49px;
+}
+
+.hotel-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1060px;
+  min-height: 896px;
+  margin: auto;
+}
+
+.hotel-card {
+  width: 340px;
+  min-height: 438px;
+  padding: 20px;
 }

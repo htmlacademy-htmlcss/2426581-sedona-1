@@ -218,14 +218,12 @@
               <div class="recommendations-item recommendations-item-1">
                 <h3 class="recommendations-name">Жильё</h3>
                 <p class="recommendations-description">Рекомендуем пожить <br> в
-                  настоящем
-                  мотеле, <br> всё как в кино!</p>
+                  настоящем мотеле, <br> всё как в кино!</p>
               </div>
               <div class="recommendations-item recommendations-item-2">
                 <h3 class="recommendations-name">Еда</h3>
                 <p class="recommendations-description">Всегда заказывайте <br>
-                  топовый
-                  фирменный бургер, <br> вы не разочаруетесь!
+                  топовый фирменный бургер, <br> вы не разочаруетесь!
                 </p>
               </div>
               <div class="recommendations-item recommendations-item-3">
@@ -266,39 +264,36 @@
             <a class="button button-big" href="hotels.html">ПОИСК ГОСТИНИЦЫ В
               СЕДОНЕ</a>
           </div>
+          <section class="newsletter-index">
+            <div class="newsletter-subscribe-area">
+              <h2 class="newsletter-subscribe">Подпишитесь на рассылку</h2>
+              <p class="newsletter-quality">
+                Только полезная информация и никакого спама,<br> честное
+                бойскаутское!
+              </p>
+              <form
+                class="newsletter-form"
+                action="https://echo.html.ru"
+                method="post">
+                <label>
+                  <input
+                    class="field"
+                    placeholder="Ваш e-mail"
+                    type="email"
+                    name="newsletter-email"
+                    id="newsletter-email"
+                    required />
+                </label>
+                <button class="button newsletter-button" type="submit">
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </section>
         </main>
         <!--FOOTER-->
-        <footer class="page-footer">
-          <section class="newsletter-index">
-            <h2 class="newsletter-subscribe">Подпишитесь на рассылку</h2>
-            <p class="newsletter-quality">
-              Только полезная информация и никакого спама,<br> честное
-              бойскаутское!
-            </p>
-            <form
-              class="newsletter-form"
-              action="https://echo.html.ru"
-              method="post">
-              <!--СЕБЕ: внедряю пропущенный тег label (оборачиваю им input).
-                не очень понимаю как с ним работать-->
-              <label>
-                <input
-                  class="field"
-                  placeholder="Ваш e-mail"
-                  type="email"
-                  name="newsletter-email"
-                  id="newsletter-email"
-                  required />
-              </label>
-              <button class="button newsletter-button" type="submit">
-                Подписаться
-              </button>
-            </form>
-            <img src="images/subscribe.jpg" width="1,200px" height="414,86px">
-          </section>
-          <div class="footer-bottom-container">
-            <!--ОБЕРНУЛ нижнюю часть футера, чтобы оптимально расположить элементы по сетке.
-            Но пока не очень все получается (левый блок с иконками уровнем ниже чем номер телефона и копирайт)-->
+        <footer class="page-footer footer-container">
+          <div class="footer-elements">
             <section class="footer-social">
               <h2 class="visually-hidden">Социальные сети</h2>
               <div class="footer-social-list">
@@ -351,6 +346,7 @@
               </a>
             </div>
           </div>
+
         </footer>
       </div>
     </body>
