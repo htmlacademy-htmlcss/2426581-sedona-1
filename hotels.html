@@ -60,11 +60,6 @@
       </header>
       <main class="main-inner">
         <header class="inner-header">
-          <!--НЕ УДАЕТСЯ подгрузить фоновое изображение -
-            не могу извлечь из фигмы почему-то отдельно от текста-->
-          <div class="inner-header-image">
-            <img src="/images/Фильтр.jpg" alt>
-          </div>
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <a class="breadcrumbs-link" href="index.html">
@@ -77,7 +72,7 @@
         </ul>
       </header>
       <!--ДИВ СЕКЦИЯ для всего каталога-->
-      <div class="catalog-box">
+      <div class="filter">
         <section class="catalog-hotels">
           <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
           <form class="catalog-filter" action="https://echo.html.ru/"
@@ -132,7 +127,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <!--ВОПРОС по верстке:
   не знаю в какой тег обернуть секцию рэйндж. скопировал форму из Сети.
   Не знаю, как сверстать этот раздел.
@@ -148,6 +142,7 @@
             </div>
           </form>
         </section>
+        <!--ГРАНИЦА ВЕРХНЕЙ КАРТИНКИ ФОН-->
       </div>
       <div class="hotels-searching">
         <div class="result-counter">
@@ -162,8 +157,6 @@
                 <option value="#">#</option>
                 <option value="#">#</option>
               </select>
-              <!--ВОПРОС:
-                какой тег должен быть у блока с тремя иконками, чтобы он был на одной строке со счетчиком результатов?-->
               <div class="button-icon-view">
                 <button class="button button-icon button-light" type="button">
                   <!--ЗДЕСЬ нужно подумать с классом,

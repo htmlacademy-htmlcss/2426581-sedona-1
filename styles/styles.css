@@ -428,7 +428,6 @@ background-color: #82B3D3;
     align-items: center;
     width: 142px;
     min-height: 50px;
-    margin: 0 auto;
     padding: 0, 10px, 0, 10px;
   }
 
@@ -465,10 +464,32 @@ align-items: center;
   color: #FFF;
 }
 
-/*.catalog-box {
+/*.filter {
 
 }*/
 
+.catalog-hotels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  min-height: 412px;
+  padding: 35px, 70px, 70px, 70px;
+  /*align-content:space-evenly;*/
+  background-image: url("../images/filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+}
+
+.sorting {
+  display: flex;
+  width: 1060px;
+  min-height: 49px;
+  justify-content: space-between;
+  align-items: center;
+}
 .button-icon-view {
   display: flex;
   flex-direction: row;
