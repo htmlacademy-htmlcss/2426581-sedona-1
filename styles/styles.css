@@ -30,13 +30,7 @@ body {
   background-color: #fff;
 }
 
-.page-container { /*ПЭЙДЖ_КОНТЕЙНЕР*/
-  /*ВОПРОС: для контейнера нежелательно задавать направление флекса - ведь ось расположения элементов на странице и горизонтальная, и вертикальная?
-  В барбершопе, по моему, направление задано изначально для всего контейнера*/
-  width: 1200px;
-  margin: 0 auto; /* ВОПРОС: я могу далее не указывать ширину любого блока, если она равна ширине макета? */
-}
-
+/*свойства, полностью скрывающие подписи с классом visually-hidden для юзера*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -50,20 +44,24 @@ body {
   overflow: hidden;
 }
 
-/* ХЕДЕР */
+/*ПЭЙДЖ_КОНТЕЙНЕР*/
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
+/* ХЕДЕР */
 .page-header {
   display: flex;
   width: 1200px;
   min-height: 64px;
 }
-/*БЛОК НАВИГАЦИИ*/
 
+/*БЛОК НАВИГАЦИИ*/
 .navigation {
   display: flex;
-  width: 1200px;
-  /*ДЛЯ СЕБЯ: это свойство/значение применяются для отцентровки блока на странице
-    ВОПРОС!: в Седоне нужны другие значения margin? у меня же не по центру (страницы) элементы навигации расположены */
+  width: 1200px; /*ВОПРОС: в каких все таки случаях ширину элемента, совпадающую с шириной page-container нужно указывать у элемента?
+  (удалил width и блок навигации сразу сжался в центр хедера)*/
 }
 
 .navigation-list{
@@ -128,8 +126,6 @@ body {
   text-transform: uppercase;
   border: 0;
   border-radius: 4px;
-  padding-left: 50px;
-  padding-top: 8px;
 }
 
 .button-big {
@@ -167,13 +163,20 @@ a.navigation-link.button {
 }
 
 .newsletter-button {
-  border-radius: 0 4px 4px 0;
-  background:#82B3D3;
+font-family: PT Sans;
+font-size: 20px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0;
+text-align: center;
+width: 232px;
+min-height: 52px;
+border-radius: 0, 4px, 4px, 0;
+background-color: #82B3D3;
+padding: 8px, 50px, 8px, 50px;
 }
 
-/* Раздел "hero" пока не трогал, только добавил фон */
-
-/* Раздел "Преимущества" */
+/* MAIN */
 
 .main-index {
   background-image: url("../images/index-background.jpg");
@@ -341,21 +344,19 @@ background-color: #82B3D3;
   background-color: #fff;
   }
 
+/*БЛОК РАССЫЛКА*/
 
 .newsletter-index {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /*align-content:space-evenly;*/
+  width: 1200px;
+  min-height: 414.86px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 96px, 258px, 104px, 258px;
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  color: #FFFFFF;
-  text-align: center;
-  width: 1200px;
-  min-height: 414,86px;
-  padding: 96px, 258px, 104px, 258px;
-  margin: auto;
 }
 
 .newsletter-inner {
@@ -364,18 +365,19 @@ background-color: #82B3D3;
   align-items: center;
   width: 1200px;
   min-height: 414.86px;
-  padding: 96px, 258px, 104px, 258px;
-  margin: auto;
+  /*padding: 96px 258px 104px;*/
   background-color: #FFF;
-  /*background-size: 100% auto;* ЭТОТ ПАРАМЕТР нужен?*/
 }
+
 
 .newsletter-subscribe-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 684px;
-  min-height: 214,86px;
+  min-height: 214.86px;
+  padding: 96px 258px 104px;
+  gap: 10px;
 }
 
 .newsletter-subscribe {
@@ -383,6 +385,9 @@ background-color: #82B3D3;
   font-weight: 700;
   line-height: 36px;
   text-align: left;
+  text-transform: uppercase;
+  width: 404px;
+  min-height: 36,35px;
   }
 
 .newsletter-quality {
@@ -390,14 +395,38 @@ background-color: #82B3D3;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  /*margin-bottom: 54px;*/
   }
+
+.newsletter-form {
+  display: flex;
+}
+
+.field {
+font-family: PT Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0;
+text-align: left;
+width: 452px;
+min-height: 52px;
+padding: 12px, 20px, 12px, 20px;
+border-radius: 4px, 0, 0, 4px;
+margin-left: auto;
+gap: 260px;/*ВОПРОС: что такое GAP?*/
+background-color: #FFFFFF;
+}
 
 .newsletter-button {
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  width: 232px;
+  min-height: 52px;
   }
+
 
   /* FOOTER */
 
@@ -408,6 +437,8 @@ background-color: #82B3D3;
     align-items: center;
     width: 1200px;
     min-height: 120px;
+    padding-top: 40px;
+    padding-left: 70px;
     /*max-width: 0 auto;*/
   }
 
@@ -456,19 +487,7 @@ align-items: center;
   align-items: center;
 }
 
-.breadcrumbs {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  color: #FFF;
-}
-
-/*.filter {
-
-}*/
-
-.catalog-hotels {
+.filter-area {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -483,18 +502,37 @@ align-items: center;
 
 }
 
-.sorting {
+.filter-header {
   display: flex;
   width: 1060px;
+  min-height: 107px;
+}
+.breadcrumbs {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+}
+
+/*.filter {
+
+}*/
+
+/*.catalog-hotels*/
+
+.sorting {
+  display: flex;
+  width: 1,060px;
   min-height: 49px;
   justify-content: space-between;
   align-items: center;
+  /*margin-left: auto;*/
 }
+
 .button-icon-view {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin: 0 auto;
   width: 160px;
   min-height: 48px;
 }
@@ -561,11 +599,13 @@ color: #333;
   justify-content: space-between;
 
 }
+/*
 .result-counter {
   display: flex;
+  justify-content: space-between;
   width: 1060px;
   min-height: 49px;
-}
+}*/
 
 .hotel-list {
   display: flex;
