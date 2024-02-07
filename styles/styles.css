@@ -449,7 +449,7 @@ background-color: #FFFFFF;
     align-items: center;
     width: 1050px;
     min-height: 60px;
-    margin: 40px 70px;
+    /*margin: 40px 70px;*/
   }
 
   .footer-social-list {
