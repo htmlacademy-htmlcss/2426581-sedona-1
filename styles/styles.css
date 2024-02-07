@@ -523,10 +523,11 @@ align-items: center;
 
 .sorting {
   display: flex;
-  width: 1,060px;
+  width: 1060px;
   min-height: 49px;
   justify-content: space-between;
   align-items: center;
+  padding: 50px 70px 40px 70px;
   /*margin-left: auto;*/
 }
 
