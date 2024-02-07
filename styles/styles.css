@@ -457,6 +457,7 @@ background-color: #FFFFFF;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    list-style-type: none;
     width: 142px;
     min-height: 50px;
     padding: 0, 10px, 0, 10px;
