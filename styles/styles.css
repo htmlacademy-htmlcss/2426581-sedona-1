@@ -30,7 +30,7 @@ body {
   background-color: #fff;
 }
 
-/*свойства, полностью скрывающие подписи с классом visually-hidden для юзера*/
+/*здесь - свойства, полностью скрывающие подписи с классом visually-hidden для юзера*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -96,15 +96,23 @@ body {
   min-height: 485px;
   margin: 0 auto;
 }
+/*НУЖНО оформить "лесенку" между блоками хиро*/
+
+.hero-divider {
+  width: 1200px;
+  min-height: 57px;
+  background-image: url("../images/divider.png");
+}
+
 /* СОЗДАЛ отдельные классы для разделения картинки и текста под ней в блоке хиро */
 .hero-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 1200px;
-  min-height: hug; /* ВОПРОС - в макете есть точная цифра,
-  но не знаю как указать усредненный вариант (или мин/макс) */
-  margin: 0 auto;
+  min-height: 261px;
+  padding: 69px, 0, 69px, 0;
+  gap: 25px;
 }
 
 .row-1,
