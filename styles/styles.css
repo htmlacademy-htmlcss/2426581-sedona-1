@@ -427,6 +427,7 @@ background-color: #FFFFFF;
 }
 
 .newsletter-button {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
