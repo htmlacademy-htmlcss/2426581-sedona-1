@@ -352,6 +352,9 @@ background-color: #82B3D3;
   background-color: #fff;
   }
 
+.button-search {
+  display: inline-block;
+}
 /*БЛОК РАССЫЛКА*/
 
 .newsletter-index {
@@ -427,7 +430,7 @@ background-color: #FFFFFF;
 }
 
 .newsletter-button {
-  display: block;
+  display: inline-block; /*ВЗЯТО ИЗ РЕТРО 5*/
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
