@@ -73,9 +73,12 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 }
 
 .navigation-list{
+  display: flex;
+  flex-wrap: wrap;
   width: 459px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 .navigation-list a {
   font-size: 20px;
@@ -89,6 +92,11 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 .navigation-user {
   max-width: 348px;
   margin-left: auto;
+}
+
+.navigation-link {
+  display:block;
+  padding: 20px 16px;
 }
 
 /*.logo {
@@ -119,7 +127,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   align-items: center;
   width: 1200px;
   min-height: 261px;
-  padding: 69px, 0, 69px, 0;
+  padding: 69px, 0;
   gap: 25px;
 }
 
