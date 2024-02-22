@@ -111,6 +111,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; /* ???? */
+  align-items: center;
   max-width: 268px;
   margin: 0;
   margin-right: 70px; /* ???? */
@@ -140,6 +141,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   width: 1200px;
   min-height: 485px;
   margin: 0 auto;
+  /*margin-bottom: 69px;*/
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -171,8 +173,24 @@ bottom: 47.46%;
   align-items: center;
   width: 1200px;
   min-height: 261px;
-  padding: 69px, 0;
+}
+
+.hero-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 69px, 290px;
   gap: 25px;
+}
+
+.lead {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .row-1,
@@ -228,8 +246,9 @@ border: transparent;
 a.navigation-user-link.button {
   width: 160px;
   height: 36px;
-  padding: 8px, 50px;
+  padding: 8px, 34px;
   border-radius: 4px;
+  text-align: center;
   color: #FFFFFF;
 }
 
@@ -262,18 +281,15 @@ padding: 8px, 50px, 8px, 50px;
   flex-grow: 1;
 }
 
-.main-index {
-  /* здесь пока ничего*/
+/*.main-index {
 }
+здесь пока ничего*/
 
-.lead {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  color: #000000;
-  text-align: center;
-  text-transform: uppercase;
+
+/*.advantages {
+  margin: 0;
 }
+*/
 
 .advantages-list {
   display: flex;
@@ -288,6 +304,7 @@ padding: 8px, 50px, 8px, 50px;
   line-height: 26px;
   text-align: center;
   color: #333333; /* почему-то в макете указан коричневый цвет текста */
+  margin: 0;
 }
 /* назначил отдельный класс чтобы обособить 1 и 5 преимущество с белым цветом шрифта */
 .advantages-item-outer {
@@ -719,4 +736,13 @@ color: #333;
   width: 340px;
   min-height: 438px;
   padding: 20px;
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+  list-style-type: none;
 }
