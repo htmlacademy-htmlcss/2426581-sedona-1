@@ -674,8 +674,9 @@ color: #333;
 }
 
 .hotels-searching {
-  min-height: 1285px;
-  padding: 50px, 70px, 60px, 70px;
+  width: 1200px;
+  min-height: 1235px;
+  padding: 50px, 70px, 60px;
 }
 
 .hotels-search-result {
