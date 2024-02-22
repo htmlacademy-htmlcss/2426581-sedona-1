@@ -76,7 +76,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 .navigation-list{
   display: flex;
   flex-wrap: wrap;
-  width: 459px;
+  min-width: 459px;
   margin: 0;
   padding: 0;
   list-style-type: none;
