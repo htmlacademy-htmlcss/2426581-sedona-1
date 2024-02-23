@@ -88,7 +88,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   display: flex;
   flex-wrap: wrap;
   min-width: 339px;
-  margin: 0;
+  margin: 0; /* !!! */
   margin-right: 285px;
   padding: 0;
   list-style-type: none;
@@ -117,6 +117,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   margin-right: 70px; /* ???? */
   padding: 0;
   text-decoration: none;
+  list-style-type: none;
 }
 
 .navigation-user-link {
@@ -740,9 +741,20 @@ color: #333;
 
 .pagination-list {
   display: flex;
+  width: 1060px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
-  list-style-type: none;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
 }
