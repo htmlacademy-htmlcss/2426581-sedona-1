@@ -8,11 +8,17 @@
   </head>
   <body>
     <div class="page-container">
+      <!--HEADER-->
       <header class="page-header">
-        <!--ДЛЯ СЕБЯ - подумать о применении атрибутов ленивой загрузки decoding=async и loading="lazy"-->
-        <a class="page-area" href="index.html">
-          <img class="logo" src="images/icons/logo-header.svg" width="140"
-            height="70" alt="логотип Sedona">
+        <!--LOGO-->
+        <a class="page-area">
+          <!--ВОПРОС: корректен ли данный класс? (он никак не указывает на отношение к лого)-->
+          <img
+            class="logo"
+            src="images/icons/logo-header.svg"
+            width="140"
+            height="70"
+            alt="логотип Sedona" />
         </a>
         <!--NAV-->
         <nav class="navigation">
@@ -31,7 +37,7 @@
           <ul class="navigation-user-list">
             <li class="navigation-user-item">
               <a
-                class="navigation-user-link navigation-user-link-search"
+                class="navigation-user-link navigation-icon"
                 href="#">
                 <img
                   src="images/icons/search.svg"
@@ -43,7 +49,7 @@
             </li>
             <li class="navigation-user-item">
               <a
-                class="navigation-user-link navigation-user-link-favorite"
+                class="navigation-user-link navigation-icon"
                 href="#">
                 <img
                   src="images/icons/chosen.svg"
@@ -51,12 +57,13 @@
                   height="17"
                   alt="#" />
                 <span class="visually-hidden">Избранное</span>
+                <!--ДЛЯ СЕБЯ: поставил доп спан (инфа из Ретро 3)-->
                 <span class="notification-badge">12</span>
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link button" href="#">
-                Хочу сюда!
+              <a class="navigation-user-link navigation-button" href="#">
+                xочу сюда!
               </a>
             </li>
           </ul>

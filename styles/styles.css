@@ -113,14 +113,13 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 
 .navigation-user-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start; /* ???? НЕ УВЕРЕН*/
   align-items: center; /* ВОПРОС: почему значки поиск и избранное все равно приклеены к потолку*/
   max-width: 268px;
+  height: 64px;
   margin: 0;
-  /*margin-right: 70px;*/
-    /* ???? ВОПРОС: почему не удается выставить отступ справа (в левом блоке навигации проблем не было)*/
   padding: 0;
+  box-sizing: content-box;
   text-decoration: none;
   list-style-type: none;
 }
@@ -130,7 +129,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 }
 */
 .navigation-user-link {
-  display: block; /* ???? */
+  display: flex; /* ???? */
 }
 
 .navigation-user-link-search {
@@ -144,6 +143,33 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   min-width: 44px;
   min-height: 64px;
   /*padding: 22px 12px;*/ /*ВОПРОС: для данного класса паддинги получаются слишком большими, но в макете они есть*/
+}
+
+a.navigation-user-link.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  border-radius: 4px;
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #756157
+
+
+  /*
+font-family: PT Sans;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+
+  */
 }
 
 .hero-top {
@@ -253,15 +279,6 @@ button.button-reset {
   /*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
 - я правильно сделал кнопку прозрачной?*/
 border: transparent;
-}
-
-a.navigation-user-link.button {
-  width: 160px;
-  height: 36px;
-  padding: 8px, 34px;
-  border-radius: 4px;
-  text-align: center;
-  color: #FFFFFF;
 }
 
 .button-blue {
