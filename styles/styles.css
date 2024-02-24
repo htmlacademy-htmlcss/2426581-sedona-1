@@ -62,13 +62,15 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 /* ХЕДЕР */
 .page-header {
   display: flex;
-  width: 1200px;
+  justify-content: center;
+  width: 1060px;
   min-height: 64px;
+  padding: 0 70px;
 }
 
 .logo {
   display:block;
-  margin: 0 auto; /* КАК ЛУЧШЕ ВЫСТАВИТЬ MARGIN? */
+  margin: 0 auto; /* ВОПРОС: КАК правильнее ВЫСТАВИТЬ MARGIN? */
   margin-left: 70px;
   margin-right: 30px;
   /*ВОПРОС: нужны ли моему Лого такие свойства? (взято из Барб-Шопа)*/
@@ -110,16 +112,20 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 .navigation-user-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* ???? */
-  align-items: center;
+  justify-content: flex-start; /* ???? НЕ УВЕРЕН*/
+  align-items: center; /* ВОПРОС: почему значки поиск и избранное все равно приклеены к потолку*/
   max-width: 268px;
   margin: 0;
-  margin-right: 70px; /* ???? */
+  margin-right: 70px; /* ???? ВОПРОС: почему не удается выставить отступ справа (в левом блоке навигации проблем не было)*/
   padding: 0;
   text-decoration: none;
   list-style-type: none;
 }
 
+/*.navigation-user-item {
+  padding: 22px, 12px, 22px, 12px;
+}
+*/
 .navigation-user-link {
   display: block; /* ???? */
 }
@@ -132,7 +138,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 .navigation-user-link-favorite {
   min-width: 44px;
   min-height: 64px;
-  padding: 22px, 12px;
+  padding: 22px, 12px, 22px, 12px; /* ВОПРОС: почему паддинги не действуют? */
 }
 
 .hero-top {
