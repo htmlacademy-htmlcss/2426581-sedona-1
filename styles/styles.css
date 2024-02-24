@@ -142,7 +142,9 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   align-items: center;
   min-width: 44px;
   min-height: 64px;
-  /*padding: 22px 12px;*/ /*ВОПРОС: для данного класса паддинги получаются слишком большими, но в макете они есть*/
+  /*padding: 22px 12px;*/
+  /*ВОПРОС: для данного класса паддинги получаются слишком большими,
+  но в макете они есть*/
 }
 
 a.navigation-user-link.navigation-button {
@@ -171,6 +173,8 @@ text-align: center;
 
   */
 }
+
+
 
 .hero-top {
   display: flex;
@@ -308,8 +312,12 @@ padding: 8px, 50px, 8px, 50px;
 
 .main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы, поскольку числовое значение flex-grow выше нуля)*/
   flex-grow: 1;
+  background-color: #ffffff;
 }
 
+.main-inner {
+  background-color: #ffffff;
+}
 /*.main-index {
 }
 здесь пока ничего*/
@@ -566,13 +574,12 @@ background-color: #FFFFFF;
 
   .footer-container {
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
-    width: 1200px;
+    width: 1060px;
     min-height: 120px;
-    padding-top: 40px;
-    padding-left: 70px;
+    padding: 0 70px;
+    background-color: #FFFFFF;
     /*max-width: 0 auto;*/
   }
 
@@ -581,20 +588,24 @@ background-color: #FFFFFF;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    width: 1050px;
-    min-height: 60px;
-    /*margin: 40px 70px;*/
+    width: 1060px;
+    min-height: 50px;
+  }
+
+  .footer-social {
+    min-width: 142px;
+    min-height: 40px;
+    /*padding: 5px 0;*/
   }
 
   .footer-social-list {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
     width: 142px;
-    min-height: 50px;
-    padding: 0, 10px, 0, 10px;
+    min-height: 40px;
+    padding: 0 10px;
   }
 
 .contacts-phone {
