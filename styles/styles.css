@@ -137,11 +137,13 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   margin: 0;
 }
 
-.navigation-user-link-search,
-.navigation-user-link-favorite {
+.navigation-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 44px;
   min-height: 64px;
-  padding: 22px, 12px, 22px, 12px; /* ВОПРОС: почему паддинги не действуют? */
+  /*padding: 22px 12px;*/ /*ВОПРОС: для данного класса паддинги получаются слишком большими, но в макете они есть*/
 }
 
 .hero-top {
