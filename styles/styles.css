@@ -18,37 +18,111 @@ html {
   height: 100%;
 }
 
-body {       /*!!! ЭТИ свойства подходят для Барбера, для Седоны нужна доп обертка, тк есть разница между фоном страницы и фоном контентной зоны*/
-  margin: 0; /* ДЛЯ СЕБЯ: таким образом убираем браузерные отступы по умолчанию*/
-  display: flex; /* ДЛЯ СЕБЯ: т-обр. разместил все блоки body на оси */
-  flex-direction: column; /* ДЛЯ СЕБЯ: ось направляем сверху вниз*/
+/*!!! ЭТИ свойства body подходят для Барбера, но для Седоны нужна доп обертка типа page-container, тк есть разница между фоном страницы и фоном контентной зоны*/
+body {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
+  /*height: 100%;*/ /* !!! оставить только это свойство в бади - остальное в контейнер*/
+  margin: 0;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000;
   background-color:#F2F2F2;
-  ;
-  height: 100%; /* !!! оставить только это свойство в бади - остальное в контейнер*/
 }
 
-/*здесь - свойства, полностью скрывающие подписи с классом visually-hidden для юзера*/
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  border: 0;
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
+/* BUTTON*/
+
+.button {
+  font-family: inherit; /* НУЖНО ли здесь это свойство? */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFF;
+  background-color: #756157;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 50px;
+}
+
+.button-big {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
+  и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
+}
+
+/*.button .navigation-user-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  border-radius: 4px;
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+*/
+
+.button-icon {
+  color: #000000;
+  background-color: #FFF;
+}
+
+button.button-reset {
+background-color: transparent;
+border: transparent;
+/*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
+- я правильно сделал кнопку прозрачной?*/
+
+}
+
+.newsletter-button {
+font-family: PT Sans;
+font-size: 20px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0;
+text-align: center;
+width: 232px;
+min-height: 52px;
+border-radius: 0 4px;
+background-color: #82B3D3;
+padding: 8px 50px;
+}
+
 /*ПЭЙДЖ_КОНТЕЙНЕР*/
-/* ДЛЯ СЕДОНЫ необходима доб обертка в боди
-(еще раз проговорить с наставником почему именно так)*/
 
 .page-container {
   width: 1200px;
@@ -59,7 +133,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   min-height: 100%;
 }
 
-/* ХЕДЕР */
+/* ШАПКА СТРАНИЦЫ */
 .page-header {
   display: flex;
   justify-content: center; /*ВОПРОС: нужно ли здесь это свойство?*/
@@ -67,6 +141,7 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   min-height: 64px;
   padding: 0 70px;
 }
+/* ЛОГО */
 
 .logo {
   display:block;
@@ -77,7 +152,8 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   margin-right: 30px;*/
 }
 
-/*БЛОК НАВИГАЦИИ*/
+/* НАВИГАЦИЯ */
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -107,33 +183,20 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
 }
 
 .navigation-link {
-  display:block;
+  display: block;
   padding: 20px 16px;
 }
 
 .navigation-user-list {
   display: flex;
-  justify-content: flex-start; /* ???? НЕ УВЕРЕН*/
-  align-items: center; /* ВОПРОС: почему значки поиск и избранное все равно приклеены к потолку*/
-  max-width: 268px;
-  height: 64px;
+  justify-content: space-between; /*!!! НЕ УВЕРЕН*/
+  align-items: center;
+  min-width: 268px;
   margin: 0;
   padding: 0;
   box-sizing: content-box;
   text-decoration: none;
   list-style-type: none;
-}
-
-/*.navigation-user-item {
-  padding: 22px, 12px, 22px, 12px;
-}
-*/
-.navigation-user-link {
-  display: flex; /* ???? */
-}
-
-.navigation-user-link-search {
-  margin: 0;
 }
 
 .navigation-icon {
@@ -142,39 +205,10 @@ body {       /*!!! ЭТИ свойства подходят для Барбер�
   align-items: center;
   min-width: 44px;
   min-height: 64px;
-  /*padding: 22px 12px;*/
+  /*padding: 22px 12px;/*
   /*ВОПРОС: для данного класса паддинги получаются слишком большими,
   но в макете они есть*/
 }
-
-a.navigation-user-link.navigation-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 36px;
-  border-radius: 4px;
-  font-family: PT Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #756157
-
-
-  /*
-font-family: PT Sans;
-font-size: 16px;
-font-weight: 700;
-line-height: 20px;
-letter-spacing: 0em;
-text-align: center;
-
-  */
-}
-
-
 
 .hero-top {
   display: flex;
@@ -189,15 +223,13 @@ text-align: center;
   background-repeat: no-repeat;
 }
 
-/* welcome
-
+.welcome-img {
 position: absolute;
 left: 30.92%;
 right: 30.92%;
 top: 6.65%;
 bottom: 47.46%;
-
-*/
+}
 
 /*
 
@@ -241,71 +273,6 @@ bottom: 47.46%;
   display: flex;
   min-height: 385px;
   padding: 85px, 103px, 85px;
-}
-
-.button {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  color: #FFF;
-  background-color: #756157;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 0;
-  border-radius: 4px;
-  padding: 8px, 50px;
-}
-
-/*
-width: Fixed (160px)
-height: Hug (36px)
-padding: 8px, 50px, 8px, 50px
-border-radius: 4px
-gap: 10px
-
-*/
-
-.button-big {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px;
-}
-
-.button-icon {
-  color: #000000;
-  background-color: #FFF;
-}
-
-button.button-reset {
-  background-color: transparent;
-  /*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
-- я правильно сделал кнопку прозрачной?*/
-border: transparent;
-}
-
-.button-blue {
-  background-color: #82B3D3;
-}
-
-.button-green {
-  background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
-  и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
-}
-
-.newsletter-button {
-font-family: PT Sans;
-font-size: 20px;
-font-weight: 700;
-line-height: 36px;
-letter-spacing: 0;
-text-align: center;
-width: 232px;
-min-height: 52px;
-border-radius: 0, 4px, 4px, 0;
-background-color: #82B3D3;
-padding: 8px, 50px, 8px, 50px;
 }
 
 /* MAIN */
