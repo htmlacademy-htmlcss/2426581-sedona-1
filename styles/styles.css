@@ -383,7 +383,6 @@ text-transform: none;
 margin: 0 85px 112.5px;
 }
 
-
 .true-town-image,
 .devil-bridge-image {
   flex: 0 0 800px;
@@ -394,7 +393,6 @@ margin: 0 85px 112.5px;
 .rest-in-sedona {
   width: 1200px;
   min-height: 246px;
-  padding: 64px, 0, 64px, 0;
 }
 
 .recommendations-heading {
@@ -404,6 +402,17 @@ margin: 0 85px 112.5px;
   text-align: Center;
   color:#000000;
   text-transform: uppercase;
+  margin: 0 347.5px 20px;
+}
+
+.recommendations-service {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+  margin: auto;
+  margin-bottom: 64px;
 }
 
 .recommendations-list {
@@ -412,33 +421,26 @@ margin: 0 85px 112.5px;
 
 .recommendations-item {
   width: 400px;
-  min-height: 385;
-  padding: 80px, 85px, 80px, 85px;
+  min-height: 385px;
 }
 
 .recommendations-item-1,
 .recommendations-item-3 {
-background-color: #82B3D3;
+  background-color: #83B3D31F;
 }
 
 .recommendations-item-2 {
   background-color: #FFF;
 }
 
-.recommendations-service {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  color: #333333;
-}
-
-.recommendations-name {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  text-align: center;
-  color: #000000;
+.recommendations-title {
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0;
+text-align: center;
+color: #000000;
+margin: 183px 85px 30px;
 }
 
 .recommendations-description {
@@ -447,7 +449,6 @@ background-color: #82B3D3;
   line-height: 21px;
   text-align: center;
   color: #333333;
-  /*background-color: #fff;*/
 }
 
 .housing {
