@@ -210,6 +210,19 @@ padding: 8px 50px;
   но в макете они есть*/
 }
 
+/*MAIN*/
+
+.main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы, поскольку числовое значение flex-grow выше нуля)*/
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+.main-inner {
+  background-color: #ffffff;
+}
+
+/*HERO*/
+
 .hero-top {
   display: flex;
   flex-direction: column;
@@ -227,7 +240,10 @@ padding: 8px 50px;
 margin: 51px 371px 25px;
 }
 
-/* ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо топ выставлять display: block как в примере из БШ?
+/*
+ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо-топ
+выставлять display: block как в примере из БШ?
+
 .logo {
   display: block;
   margin: 0 auto;
@@ -275,43 +291,31 @@ margin: 51px 371px 25px;
   margin: 0 274.5px 69px;
 }
 
+/*ПРЕИМУЩЕСТВА*/
+
+.advantages {
+margin-bottom: 64px;
+}
+/* ЭТОТ класс нужен, если преимущества представлены как список в верстке
+
+.advantages-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+*/
+
+/* РЯДЫ */
 
 .row-1,
 .row-2,
 .row-3 {
   display: flex;
-  min-height: 385px;
-  padding: 85px, 103px, 85px;
+  width: 400;
+  height: 385px;
 }
 
-/* MAIN */
-
-.main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы, поскольку числовое значение flex-grow выше нуля)*/
-  flex-grow: 1;
-  background-color: #ffffff;
-}
-
-.main-inner {
-  background-color: #ffffff;
-}
-/*.main-index {
-}
-здесь пока ничего*/
-
-
-/*.advantages {
-  margin: 0;
-}
-*/
-
-.advantages-list {
-  display: flex;
-  /*width: */
-  margin: 0;
-  padding: 0;
-}
-
-/* назначил отдельный класс чтобы обособить 1 и 5 преимущество с белым цветом шрифта */
+/* назначил отдельный класс, чтобы обособить преимущества 1 и 5 с белым цветом шрифта */
 .advantages-item-outer {
   font-size: 24px;
   font-weight: 700;
@@ -329,7 +333,7 @@ margin: 51px 371px 25px;
   line-height: 28px;
   text-align: center;
   color: #000000;
-  /*background-color: #82B3D3; ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
+  /*background-color: #82B3D3;     ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
   но различается по оттенкам в процентах. Как мне это применить? */
   text-transform: uppercase;
   width: 400px;
@@ -344,17 +348,44 @@ margin: 51px 371px 25px;
   background-color: #FFF;
 }
 
-.advantages-description {
+.advantages-title-1,
+.advantages-title-5 {
+  color: #FFF;
+  margin: 102px 112.5px 62px;
+}
+
+.advantages-description-1,
+.advantages-description-5 {
 font-size: 18px;
 font-weight: 400;
 line-height: 21px;
 text-transform: none;
+margin: 0 85px 102px;
 }
+
+.advantages-title-2,
+.advantages-title-3,
+.advantages-title-4 {
+margin: 112.5px;
+margin-bottom: 62px;
+}
+
+.advantages-description-2,
+.advantages-description-3,
+.advantages-description-4 {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-transform: none;
+margin: 0 85px 112.5px;
+}
+
 
 .true-town-image,
 .devil-bridge-image {
   flex: 0 0 800px;
 }
+
 /* Раздел "Рекомендации" */
 
 .rest-in-sedona {
