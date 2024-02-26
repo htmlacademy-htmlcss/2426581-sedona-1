@@ -228,22 +228,19 @@ margin: 51px 371px 25px;
 }
 
 /* ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо топ выставлять display: block как в примере из БШ?
-
 .logo {
   display: block;
   margin: 0 auto;
   margin-bottom: 64px;
 }
-
 */
 
 .hero-divider {
   width: 1200px;
   min-height: 57px;
+  margin-bottom: 69px;
 }
 
-
-/* СОЗДАЛ отдельные классы для разделения картинки и текста под ней в блоке хиро */
 .hero-bottom {
   display: flex;
   flex-direction: column;
@@ -256,8 +253,9 @@ margin: 51px 371px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 69px, 290px;
-  gap: 25px;
+  justify-content: center;
+  margin: 69px, 274,5px;
+  /*gap: 25px;*/
 }
 
 .lead {
