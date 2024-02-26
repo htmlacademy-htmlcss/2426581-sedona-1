@@ -224,21 +224,24 @@ padding: 8px 50px;
 }
 
 .welcome-img {
-position: absolute;
-left: 30.92%;
-right: 30.92%;
-top: 6.65%;
-bottom: 47.46%;
+margin: 51px 371px 25px;
 }
 
-/*
+/* ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо топ выставлять display: block как в примере из БШ?
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+*/
 
 .hero-divider {
   width: 1200px;
   min-height: 57px;
-  background-image: url("../images/divider.png");
 }
-*/
+
 
 /* СОЗДАЛ отдельные классы для разделения картинки и текста под ней в блоке хиро */
 .hero-bottom {
