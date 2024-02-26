@@ -253,8 +253,6 @@ margin: 51px 371px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 69px, 274,5px;
   /*gap: 25px;*/
 }
 
@@ -265,8 +263,18 @@ margin: 51px 371px 25px;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin: 0 290px 25px;
 }
+
+.cool-advantages {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333; /* почему-то в макете указан коричневый цвет текста */
+  margin: 0 274.5px 69px;
+}
+
 
 .row-1,
 .row-2,
@@ -303,14 +311,6 @@ margin: 51px 371px 25px;
   padding: 0;
 }
 
-.cool-advantages {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  color: #333333; /* почему-то в макете указан коричневый цвет текста */
-  margin: 0;
-}
 /* назначил отдельный класс чтобы обособить 1 и 5 преимущество с белым цветом шрифта */
 .advantages-item-outer {
   font-size: 24px;
