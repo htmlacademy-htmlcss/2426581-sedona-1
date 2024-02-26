@@ -316,7 +316,9 @@ margin-bottom: 64px;
 }
 
 /* назначил отдельный класс, чтобы обособить преимущества 1 и 5 с белым цветом шрифта */
-.advantages-item-outer {
+
+.advantages-item-1,
+.advantages-item-5 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -327,25 +329,26 @@ margin-bottom: 64px;
   width: 400px;
 }
 
-.advantages-item {
+.advantages-item-2,
+.advantages-item-4 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
   color: #000000;
-  /*background-color: #82B3D3;     ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
+  background-color: #83B3D31F;     /*ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
   но различается по оттенкам в процентах. Как мне это применить? */
   text-transform: uppercase;
   width: 400px;
 }
 
-.advantages-item-1,
-.advantages-item-3 {
-  background-color: #83B3D31F;
-}
-
-.advantages-item-2 {
-  background-color: #FFF;
+.advantages-item-3 { /* ПОЧЕМУ ПОЛЕТЕЛ ШРИФТ ТАЙТЛА? */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  background-color: #83B3D333;
 }
 
 .advantages-title-1,
