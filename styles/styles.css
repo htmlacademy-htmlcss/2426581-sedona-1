@@ -22,8 +22,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  /*height: 100%;*/ /* !!! оставить только это свойство в бади - остальное в контейнер*/
+  height: 100%;
   margin: 0;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 16px;
@@ -541,6 +540,7 @@ margin: 183px 85px 30px;
   text-transform: uppercase;
   width: 404px;
   min-height: 36.35px;
+  margin: 0 auto 20px;
   }
 
 .newsletter-quality {
@@ -548,11 +548,14 @@ margin: 183px 85px 30px;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  /*margin-bottom: 54px;*/
+  margin: 0 auto 54px;
   }
 
 .newsletter-form {
   display: flex;
+  justify-content: center;
+  width: 452px;
+  min-height: 52px;
 }
 
 .field {
@@ -564,10 +567,11 @@ letter-spacing: 0;
 text-align: left;
 width: 452px;
 min-height: 52px;
-padding: 12px 20px 12px 20px;
-border-radius: 4px 0 0 4px;
-margin-left: auto;
-gap: 260px;
+/*padding: 12px 20px 12px 20px;
+border: 0;
+border-radius: 4px 0 0 4px;*/
+/*margin-left: auto;
+gap: 260px;*/
 background-color: #FFFFFF;
 }
 
@@ -611,12 +615,20 @@ background-color: #FFFFFF;
 
   .footer-social-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
     width: 142px;
     min-height: 40px;
-    padding: 0 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-social-item {
+    width: 47.33px;
+    height: 40px;
+
   }
 
 .contacts-phone {
@@ -669,18 +681,23 @@ align-items: center;
   margin: 0 0 8px;
 }
 
-.breadcrumbs {
+.breadcrumbs { /* ХЛЕБНЫЕ КРОШКИ НЕ НАСТРОЕНЫ */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   color: #FFF;
-  /*display: flex;
-  width: 1060px; */
+  display: flex;
+  min-width: 114px;
+  min-height: 21px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
+/*.breadcrumbs-item {
+
+}*/
 
 .filter {
   display: flex;
@@ -799,7 +816,7 @@ line-height: 21px;
 color: #333;
 }
 
-a, h3, .hotel-card-title { /* ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
+a h3 .hotel-card-title { /* ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
   сделал наугад, получилось удалить подчеркивание в названиях гостиниц, но не уверен, что оформление корректно */
 font-size: 24px;
 font-style: normal;
@@ -852,10 +869,21 @@ color: #333;
   padding: 20px;
 }
 
-.pagination-list {
+/* ПАГИНАЦИЯ */
+
+.pagination-container {
   display: flex;
   width: 1060px;
   height: 60px;
+  margin: 0 70px 60px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -870,4 +898,22 @@ color: #333;
   box-sizing: border-box;
   width: 60px;
   height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.pagination-clear {
+  color: #000000;
+  background-color: transparent;
+}
+
+.pagination-current {
+  color:#000000;
+  background-color: #F2F2F2;
 }
