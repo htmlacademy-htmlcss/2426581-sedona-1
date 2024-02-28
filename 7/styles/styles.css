@@ -417,6 +417,7 @@ margin: 0 85px 112.5px;
 
 .recommendations-list {
   display: flex;
+  margin-bottom: 96px;
 }
 
 .recommendations-item {
@@ -433,13 +434,14 @@ margin: 0 85px 112.5px;
   background-color: #FFF;
 }
 
-.recommendations-title {
+.recommendations-title { /* НЕ УДАЕТСЯ СДЕЛАТЬ АППЕРКЕЙСОМ ТАЙТЛ*/
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
 letter-spacing: 0;
 text-align: center;
 color: #000000;
+text-transform: uppercase;
 margin: 183px 85px 30px;
 }
 
@@ -451,14 +453,21 @@ margin: 183px 85px 30px;
   color: #333333;
 }
 
-.housing {
+.housing { /*НЕ УДАЕТСЯ ОТЛАДИТЬ ВЫСОТУ БЛОКА - СЛИШКОМ ВЫТЯНУТ ПО ВЕРТИКАЛИ*/
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 1200px;
-  min-height: 406px;
-  padding: 96px, 304px;
-  margin: auto;
+  height: 406px;
+}
+
+.housing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 592px;
+  min-height: 214px;
+  margin: 0 304px 96px;
 }
 
 .housing-interest {
@@ -466,8 +475,11 @@ margin: 183px 85px 30px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  text-transform: uppercase;
   color: #000000;
   background-color: #fff;
+  margin:auto;
+  /*margin-bottom: 20px;*/
 }
 
 .housing-data {
@@ -477,16 +489,15 @@ margin: 183px 85px 30px;
   text-align: center;
   color: #333333;
   background-color: #fff;
+  margin:0;
+  margin-bottom: 54px;
   }
 
 .button-search {
-  display: flex; /*ВОЗМОЖНО, свойства класса будут изменены*/
-  width: 376px;
-  height: 52px;
-  align-items: center;
   border-radius: 4px;
-  padding: 8px, 50px;
+  padding: 8px 50px;
   gap: 10px;
+  /*margin-bottom: 96px;*/
 }
 /*БЛОК РАССЫЛКА*/
 
@@ -497,7 +508,6 @@ margin: 183px 85px 30px;
   min-height: 414.86px;
   text-align: center;
   color: #FFFFFF;
-  padding: 96px, 258px, 104px, 258px;
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -509,18 +519,17 @@ margin: 183px 85px 30px;
   align-items: center;
   width: 1200px;
   min-height: 414.86px;
-  /*padding: 96px 258px 104px;*/
   background-color: #FFF;
 }
 
-
-.newsletter-subscribe-area {
+.newsletter-subscribe-area { /* В БЛОКАХ ИНТЕРЕС И ПОДПИСКА НЕ УДАЕТСЯ ВЫСТАВИТЬ РАЗМЕРЫ*/
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 684px;
   min-height: 214.86px;
-  padding: 96px 258px 104px;
+  /*padding: 96px 258px 104px;*/
+  margin: auto/*0 258px 104px*/;
   gap: 10px;
 }
 
@@ -531,7 +540,7 @@ margin: 183px 85px 30px;
   text-align: left;
   text-transform: uppercase;
   width: 404px;
-  min-height: 36,35px;
+  min-height: 36.35px;
   }
 
 .newsletter-quality {
@@ -555,10 +564,10 @@ letter-spacing: 0;
 text-align: left;
 width: 452px;
 min-height: 52px;
-padding: 12px, 20px, 12px, 20px;
-border-radius: 4px, 0, 0, 4px;
+padding: 12px 20px 12px 20px;
+border-radius: 4px 0 0 4px;
 margin-left: auto;
-gap: 260px;/*ВОПРОС: что такое GAP?*/
+gap: 260px;
 background-color: #FFFFFF;
 }
 
@@ -571,7 +580,6 @@ background-color: #FFFFFF;
   width: 232px;
   min-height: 52px;
   }
-
 
   /* FOOTER */
 
@@ -623,60 +631,118 @@ text-decoration: none;
 align-items: center;
   }
 
-/*.filter-header {
-  background-image: image;
-}*/
+  /* ФИЛЬТРЫ */
 
-.inner-header-title {
+.filter-area {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 412px;
+  background-image: url("../images/filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.filter-content {
+  width: 1060px;
+  height: 307px;
+  margin: 35px 70px 70px;
+}
+.filter-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1060px;
+  height: 107px;
+  margin-bottom: 40px;
+}
+
+.filter-header-title {
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 78px;
   color: #FFF;
-  align-items: center;
-}
-
-.filter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 1200px;
-  min-height: 412px;
-  padding: 35px, 70px, 70px;
-  /*align-content:space-evenly;*/
-  background-image: url("../images/filter.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-
-}
-
-.inner-header {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: flex-start;
-  min-width: 1060px;
-  min-height: 107px;
+  margin: 0 0 8px;
 }
 
 .breadcrumbs {
-  display: flex;
-  width: 1060px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   color: #FFF;
+  /*display: flex;
+  width: 1060px; */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 1060px;
+  min-height: 160px;
+  /*padding: 35px 70px 70px;*/
+}
+
+.catalog-hotels {
+  display: flex;
+  list-style-type: none;
+  min-width: 1060px;
+  min-height: 160px;
+}
+
+.catalog-filter  {
+  display: flex;
+}
+
+.catalog-filter-group {
+  min-width: 150.43px;
+  min-height: 157px;
+  gap: 32px;
+  border: transparent;
+}
+
+.catalog-filter-group-1 {
+  margin-right: 70px;
+}
+
+.catalog-filter-group-2 {
+  margin-right: 498.15px;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 150.43px;
+  height: 157px;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/*.filter {
+.catalog-filter-title {
+  margin-bottom: 32px;
+}
 
-}*/
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 191px;
+  min-height: 104px;
+  margin-bottom: 70px;
+}
 
-/*.catalog-hotels*/
+/* СОРТИРОВКА */
 
 .sorting {
   display: flex;
@@ -688,11 +754,16 @@ align-items: center;
   /*margin-left: auto;*/
 }
 
+.hotels-numbers {
+  margin-right: 200px;
+}
+
 .button-icon-view {
   display: flex;
   justify-content: space-between;
-  width: 160px;
+  min-width: 48px;
   min-height: 48px;
+  margin-right: 8px;
 }
 
 .catalog-filter-title {
