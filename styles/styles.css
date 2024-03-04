@@ -855,12 +855,14 @@ color: #333;
 }*/
 
 .hotel-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   width: 1060px;
-  min-height: 896px;
-  margin: auto;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0 70px;
+  gap: 20px;
 }
 
 .hotel-card {
