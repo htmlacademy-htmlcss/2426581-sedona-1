@@ -865,20 +865,19 @@ color: #333;
   gap: 20px;
 }
 
+/*
 .hotel-card {
-  display: flex;
-  flex-direction: column;
-  width: 340px;
-  /*height: 348px;*/
-  padding:0;
-  margin: 0;
+  display: grid;
+  grid-template-rows: 212px min-content auto min-content 20px;
+  grid-template-columns: 20px 300px 20px;
 }
+*/
 
-.hotel-card-content {
-padding: 20px;
+/*
+.hotel-card-image-link {
+  grid-column: 1 / -1;
 }
-
-.hotel-card-title-link
+*/
 
 /* ПАГИНАЦИЯ */
 
