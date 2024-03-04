@@ -866,10 +866,19 @@ color: #333;
 }
 
 .hotel-card {
+  display: flex;
+  flex-direction: column;
   width: 340px;
-  min-height: 438px;
-  padding: 20px;
+  /*height: 348px;*/
+  padding:0;
+  margin: 0;
 }
+
+.hotel-card-content {
+padding: 20px;
+}
+
+.hotel-card-title-link
 
 /* ПАГИНАЦИЯ */
 
