@@ -865,19 +865,46 @@ color: #333;
   gap: 20px;
 }
 
-/*
 .hotel-card {
   display: grid;
-  grid-template-rows: 212px min-content auto min-content 20px;
-  grid-template-columns: 20px 300px 20px;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+}
+
+.hotel-card-image-link,
+.hotel-card-title-link
+/*
+.hotel-card-subscription,
+.hotel-card-price,
+.hotel-card-button,
+.rating-area
+*/ {
+  grid-column: 1 / 3;
 }
 */
 
-/*
 .hotel-card-image-link {
-  grid-column: 1 / -1;
+  margin-top: 20px;
 }
-*/
+
+.hotel-card-title-link {
+  margin: 0;
+}
+
+.hotel-card-button {
+  padding: 0;
+}
+
+.hotel-card-price {
+  justify-content: end;
+}
+
+
+.rating-area {
+  grid-column: -2 / -1;
+  justify-content: end;
+  margin-bottom: 20px;
+}
 
 /* ПАГИНАЦИЯ */
 
