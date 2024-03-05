@@ -896,7 +896,7 @@ color: #333;
 }
 
 .hotel-card-price {
-  justify-content: end;
+  justify-self: end;
 }
 
 
