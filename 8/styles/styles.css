@@ -1,0 +1,956 @@
+@font-face {
+  font-family: "PT Sans"; /* здесь никогда не нужно писать sans-serif*/
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+/*!!! ЭТИ свойства body подходят для Барбера, но для Седоны нужна доп обертка типа page-container, тк есть разница между фоном страницы и фоном контентной зоны*/
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  background-color:#F2F2F2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* BUTTON*/
+
+.button {
+  font-family: inherit; /* НУЖНО ли здесь это свойство? */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFF;
+  background-color: #756157;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 50px;
+}
+
+.button-big {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
+  и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
+}
+
+/*.button .navigation-user-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  border-radius: 4px;
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+*/
+
+.button-icon {
+  color: #000000;
+  background-color: #FFF;
+}
+
+button.button-reset {
+background-color: transparent;
+border: transparent;
+/*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
+- я правильно сделал кнопку прозрачной?*/
+
+}
+
+.newsletter-button {
+font-family: PT Sans;
+font-size: 20px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0;
+text-align: center;
+width: 232px;
+min-height: 52px;
+border-radius: 0 4px;
+background-color: #82B3D3;
+padding: 8px 50px;
+}
+
+/*ПЭЙДЖ_КОНТЕЙНЕР*/
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* ШАПКА СТРАНИЦЫ */
+.page-header {
+  display: flex;
+  justify-content: center; /*ВОПРОС: нужно ли здесь это свойство?*/
+  width: 1060px;
+  min-height: 64px;
+  padding: 0 70px;
+}
+/* ЛОГО */
+
+.logo {
+  display:block;
+  margin: 0 auto;
+  margin-right: 30px;
+  /* ВОПРОС: КАК правильнее ВЫСТАВИТЬ MARGIN? Если отступ слева относится к пейдж хедеру, тогда ставлю marg 0 auto? */
+  /*margin-left: 70px;
+  margin-right: 30px;*/
+}
+
+/* НАВИГАЦИЯ */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 892px;
+  min-height: 64px;
+  margin: 0;
+  padding: 0;
+}
+/* НУЖЕН ЛИ ЭТОТ КЛАСС?*/
+
+.navigation-list{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 339px;
+  margin: 0; /* !!! */
+  margin-right: auto;
+  padding: 0;
+  list-style-type: none;
+}
+.navigation-list a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation-link {
+  display: block;
+  padding: 20px 16px;
+}
+
+.navigation-user-list {
+  display: flex;
+  justify-content: space-between; /*!!! НЕ УВЕРЕН*/
+  align-items: center;
+  min-width: 268px;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navigation-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  min-height: 64px;
+  /*padding: 22px 12px;/*
+  /*ВОПРОС: для данного класса паддинги получаются слишком большими,
+  но в макете они есть*/
+}
+
+/*MAIN*/
+
+.main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы, поскольку числовое значение flex-grow выше нуля)*/
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+.main-inner {
+  background-color: #ffffff;
+}
+
+/*HERO*/
+
+.hero-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 485px;
+  margin: 0 auto;
+  /*margin-bottom: 69px;*/
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.welcome-img {
+margin: 51px 371px 25px;
+}
+
+/*
+ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо-топ
+выставлять display: block как в примере из БШ?
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+*/
+
+.hero-divider {
+  width: 1200px;
+  min-height: 57px;
+  margin-bottom: 69px;
+}
+
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 261px;
+}
+
+.hero-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*gap: 25px;*/
+}
+
+.lead {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 290px 25px;
+}
+
+.cool-advantages {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333; /* почему-то в макете указан коричневый цвет текста */
+  margin: 0 274.5px 69px;
+}
+
+/*ПРЕИМУЩЕСТВА*/
+
+.advantages {
+margin-bottom: 64px;
+}
+/* ЭТОТ класс нужен, если преимущества представлены как список в верстке
+
+.advantages-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+*/
+
+/* РЯДЫ */
+
+.row-1,
+.row-2,
+.row-3 {
+  display: flex;
+  width: 400;
+  height: 385px;
+}
+
+/* назначил отдельный класс, чтобы обособить преимущества 1 и 5 с белым цветом шрифта */
+
+.advantages-item-1,
+.advantages-item-5 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color:#FFFFFF;
+  background-color: #82B3D3;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.advantages-item-2,
+.advantages-item-4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  background-color: #83B3D31F;     /*ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
+  но различается по оттенкам в процентах. Как мне это применить? */
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.advantages-item-3 { /* ПОЧЕМУ ПОЛЕТЕЛ ШРИФТ ТАЙТЛА? */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  background-color: #83B3D333;
+}
+
+.advantages-title-1,
+.advantages-title-5 {
+  color: #FFF;
+  margin: 102px 112.5px 62px;
+}
+
+.advantages-description-1,
+.advantages-description-5 {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-transform: none;
+margin: 0 85px 102px;
+}
+
+.advantages-title-2,
+.advantages-title-3,
+.advantages-title-4 {
+margin: 112.5px;
+margin-bottom: 62px;
+}
+
+.advantages-description-2,
+.advantages-description-3,
+.advantages-description-4 {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-transform: none;
+margin: 0 85px 112.5px;
+}
+
+.true-town-image,
+.devil-bridge-image {
+  flex: 0 0 800px;
+}
+
+/* Раздел "Рекомендации" */
+
+.rest-in-sedona {
+  width: 1200px;
+  min-height: 246px;
+}
+
+.recommendations-heading {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: Center;
+  color:#000000;
+  text-transform: uppercase;
+  margin: 0 347.5px 20px;
+}
+
+.recommendations-service {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+  margin: auto;
+  margin-bottom: 64px;
+}
+
+.recommendations-list {
+  display: flex;
+  margin-bottom: 96px;
+}
+
+.recommendations-item {
+  width: 400px;
+  min-height: 385px;
+}
+
+.recommendations-item-1,
+.recommendations-item-3 {
+  background-color: #83B3D31F;
+}
+
+.recommendations-item-2 {
+  background-color: #FFF;
+}
+
+.recommendations-title { /* НЕ УДАЕТСЯ СДЕЛАТЬ АППЕРКЕЙСОМ ТАЙТЛ*/
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0;
+text-align: center;
+color: #000000;
+text-transform: uppercase;
+margin: 183px 85px 30px;
+}
+
+.recommendations-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+}
+
+.housing { /*НЕ УДАЕТСЯ ОТЛАДИТЬ ВЫСОТУ БЛОКА - СЛИШКОМ ВЫТЯНУТ ПО ВЕРТИКАЛИ*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  height: 406px;
+}
+
+.housing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 592px;
+  min-height: 214px;
+  margin: 0 304px 96px;
+}
+
+.housing-interest {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #fff;
+  margin:auto;
+  /*margin-bottom: 20px;*/
+}
+
+.housing-data {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  background-color: #fff;
+  margin:0;
+  margin-bottom: 54px;
+  }
+
+.button-search {
+  border-radius: 4px;
+  padding: 8px 50px;
+  gap: 10px;
+  /*margin-bottom: 96px;*/
+}
+/*БЛОК РАССЫЛКА*/
+
+.newsletter-index {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 414.86px;
+  text-align: center;
+  color: #FFFFFF;
+  background-image: url("../images/subscribe.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.newsletter-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  min-height: 414.86px;
+  background-color: #FFF;
+}
+
+.newsletter-subscribe-area { /* В БЛОКАХ ИНТЕРЕС И ПОДПИСКА НЕ УДАЕТСЯ ВЫСТАВИТЬ РАЗМЕРЫ*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 684px;
+  min-height: 214.86px;
+  /*padding: 96px 258px 104px;*/
+  margin: auto/*0 258px 104px*/;
+  gap: 10px;
+}
+
+.newsletter-subscribe {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 404px;
+  min-height: 36.35px;
+  margin: 0 auto 20px;
+  }
+
+.newsletter-quality {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 auto 54px;
+  }
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  width: 452px;
+  min-height: 52px;
+}
+
+.field {
+font-family: PT Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0;
+text-align: left;
+width: 452px;
+min-height: 52px;
+/*padding: 12px 20px 12px 20px;
+border: 0;
+border-radius: 4px 0 0 4px;*/
+/*margin-left: auto;
+gap: 260px;*/
+background-color: #FFFFFF;
+}
+
+.newsletter-button {
+  display: inline-block; /*ВЗЯТО ИЗ РЕТРО 5*/
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  width: 232px;
+  min-height: 52px;
+  }
+
+  /* FOOTER */
+
+  .footer-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 1060px;
+    min-height: 120px;
+    padding: 0 70px;
+    background-color: #FFFFFF;
+    /*max-width: 0 auto;*/
+  }
+
+  .footer-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 1060px;
+    min-height: 50px;
+  }
+
+  .footer-social {
+    min-width: 142px;
+    min-height: 40px;
+    /*padding: 5px 0;*/
+  }
+
+  .footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 142px;
+    min-height: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-social-item {
+    width: 47.33px;
+    height: 40px;
+
+  }
+
+.contacts-phone {
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+color: #000;
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+align-items: center;
+  }
+
+  /* ФИЛЬТРЫ */
+
+.filter-area {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 412px;
+  background-image: url("../images/filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.filter-content {
+  width: 1060px;
+  height: 307px;
+  margin: 35px 70px 70px;
+}
+.filter-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1060px;
+  height: 107px;
+  margin-bottom: 40px;
+}
+
+.filter-header-title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 8px;
+}
+
+.breadcrumbs { /* ХЛЕБНЫЕ КРОШКИ НЕ НАСТРОЕНЫ */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFF;
+  display: flex;
+  min-width: 114px;
+  min-height: 21px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/*.breadcrumbs-item {
+
+}*/
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 1060px;
+  min-height: 160px;
+  /*padding: 35px 70px 70px;*/
+}
+
+.catalog-hotels {
+  display: flex;
+  list-style-type: none;
+  min-width: 1060px;
+  min-height: 160px;
+}
+
+.catalog-filter  {
+  display: flex;
+}
+
+.catalog-filter-group {
+  min-width: 150.43px;
+  min-height: 157px;
+  gap: 32px;
+  border: transparent;
+}
+
+.catalog-filter-group-1 {
+  margin-right: 70px;
+}
+
+.catalog-filter-group-2 {
+  margin-right: 498.15px;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 150.43px;
+  height: 157px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-title {
+  margin-bottom: 32px;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 191px;
+  min-height: 104px;
+  margin-bottom: 70px;
+}
+
+/* СОРТИРОВКА */
+
+.sorting {
+  display: flex;
+  width: 1060px;
+  min-height: 49px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 70px 40px;
+  /*margin-left: auto;*/
+}
+
+.hotels-numbers {
+  margin-right: 200px;
+}
+
+.button-icon-view {
+  display: flex;
+  justify-content: space-between;
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: 8px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFF;
+  text-transform: capitalize;}
+
+.catalog-filter-item {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  color: #FFF;
+}
+
+.hotels-numbers {
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+color: #000;
+text-transform: uppercase;
+}
+
+.select-control {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
+
+a h3 .hotel-card-title { /* ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
+  сделал наугад, получилось удалить подчеркивание в названиях гостиниц, но не уверен, что оформление корректно */
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+color: #000;
+text-decoration: none;
+}
+
+.hotel-card-subscription,
+.hotel-card-price {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+color: #333;
+}
+
+.hotels-searching {
+  width: 1200px;
+  min-height: 1235px;
+  padding: 50px, 70px, 60px;
+}
+
+.hotels-search-result {
+  display: flex;
+  justify-content: space-between;
+
+}
+/*
+.result-counter {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  min-height: 49px;
+}*/
+
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  width: 1060px;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0 70px;
+  gap: 20px;
+}
+
+.hotel-card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+}
+
+.hotel-card-image-link,
+.hotel-card-title-link
+/*
+.hotel-card-subscription,
+.hotel-card-price,
+.hotel-card-button,
+.rating-area
+*/ {
+  grid-column: 1 / 3;
+}
+*/
+
+.hotel-card-image-link {
+  margin-top: 20px;
+}
+
+.hotel-card-title-link {
+  margin: 0;
+}
+
+.hotel-card-button {
+  padding: 0;
+}
+
+.hotel-card-price {
+  justify-content: end;
+}
+
+
+.rating-area {
+  grid-column: -2 / -1;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+/* ПАГИНАЦИЯ */
+
+.pagination-container {
+  display: flex;
+  width: 1060px;
+  height: 60px;
+  margin: 0 70px 60px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.pagination-clear {
+  color: #000000;
+  background-color: transparent;
+}
+
+.pagination-current {
+  color:#000000;
+  background-color: #F2F2F2;
+}
