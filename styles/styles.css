@@ -57,9 +57,19 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border: 0;
-  border-radius: 4px;
-  padding: 8px 50px;
+  width: 160px;
+height: 36px;
+border-radius: 4px;
+gap: 10px;
 }
+
+/*.navigation-button {
+width: 160px;
+height: 36;
+padding: 8px, 50px;
+border-radius: 4px;
+gap: 10px
+}*/
 
 .button-big {
   font-size: 20px;
@@ -76,6 +86,30 @@ body {
   background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
   и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
 }
+
+.button-reset {
+color:#FFF;
+background-color: transparent;
+width: 191px;
+height: 36px;
+padding: 8px, 50px;
+border-radius: 4px;
+gap: 10px;
+}
+
+.button-reset:hover { /*НЕ ПОЛУЧАЕТСЯ*/
+  color: transparent;
+  opacity: 60%;
+}
+
+.button-reset:focus {
+  color: #FFF;
+  border: 3px;
+  border-color: #83B3D3;
+}
+
+
+
 
 /*.button .navigation-user-link a {
   display: flex;
@@ -97,14 +131,6 @@ body {
 .button-icon {
   color: #000000;
   background-color: #FFF;
-}
-
-button.button-reset {
-background-color: transparent;
-border: transparent;
-/*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
-- я правильно сделал кнопку прозрачной?*/
-
 }
 
 .newsletter-button {
@@ -183,8 +209,24 @@ padding: 8px 50px;
 
 .navigation-link {
   display: block;
+  /*position: relative;*/
   padding: 20px 16px;
 }
+                          /*ВЫПОЛНИТЬ ПОДЧЕРКИВАНИЕ В НАВИГАЦИИ НЕ УДАЛОСЬ*/
+.navigation-item {
+  display: inline-block;
+  /*position: relative;*/
+}
+
+/*.navigation-link-current {
+  position: absolute;
+  border: 2px solid #756257;
+  top: 21px;
+  right: 16px;
+  bottom: 1px;
+  left: 16px;
+}*/
+
 
 .navigation-user-list {
   display: flex;
@@ -198,15 +240,44 @@ padding: 8px 50px;
   list-style-type: none;
 }
 
-.navigation-icon {
+/*.navigation-user-link {
+  position: relative;
+  display: block;
+}*/
+
+.navigation-icon { /*Вопрос: применил абсолют и иконки навигации сдвинулись со своих мест*/
+  /*position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 44px;
-  min-height: 64px;
-  /*padding: 22px 12px;/*
+  width: 20px;
+  height: 20px;
+  padding: 2px 1px;
   /*ВОПРОС: для данного класса паддинги получаются слишком большими,
   но в макете они есть*/
+}
+
+.notification-badge { /* НЕ ПОЛУЧАЕТСЯ ПРИЛАДИТЬ БЭЙДЖ*/
+position: absolute;
+top: -6px;
+right: -6px;
+width: 11px;
+height: 10px;
+border-radius: 10px;
+font-size: 10px;
+font-weight: 400;
+line-height: 10px;
+letter-spacing: 0;
+text-align: center;
+text-decoration: none;
+color:#FFF;
+background-color: #7DB54F;
+
 }
 
 /*MAIN*/
@@ -639,7 +710,26 @@ background-color: #FFFFFF;
   .footer-social-link {
     display: flex;
     align-items: center;
+    /*display: block;
+    height: 40px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: ;*/
   }
+
+/*.footer-social-vk {
+background-image: url("/images/icons/social-vk.svg");
+  }
+
+.footer-social-tg {
+  background-image: url("/images/icons/social-tg.svg");
+}
+
+.footer-social-yt {
+  background-image: url("/images/icons/social-yt.svg");
+}
+*/
 
 .contacts-phone {
 font-size: 40px;
@@ -691,7 +781,7 @@ align-items: center;
   margin: 0 0 8px;
 }
 
-.breadcrumbs { /* ХЛЕБНЫЕ КРОШКИ НЕ НАСТРОЕНЫ */
+.breadcrumbs { /* НЕ ПОЛУЧАЕТСЯ ВЫРОВНЯТЬ ДОМИК ОТНОСИТЕЛЬНО ТЕКСТА */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -708,6 +798,32 @@ align-items: center;
 /*.breadcrumbs-item {
 
 }*/
+
+.breadcrumbs-main {
+  padding-bottom: 5.5px;
+  /*width: 12px;
+  height: 12px;
+  background-image: url("/images/icons/breadcrumbs-main.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 15px;
+  background-position: center left 28px;
+  color: #FFFFFF;
+  */
+}
+
+.breadcrumbs-hotels {
+  padding-left: 28.5px;
+  background-image: url("/images/icons/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 6.39px 9.94px;
+  background-position: center left 10px;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0;
+text-align: left;
+  color: #FFFFFF;
+}
 
 .filter {
   display: flex;
@@ -935,17 +1051,27 @@ text-decoration: none;
 margin: 0;
 }
 
-.hotel-card-button {
+.hotel-card-details {
 font-size: 16px;
 font-weight: 700;
 line-height: 20px;
 letter-spacing: 0;
 text-align: center;
-  width: 140px;
-  height: 36px;
-  padding: 0;
-  border-radius: 4px;
-  gap: 10px;
+width: 140px;
+height: 36px;
+background-color: #756157;
+padding: 0;
+border-radius: 4px;
+gap: 10px;
+}
+
+.hotel-card-details:hover {
+  background-color: #615048;
+}
+
+.hotel-card-details:active {
+  color: #FFFFFF4D;
+  background-color: #756157;
 }
 
 .hotel-card-price {
