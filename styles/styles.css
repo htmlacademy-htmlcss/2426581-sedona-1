@@ -183,13 +183,11 @@ padding: 8px 50px;
   display:block;
   margin: 0 auto;
   margin-right: 30px;
-  /* ВОПРОС: КАК правильнее ВЫСТАВИТЬ MARGIN? Если отступ слева относится к пейдж хедеру, тогда ставлю marg 0 auto? */
-  /*margin-left: 70px;
-  margin-right: 30px;*/
+  /* ВОПРОС: КАК СДЕЛАТЬ НАЛОЖЕНИЕ НИЖНЕГО УГЛА ЛОГО НА ФОН НИЖЕ? */
 }
 
-/* НАВИГАЦИЯ */
-
+/* ! НАВИГАЦИЯ 1*/
+/* ВОПРОС: почему вокруг блока в браузере возникла пунктирная обводка и как от нее избавиться? */
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -198,7 +196,6 @@ padding: 8px 50px;
   margin: 0;
   padding: 0;
 }
-/* НУЖЕН ЛИ ЭТОТ КЛАСС?*/
 
 .navigation-list{
   display: flex;
@@ -218,30 +215,37 @@ padding: 8px 50px;
   text-decoration: none;
 }
 
+.navigation-item {   /* ТРУДНО ПОНЯТЬ КАК ВЗАИМОДЕЙСТВУЮТ ВЛОЖЕННЫЕ ДРУГ В ДРУГА РАЗНЫЕ ТИПЫ ДИСПЛЕЕВ*/
+  display: inline-block;
+  /*position: relative;*/
+}
+
 .navigation-link {
   display: block;
   /*position: relative;*/
   padding: 20px 16px;
 }
-                          /*ВЫПОЛНИТЬ ПОДЧЕРКИВАНИЕ В НАВИГАЦИИ НЕ УДАЛОСЬ*/
-.navigation-item {
-  display: inline-block;
-  /*position: relative;*/
+
+.navigation-link-current {
+  position: relative;
 }
 
-/*.navigation-link-current {
+.navigation-link-current::after {
   position: absolute;
-  border: 2px solid #756257;
-  top: 21px;
+  content: "";
   right: 16px;
-  bottom: 1px;
   left: 16px;
-}*/
+  bottom: 0;
+  height: 2px;
+  background-color: #756257;
+}
 
+
+/* ! НАВИГАЦИЯ 2*/
 
 .navigation-user-list {
   display: flex;
-  justify-content: space-between; /*!!! НЕ УВЕРЕН*/
+  justify-content: space-between; /*! ПОЧЕМУ? */
   align-items: center;
   min-width: 268px;
   margin: 0;
@@ -251,39 +255,43 @@ padding: 8px 50px;
   list-style-type: none;
 }
 
+/*.navigation-user-item {
+  display: flex;
+}*/
+
 /*.navigation-user-link {
   position: relative;
   display: block;
 }*/
 
-.navigation-user-wrapper {
+.navigation-user-wrapper { /* ОБЕРТКУ СДЕЛАЛ, ЧТОБЫ ОТДЕЛИТЬ ОТ КНОПКИ ВНТУРИ СПИСКА*/
   position: relative;
   display: block;
 }
 
-.navigation-icon { /*Вопрос: применил абсолют и иконки навигации сдвинулись со своих мест*/
+.navigation-icon {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  /*display: flex;
+  /*
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  padding: 2px 1px;/*
-  /*ВОПРОС: для данного класса паддинги получаются слишком большими,
-  но в макете они есть*/
+  padding: 2px 1px;
+  */
 }
 
-.notification-badge { /* НЕ ПОЛУЧАЕТСЯ ПРИЛАДИТЬ БЭЙДЖ*/
+.notification-badge { /* КАК ОТЦЕНТРОВАТЬ ЦИФРЫ ВНУТРИ КРУЖКА?*/
 position: absolute;
-top: -6px;
-right: -6px;
-width: 11px;
-height: 10px;
+top: -20px;
+right: -30px;
+width: 20px;
+height: 20px;
 border-radius: 10px;
 font-size: 10px;
 font-weight: 400;
@@ -293,7 +301,6 @@ text-align: center;
 text-decoration: none;
 color:#FFF;
 background-color: #7DB54F;
-
 }
 
 /*MAIN*/
