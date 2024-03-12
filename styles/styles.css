@@ -245,7 +245,7 @@ padding: 8px 50px;
 
 .navigation-user-list {
   display: flex;
-  justify-content: space-between; /*! ПОЧЕМУ? */
+  justify-content: space-between;
   align-items: center;
   min-width: 268px;
   margin: 0;
@@ -303,7 +303,7 @@ color:#FFF;
 background-color: #7DB54F;
 }
 
-/*MAIN*/
+/*! MAIN !*/
 
 .main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы, поскольку числовое значение flex-grow выше нуля)*/
   flex-grow: 1;
@@ -314,7 +314,7 @@ background-color: #7DB54F;
   background-color: #ffffff;
 }
 
-/*HERO*/
+/*! HERO !*/
 
 .hero-top {
   display: flex;
@@ -323,7 +323,6 @@ background-color: #7DB54F;
   width: 1200px;
   min-height: 485px;
   margin: 0 auto;
-  /*margin-bottom: 69px;*/
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -375,16 +374,7 @@ margin: 51px 371px 25px;
   margin: 0 290px 25px;
 }
 
-.cool-advantages {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  color: #333333; /* почему-то в макете указан коричневый цвет текста */
-  margin: 0 274.5px 69px;
-}
-
-/*ПРЕИМУЩЕСТВА*/
+/*! ПРЕИМУЩЕСТВА !*/
 
 .advantages {
 margin-bottom: 64px;
@@ -444,17 +434,59 @@ margin-bottom: 64px;
   background-color: #83B3D333;
 }
 
+/*.advantages-title {
+  position: relative;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  margin: 0 274.5px 69px;
+}*/
+
+/*.advantages-text {
+display: flex;
+flex-direction: column;
+width: 230px;
+height: 181px;
+}*/
+
 .advantages-title-1,
 .advantages-title-5 {
-  color: #FFF;
-  margin: 102px 112.5px 62px;
+  position: relative;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0;
+text-align: center;
+text-transform: uppercase;
+color: #FFF;
+margin: 102px 112.5px 62px;
+/*padding-right: 27.5px;
+padding-left: 27.5px;*/
+/*gap: 30px;*/
 }
+
+.advantages-title-1::after,
+.advantages-title-5::after {
+  position: absolute;
+  content: "";
+  right: 85px;
+  left: 85px;
+  bottom: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: #FFFFFF4D;
+}
+
 
 .advantages-description-1,
 .advantages-description-5 {
 font-size: 18px;
 font-weight: 400;
 line-height: 21px;
+letter-spacing: 0;
+text-align: center;
 text-transform: none;
 margin: 0 85px 102px;
 }
@@ -462,8 +494,29 @@ margin: 0 85px 102px;
 .advantages-title-2,
 .advantages-title-3,
 .advantages-title-4 {
+  position: relative;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0;
+text-align: center;
+text-transform: uppercase;
 margin: 112.5px;
 margin-bottom: 62px;
+}
+
+.advantages-title-2::after,
+.advantages-title-3::after,
+.advantages-title-4::after {
+  position: absolute;
+  content: "";
+  right: 85px;
+  left: 85px;
+  bottom: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: #0000004D;
+
 }
 
 .advantages-description-2,
@@ -473,6 +526,7 @@ font-size: 18px;
 font-weight: 400;
 line-height: 21px;
 text-transform: none;
+color: #333333;
 margin: 0 85px 112.5px;
 }
 
@@ -481,7 +535,7 @@ margin: 0 85px 112.5px;
   flex: 0 0 800px;
 }
 
-/* Раздел "Рекомендации" */
+/* ! "Рекомендации" */
 
 .rest-in-sedona {
   width: 1200px;
@@ -489,19 +543,21 @@ margin: 0 85px 112.5px;
 }
 
 .recommendations-heading {
-  font-weight: 700;
   font-size: 30px;
+  font-weight: 700;
   line-height: 36px;
-  text-align: Center;
+  letter-spacing: 0;
+  text-align: center;
   color:#000000;
   text-transform: uppercase;
   margin: 0 347.5px 20px;
 }
 
 .recommendations-service {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
     text-align: center;
     color: #333333;
   margin: auto;
