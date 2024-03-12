@@ -583,7 +583,7 @@ margin: 0 85px 112.5px;
   background-color: #FFF;
 }
 
-.recommendations-title { /* НЕ УДАЕТСЯ СДЕЛАТЬ АППЕРКЕЙСОМ ТАЙТЛ*/
+.recommendations-title {
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
@@ -591,7 +591,23 @@ letter-spacing: 0;
 text-align: center;
 color: #000000;
 text-transform: uppercase;
-margin: 183px 85px 30px;
+background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center top 81px;
+margin: auto 85px 30px;
+padding-top:183px;
+}
+
+.recommendations-title-1 {
+  background-image: url("../images/icons/recomm-hosting.svg");
+}
+
+.recommendations-title-2 {
+  background-image: url("../images/icons/recomm-meal.svg");
+
+}
+.recommendations-title-3 {
+  background-image: url("../images/icons/recomm-souveniers.svg")
 }
 
 .recommendations-description {
