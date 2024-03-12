@@ -63,13 +63,24 @@ border-radius: 4px;
 gap: 10px;
 }
 
-/*.navigation-button {
+.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+color: #FFF;
+background-color: #756157;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+border: 0;
 width: 160px;
-height: 36;
-padding: 8px, 50px;
+height: 36px;
 border-radius: 4px;
-gap: 10px
-}*/
+gap: 10px;
+}
 
 .button-big {
   font-size: 20px;
@@ -245,19 +256,24 @@ padding: 8px 50px;
   display: block;
 }*/
 
+.navigation-user-wrapper {
+  position: relative;
+  display: block;
+}
+
 .navigation-icon { /*Вопрос: применил абсолют и иконки навигации сдвинулись со своих мест*/
-  /*position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;*/
-  display: flex;
+  margin: auto;
+  /*display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  padding: 2px 1px;
+  padding: 2px 1px;/*
   /*ВОПРОС: для данного класса паддинги получаются слишком большими,
   но в макете они есть*/
 }
