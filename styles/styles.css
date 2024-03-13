@@ -57,8 +57,29 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border: 0;
-  border-radius: 4px;
-  padding: 8px 50px;
+  width: 160px;
+height: 36px;
+border-radius: 4px;
+gap: 10px;
+}
+
+.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+color: #FFF;
+background-color: #756157;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+border: 0;
+width: 160px;
+height: 36px;
+border-radius: 4px;
+gap: 10px;
 }
 
 .button-big {
@@ -76,6 +97,30 @@ body {
   background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
   и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
 }
+
+.button-reset {
+color:#FFF;
+background-color: transparent;
+width: 191px;
+height: 36px;
+padding: 8px, 50px;
+border-radius: 4px;
+gap: 10px;
+}
+
+.button-reset:hover { /*НЕ ПОЛУЧАЕТСЯ*/
+  color: transparent;
+  opacity: 60%;
+}
+
+.button-reset:focus {
+  color: #FFF;
+  border: 3px;
+  border-color: #83B3D3;
+}
+
+
+
 
 /*.button .navigation-user-link a {
   display: flex;
@@ -97,14 +142,6 @@ body {
 .button-icon {
   color: #000000;
   background-color: #FFF;
-}
-
-button.button-reset {
-background-color: transparent;
-border: transparent;
-/*ВОПРОС: судя по макету, у данной кнопки нет фонового цвета, все кроме текста сливается с фоновой картинкой
-- я правильно сделал кнопку прозрачной?*/
-
 }
 
 .newsletter-button {
@@ -146,13 +183,11 @@ padding: 8px 50px;
   display:block;
   margin: 0 auto;
   margin-right: 30px;
-  /* ВОПРОС: КАК правильнее ВЫСТАВИТЬ MARGIN? Если отступ слева относится к пейдж хедеру, тогда ставлю marg 0 auto? */
-  /*margin-left: 70px;
-  margin-right: 30px;*/
+  /* ВОПРОС: КАК СДЕЛАТЬ НАЛОЖЕНИЕ НИЖНЕГО УГЛА ЛОГО НА ФОН НИЖЕ? */
 }
 
-/* НАВИГАЦИЯ */
-
+/* ! НАВИГАЦИЯ 1*/
+/* ВОПРОС: почему вокруг блока в браузере возникла пунктирная обводка и как от нее избавиться? */
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -161,7 +196,6 @@ padding: 8px 50px;
   margin: 0;
   padding: 0;
 }
-/* НУЖЕН ЛИ ЭТОТ КЛАСС?*/
 
 .navigation-list{
   display: flex;
@@ -181,14 +215,37 @@ padding: 8px 50px;
   text-decoration: none;
 }
 
+.navigation-item {   /* ТРУДНО ПОНЯТЬ КАК ВЗАИМОДЕЙСТВУЮТ ВЛОЖЕННЫЕ ДРУГ В ДРУГА РАЗНЫЕ ТИПЫ ДИСПЛЕЕВ*/
+  display: inline-block;
+  /*position: relative;*/
+}
+
 .navigation-link {
   display: block;
+  /*position: relative;*/
   padding: 20px 16px;
 }
 
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::after {
+  position: absolute;
+  content: "";
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+  height: 2px;
+  background-color: #756257;
+}
+
+
+/* ! НАВИГАЦИЯ 2*/
+
 .navigation-user-list {
   display: flex;
-  justify-content: space-between; /*!!! НЕ УВЕРЕН*/
+  justify-content: space-between;
   align-items: center;
   min-width: 268px;
   margin: 0;
@@ -198,18 +255,55 @@ padding: 8px 50px;
   list-style-type: none;
 }
 
+/*.navigation-user-item {
+  display: flex;
+}*/
+
+/*.navigation-user-link {
+  position: relative;
+  display: block;
+}*/
+
+.navigation-user-wrapper { /* ОБЕРТКУ СДЕЛАЛ, ЧТОБЫ ОТДЕЛИТЬ ОТ КНОПКИ ВНТУРИ СПИСКА*/
+  position: relative;
+  display: block;
+}
+
 .navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  /*
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 44px;
-  min-height: 64px;
-  /*padding: 22px 12px;/*
-  /*ВОПРОС: для данного класса паддинги получаются слишком большими,
-  но в макете они есть*/
+  width: 20px;
+  height: 20px;
+  padding: 2px 1px;
+  */
 }
 
-/*MAIN*/
+.notification-badge { /* КАК ОТЦЕНТРОВАТЬ ЦИФРЫ ВНУТРИ КРУЖКА?*/
+position: absolute;
+top: -20px;
+right: -30px;
+width: 20px;
+height: 20px;
+border-radius: 10px;
+font-size: 10px;
+font-weight: 400;
+line-height: 10px;
+letter-spacing: 0;
+text-align: center;
+text-decoration: none;
+color:#FFF;
+background-color: #7DB54F;
+}
+
+/*! MAIN !*/
 
 .main-container { /* ДЛЯ СЕБЯ: этот контейнер отвечает за стики-футер на странице (прибивает его к низу страницы, поскольку числовое значение flex-grow выше нуля)*/
   flex-grow: 1;
@@ -220,7 +314,7 @@ padding: 8px 50px;
   background-color: #ffffff;
 }
 
-/*HERO*/
+/*! HERO !*/
 
 .hero-top {
   display: flex;
@@ -229,7 +323,6 @@ padding: 8px 50px;
   width: 1200px;
   min-height: 485px;
   margin: 0 auto;
-  /*margin-bottom: 69px;*/
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -281,16 +374,7 @@ margin: 51px 371px 25px;
   margin: 0 290px 25px;
 }
 
-.cool-advantages {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  color: #333333; /* почему-то в макете указан коричневый цвет текста */
-  margin: 0 274.5px 69px;
-}
-
-/*ПРЕИМУЩЕСТВА*/
+/*! ПРЕИМУЩЕСТВА !*/
 
 .advantages {
 margin-bottom: 64px;
@@ -350,17 +434,59 @@ margin-bottom: 64px;
   background-color: #83B3D333;
 }
 
+/*.advantages-title {
+  position: relative;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  margin: 0 274.5px 69px;
+}*/
+
+/*.advantages-text {
+display: flex;
+flex-direction: column;
+width: 230px;
+height: 181px;
+}*/
+
 .advantages-title-1,
 .advantages-title-5 {
-  color: #FFF;
-  margin: 102px 112.5px 62px;
+  position: relative;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0;
+text-align: center;
+text-transform: uppercase;
+color: #FFF;
+margin: 102px 112.5px 62px;
+/*padding-right: 27.5px;
+padding-left: 27.5px;*/
+/*gap: 30px;*/
 }
+
+.advantages-title-1::after,
+.advantages-title-5::after {
+  position: absolute;
+  content: "";
+  right: 85px;
+  left: 85px;
+  bottom: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: #FFFFFF4D;
+}
+
 
 .advantages-description-1,
 .advantages-description-5 {
 font-size: 18px;
 font-weight: 400;
 line-height: 21px;
+letter-spacing: 0;
+text-align: center;
 text-transform: none;
 margin: 0 85px 102px;
 }
@@ -368,8 +494,29 @@ margin: 0 85px 102px;
 .advantages-title-2,
 .advantages-title-3,
 .advantages-title-4 {
+  position: relative;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0;
+text-align: center;
+text-transform: uppercase;
 margin: 112.5px;
 margin-bottom: 62px;
+}
+
+.advantages-title-2::after,
+.advantages-title-3::after,
+.advantages-title-4::after {
+  position: absolute;
+  content: "";
+  right: 85px;
+  left: 85px;
+  bottom: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: #0000004D;
+
 }
 
 .advantages-description-2,
@@ -379,6 +526,7 @@ font-size: 18px;
 font-weight: 400;
 line-height: 21px;
 text-transform: none;
+color: #333333;
 margin: 0 85px 112.5px;
 }
 
@@ -387,7 +535,7 @@ margin: 0 85px 112.5px;
   flex: 0 0 800px;
 }
 
-/* Раздел "Рекомендации" */
+/* ! "Рекомендации" */
 
 .rest-in-sedona {
   width: 1200px;
@@ -395,19 +543,21 @@ margin: 0 85px 112.5px;
 }
 
 .recommendations-heading {
-  font-weight: 700;
   font-size: 30px;
+  font-weight: 700;
   line-height: 36px;
-  text-align: Center;
+  letter-spacing: 0;
+  text-align: center;
   color:#000000;
   text-transform: uppercase;
   margin: 0 347.5px 20px;
 }
 
 .recommendations-service {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
     text-align: center;
     color: #333333;
   margin: auto;
@@ -416,7 +566,7 @@ margin: 0 85px 112.5px;
 
 .recommendations-list {
   display: flex;
-  margin-bottom: 96px;
+  /*margin-bottom: 96px*/;
 }
 
 .recommendations-item {
@@ -433,7 +583,7 @@ margin: 0 85px 112.5px;
   background-color: #FFF;
 }
 
-.recommendations-title { /* НЕ УДАЕТСЯ СДЕЛАТЬ АППЕРКЕЙСОМ ТАЙТЛ*/
+.recommendations-title {
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
@@ -441,35 +591,57 @@ letter-spacing: 0;
 text-align: center;
 color: #000000;
 text-transform: uppercase;
-margin: 183px 85px 30px;
+background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center top 81px;
+margin: auto 85px 30px;
+padding-top:183px;
+}
+
+.recommendations-title-1 {
+  background-image: url("../images/icons/recomm-hosting.svg");
+}
+
+.recommendations-title-2 {
+  background-image: url("../images/icons/recomm-meal.svg");
+
+}
+.recommendations-title-3 {
+  background-image: url("../images/icons/recomm-souveniers.svg")
 }
 
 .recommendations-description {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  letter-spacing: 0;
   text-align: center;
   color: #333333;
 }
 
 .housing { /*НЕ УДАЕТСЯ ОТЛАДИТЬ ВЫСОТУ БЛОКА - СЛИШКОМ ВЫТЯНУТ ПО ВЕРТИКАЛИ*/
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   align-items: center;
   width: 1200px;
   height: 406px;
+  margin: 0 auto;*/
+  padding-top: 96px;
+  padding-bottom: 96px;;
 }
 
 .housing-content {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  align-items: center;
-  min-width: 592px;
-  min-height: 214px;
-  margin: 0 304px 96px;
+  align-items: center;*/
+  width: 592px;
+  text-align: center;
+  height: 214px;
+  margin: 0 auto;
+  /*padding: 96px, 304px;*/
 }
 
-.housing-interest {
+.housing-title {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -477,8 +649,8 @@ margin: 183px 85px 30px;
   text-transform: uppercase;
   color: #000000;
   background-color: #fff;
-  margin:auto;
-  /*margin-bottom: 20px;*/
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .housing-data {
@@ -492,11 +664,19 @@ margin: 183px 85px 30px;
   margin-bottom: 54px;
   }
 
-.button-search {
+.button-search.button-big {
+font-size: 20px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0;
+text-align: center;
+padding: 8px 50px;
+  width: 376px;
+  height: 52px;
   border-radius: 4px;
-  padding: 8px 50px;
+  margin-right: 108px;
+  margin-left: 108px;
   gap: 10px;
-  /*margin-bottom: 96px;*/
 }
 /*БЛОК РАССЫЛКА*/
 
@@ -605,12 +785,15 @@ background-color: #FFFFFF;
     align-items: center;
     width: 1060px;
     min-height: 50px;
+    padding: 40px 70px 30px;
   }
 
   .footer-social {
     min-width: 142px;
     min-height: 40px;
-    /*padding: 5px 0;*/
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
   }
 
   .footer-social-list {
@@ -628,8 +811,34 @@ background-color: #FFFFFF;
   .footer-social-item {
     width: 47.33px;
     height: 40px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .footer-social-link {
+    display: flex;
+    align-items: center;
+    /*display: block;
+    height: 40px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: ;*/
+  }
+
+/*.footer-social-vk {
+background-image: url("/images/icons/social-vk.svg");
+  }
+
+.footer-social-tg {
+  background-image: url("/images/icons/social-tg.svg");
+}
+
+.footer-social-yt {
+  background-image: url("/images/icons/social-yt.svg");
+}
+*/
 
 .contacts-phone {
 font-size: 40px;
@@ -681,7 +890,7 @@ align-items: center;
   margin: 0 0 8px;
 }
 
-.breadcrumbs { /* ХЛЕБНЫЕ КРОШКИ НЕ НАСТРОЕНЫ */
+.breadcrumbs { /* НЕ ПОЛУЧАЕТСЯ ВЫРОВНЯТЬ ДОМИК ОТНОСИТЕЛЬНО ТЕКСТА */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -698,6 +907,32 @@ align-items: center;
 /*.breadcrumbs-item {
 
 }*/
+
+.breadcrumbs-main {
+  padding-bottom: 5.5px;
+  /*width: 12px;
+  height: 12px;
+  background-image: url("/images/icons/breadcrumbs-main.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 15px;
+  background-position: center left 28px;
+  color: #FFFFFF;
+  */
+}
+
+.breadcrumbs-hotels {
+  padding-left: 28.5px;
+  background-image: url("/images/icons/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 6.39px 9.94px;
+  background-position: center left 10px;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0;
+text-align: left;
+  color: #FFFFFF;
+}
 
 .filter {
   display: flex;
@@ -793,16 +1028,25 @@ margin-right: 70px;
 }
 
 .button-icon-view {
+  width: 160px;
+  height: 48px;
   display: flex;
-  min-width: 48px;
-  min-height: 48px;
+  justify-content: space-between;
 }
 
 .button-icon {
+  width: 48px;
+  height: 48px;
   display: flex;
   margin: 0;
   margin-right: 8px;
   padding: 0;
+}
+
+.button-icon-light {
+  padding: 14px, 12px;
+  border-radius: 4px;
+  border: 2px solid #000000
 }
 
 .button-icon:last-child {
@@ -925,17 +1169,27 @@ text-decoration: none;
 margin: 0;
 }
 
-.hotel-card-button {
+.hotel-card-details {
 font-size: 16px;
 font-weight: 700;
 line-height: 20px;
 letter-spacing: 0;
 text-align: center;
-  width: 140px;
-  height: 36px;
-  padding: 0;
-  border-radius: 4px;
-  gap: 10px;
+width: 140px;
+height: 36px;
+background-color: #756157;
+padding: 0;
+border-radius: 4px;
+gap: 10px;
+}
+
+.hotel-card-details:hover {
+  background-color: #615048;
+}
+
+.hotel-card-details:active {
+  color: #FFFFFF4D;
+  background-color: #756157;
 }
 
 .hotel-card-price {
