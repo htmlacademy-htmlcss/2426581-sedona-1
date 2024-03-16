@@ -828,6 +828,13 @@ outline: 2px solid red;
     cursor: pointer;
   }
 
+.search-form {
+  width: 577px;
+height: 348px;
+margin: 0;
+gap: 48px;
+}
+
 .field-group {
   display: flex;
   justify-content: space-between;
@@ -853,10 +860,7 @@ background-color: #F2F2F2;
 display: flex;
 justify-content: space-between;
 align-items: center;
-/*width: 557px;
-height: 48px;*/
-margin-top: 0;
-margin-bottom: 48px;
+margin: 0 auto;
 padding: 0;
 }
 
@@ -865,6 +869,24 @@ padding: 0;
   height: 48px;
 border-radius: 4px;
 background-color: #F2F2F2;
+}
+
+.mature,
+.kids {
+  margin-right: 46px;
+}
+
+.search-form-button {
+width: 577px;
+height: 60px;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+text-align: center;
+/*padding: 18px 77px;*/
+border-radius: 10px;
+background-color: #83B3D3;
+margin: 0 auto;
 }
 
   /* ! FOOTER */
