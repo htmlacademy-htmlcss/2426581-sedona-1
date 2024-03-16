@@ -904,7 +904,7 @@ margin: 0 auto;
 }
 
 .search-form-button:active {
-  opacity: 30%;
+  color: #FFFFFF4D;
   background-color: #68A2CA;
 }
 
@@ -961,26 +961,7 @@ margin: 0 auto;
   .footer-social-link {
     display: flex;
     align-items: center;
-    /*display: block;
-    height: 40px;
-    background-color: #FFFFFF;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: ;*/
   }
-
-/*.footer-social-vk {
-background-image: url("/images/icons/social-vk.svg");
-  }
-
-.footer-social-tg {
-  background-image: url("/images/icons/social-tg.svg");
-}
-
-.footer-social-yt {
-  background-image: url("/images/icons/social-yt.svg");
-}
-*/
 
 .contacts-phone {
 font-size: 40px;
@@ -1119,7 +1100,7 @@ color:  #FFFFFF;
 }
 
 .catalog-filter-group-2 {
-  margin-right: auto/*498.15px*/;
+  margin-right: auto;
 }
 
 .catalog-filter-list {
@@ -1280,6 +1261,19 @@ font-style: normal;
 font-weight: 400;
 line-height: 21px;
 color: #333;
+border: 2px solid #E5E5E5;
+}
+
+.select-control:hover {
+border: 2px solid #68A2CA;
+}
+
+.select-control:focus {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:active {
+  border: 2px solid #3F5E72;
 }
 
 a.hotel-card-title { /* ! ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
@@ -1366,9 +1360,28 @@ gap: 10px;
   background-color: #615048;
 }
 
+.hotel-card-details:focus {
+  background-color: #615048;
+}
+
 .hotel-card-details:active {
   color: #FFFFFF4D;
   background-color: #756157;
+}
+
+.button-blue:hover {
+  background-color: #68A2CA;
+
+}
+
+.button-blue:focus {
+  background-color: #68A2CA;
+}
+
+.button-blue:active {
+  color: #FFFFFF4D;
+  background-color: #82B3D3;
+
 }
 
 .hotel-card-price {
