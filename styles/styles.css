@@ -160,26 +160,6 @@ gap: 10px;
   opacity: 10%;
 }
 
-
-
-
-/*.button .navigation-user-link a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 36px;
-  border-radius: 4px;
-  font-family: PT Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #756157;
-}
-*/
-
 .button-icon {
   color: #000000;
   background-color: #FFF;
@@ -212,7 +192,7 @@ padding: 8px 50px;
 /* ШАПКА СТРАНИЦЫ */
 .page-header {
   display: flex;
-  justify-content: center; /*ВОПРОС: нужно ли здесь это свойство?*/
+  justify-content: center;
   width: 1060px;
   min-height: 64px;
   padding: 0 70px;
@@ -241,7 +221,7 @@ padding: 8px 50px;
   display: flex;
   flex-wrap: wrap;
   min-width: 339px;
-  margin: 0; /* !!! */
+  margin: 0;
   margin-right: auto;
   padding: 0;
   list-style-type: none;
@@ -257,12 +237,10 @@ padding: 8px 50px;
 
 .navigation-item {   /* ТРУДНО ПОНЯТЬ КАК ВЗАИМОДЕЙСТВУЮТ ВЛОЖЕННЫЕ ДРУГ В ДРУГА РАЗНЫЕ ТИПЫ ДИСПЛЕЕВ*/
   display: inline-block;
-  /*position: relative;*/
 }
 
 .navigation-link {
   display: block;
-  /*position: relative;*/
   padding: 20px 16px;
 }
 
@@ -797,7 +775,6 @@ margin: 70px 64px;
 outline: 2px solid red;
 }
 
-
 .modal-title {
   font-size: 30px;
   font-weight: 700;
@@ -856,6 +833,20 @@ border-radius: 4px;
 background-color: #F2F2F2;
 }
 
+.search-form-field:hover {
+  background-color: #E6E6E6;
+}
+
+.search-form-field:focus {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3
+}
+
+.search-form-field:active {
+  color: #F2F2F2;
+  border: 2px solid #000000
+}
+
 .number-form {
 display: flex;
 justify-content: space-between;
@@ -870,6 +861,21 @@ padding: 0;
 border-radius: 4px;
 background-color: #F2F2F2;
 }
+
+.number-form-field:hover {
+  background-color: #E6E6E6;
+}
+
+.number-form-field:focus {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3
+}
+
+.number-form-field:active {
+  color: #F2F2F2;
+  border: 2px solid #000000
+}
+
 
 .mature,
 .kids {
@@ -887,6 +893,19 @@ text-align: center;
 border-radius: 10px;
 background-color: #83B3D3;
 margin: 0 auto;
+}
+
+.search-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.search-form-button:focus {
+  background-color: #68A2CA;
+}
+
+.search-form-button:active {
+  opacity: 30%;
+  background-color: #68A2CA;
 }
 
   /* ! FOOTER */
