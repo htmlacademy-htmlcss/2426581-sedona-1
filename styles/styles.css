@@ -90,33 +90,74 @@ gap: 10px;
 }
 
 .button-blue {
-  background-color: #82B3D3;
+  width: 140px;
+  height: 36px;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0;
+text-align: center;
+background-color: #82B3D3;
 }
 
 .button-green {
-  background-color: #7DB54F; /* полагаю, здесь значение кнопки не является неизменным
-  и зависит от состояния (hover, focus, active), поэтому этот раздел позже будем дорабатывать*/
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0;
+text-align: center;
+width: 140px;
+height: 36px;
+  background-color: #7DB54F;
+}
+
+.button-submit {
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0;
+text-align: center;
+  width: 191px;
+  height: 36px;
+  padding: 8px 50px;
+  border-radius: 4px;
+  background-color: #82B3D3;
+  gap: 10px
+
 }
 
 .button-reset {
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0;
+text-align: center;
 color:#FFF;
 background-color: transparent;
 width: 191px;
 height: 36px;
-padding: 8px, 50px;
+padding: 8px 50px;
 border-radius: 4px;
 gap: 10px;
 }
 
-.button-reset:hover { /*НЕ ПОЛУЧАЕТСЯ*/
-  color: transparent;
+.button-reset:hover {
+  color:#FFF;
   opacity: 60%;
 }
 
 .button-reset:focus {
   color: #FFF;
-  border: 3px;
-  border-color: #83B3D3;
+  border: 3px solid #83B3D3;
+}
+
+.button-reset:active {
+  color: #FFFFFF4D;
+}
+
+.button-reset:disabled {
+  color: #FFF;
+  opacity: 10%;
 }
 
 
@@ -332,8 +373,7 @@ margin: 51px 371px 25px;
 }
 
 /*
-ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо-топ
-выставлять display: block как в примере из БШ?
+! ВОПРОС: нужно ли для контентного изображения поверх бэкграунда в херо-топ выставлять display: block как в примере из БШ?
 
 .logo {
   display: block;
@@ -360,7 +400,6 @@ margin: 51px 371px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*gap: 25px;*/
 }
 
 .lead {
@@ -388,17 +427,7 @@ text-align: center;
 color: #333333;
 }
 
-
-/* ЭТОТ класс нужен, если преимущества представлены как список в верстке
-
-.advantages-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-*/
-
-/* РЯДЫ */
+/* ! РЯДЫ */
 
 .row-1,
 .row-2,
@@ -407,8 +436,6 @@ color: #333333;
   width: 400;
   height: 385px;
 }
-
-/* назначил отдельный класс, чтобы обособить преимущества 1 и 5 с белым цветом шрифта */
 
 .advantages-item-1,
 .advantages-item-5 {
@@ -429,13 +456,12 @@ color: #333333;
   line-height: 28px;
   text-align: center;
   color: #000000;
-  background-color: #83B3D31F;     /*ВОПРОС: в макете цвет фона для всех квадратиков одинаковый,
-  но различается по оттенкам в процентах. Как мне это применить? */
+  background-color: #83B3D31F;
   text-transform: uppercase;
   width: 400px;
 }
 
-.advantages-item-3 { /* ПОЧЕМУ ПОЛЕТЕЛ ШРИФТ ТАЙТЛА? */
+.advantages-item-3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -443,23 +469,6 @@ color: #333333;
   color: #000000;
   background-color: #83B3D333;
 }
-
-/*.advantages-title {
-  position: relative;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  color: #333333;
-  margin: 0 274.5px 69px;
-}*/
-
-/*.advantages-text {
-display: flex;
-flex-direction: column;
-width: 230px;
-height: 181px;
-}*/
 
 .advantages-title-1,
 .advantages-title-5 {
@@ -472,9 +481,6 @@ text-align: center;
 text-transform: uppercase;
 color: #FFF;
 margin: 102px 112.5px 62px;
-/*padding-right: 27.5px;
-padding-left: 27.5px;*/
-/*gap: 30px;*/
 }
 
 .advantages-title-1::after,
@@ -629,26 +635,16 @@ padding-top:183px;
   color: #333333;
 }
 
-.housing { /*НЕ УДАЕТСЯ ОТЛАДИТЬ ВЫСОТУ БЛОКА - СЛИШКОМ ВЫТЯНУТ ПО ВЕРТИКАЛИ*/
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1200px;
-  height: 406px;
-  margin: 0 auto;*/
+.housing {
   padding-top: 96px;
   padding-bottom: 96px;;
 }
 
 .housing-content {
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
   width: 592px;
   text-align: center;
   height: 214px;
   margin: 0 auto;
-  /*padding: 96px, 304px;*/
 }
 
 .housing-title {
@@ -711,14 +707,13 @@ padding: 8px 50px;
   background-color: #FFF;
 }
 
-.newsletter-subscribe-area { /* В БЛОКАХ ИНТЕРЕС И ПОДПИСКА НЕ УДАЕТСЯ ВЫСТАВИТЬ РАЗМЕРЫ*/
+.newsletter-subscribe-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 684px;
   min-height: 214.86px;
-  /*padding: 96px 258px 104px;*/
-  margin: auto/*0 258px 104px*/;
+  margin: auto;
   gap: 10px;
 }
 
@@ -756,16 +751,11 @@ letter-spacing: 0;
 text-align: left;
 width: 452px;
 min-height: 52px;
-/*padding: 12px 20px 12px 20px;
-border: 0;
-border-radius: 4px 0 0 4px;*/
-/*margin-left: auto;
-gap: 260px;*/
 background-color: #FFFFFF;
 }
 
 .newsletter-button {
-  display: inline-block; /*ВЗЯТО ИЗ РЕТРО 5*/
+  display: inline-block; /*! ВЗЯТО ИЗ РЕТРО 5*/
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -774,7 +764,110 @@ background-color: #FFFFFF;
   min-height: 52px;
   }
 
-  /* FOOTER */
+/* ! МОДАЛЬНОЕ ОКНО */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F2CC;
+  ;
+}
+
+.modal-containter-close {
+  display: none;
+}
+
+.modal {
+  width: 717px;
+  height: 576px;
+  margin: auto;
+  background-color:#FFFFFF;
+  border-radius: 30px
+}
+
+.modal-content {
+  position: relative;
+  width: 577px;
+height: 448px;
+margin: 70px 64px;
+outline: 2px solid red;
+}
+
+
+.modal-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #000000;
+  text-decoration: uppercase;
+  width: 413px;
+  height: 36px;
+  margin-top: 0;
+  }
+
+  .modal-close-button {
+  position: absolute;
+  width: 19.62px;
+  height: 19.62px;
+  top: 0;
+  right: 0;
+  color: #000000;
+  padding: 14px 14px;
+    /*color: #F2F2F2;*/
+    background-image: url("/images/icons/modal-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0;
+text-align: left;
+color: #000000;
+margin-top: 0;
+margin-bottom: 48px;
+}
+
+.search-form-field {
+width: 440px;
+height: 48px;
+border-radius: 4px;
+background-color: #F2F2F2;
+}
+
+.number-form {
+display: flex;
+justify-content: space-between;
+align-items: center;
+/*width: 557px;
+height: 48px;*/
+margin-top: 0;
+margin-bottom: 48px;
+padding: 0;
+}
+
+.number-form-field {
+  width: 110px;
+  height: 48px;
+border-radius: 4px;
+background-color: #F2F2F2;
+}
+
+  /* ! FOOTER */
 
   .footer-container {
     display: flex;
@@ -784,7 +877,6 @@ background-color: #FFFFFF;
     min-height: 120px;
     padding: 0 70px;
     background-color: #FFFFFF;
-    /*max-width: 0 auto;*/
   }
 
   .footer-elements {
@@ -899,49 +991,61 @@ align-items: center;
   margin: 0 0 8px;
 }
 
-.breadcrumbs { /* НЕ ПОЛУЧАЕТСЯ ВЫРОВНЯТЬ ДОМИК ОТНОСИТЕЛЬНО ТЕКСТА */
+.breadcrumbs {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   color: #FFF;
   display: flex;
+  align-items: center;
   min-width: 114px;
   min-height: 21px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  gap: 10px;
 }
 
-/*.breadcrumbs-item {
-
-}*/
+.breadcrumbs-item {
+  position: relative;
+}
 
 .breadcrumbs-main {
-  padding-bottom: 5.5px;
-  /*width: 12px;
-  height: 12px;
-  background-image: url("/images/icons/breadcrumbs-main.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 15px;
-  background-position: center left 28px;
-  color: #FFFFFF;
-  */
+  position: absolute;
 }
 
 .breadcrumbs-hotels {
-  padding-left: 28.5px;
-  background-image: url("/images/icons/breadcrumbs-arrow.svg");
-  background-repeat: no-repeat;
-  background-size: 6.39px 9.94px;
-  background-position: center left 10px;
-font-size: 16px;
+  font-size: 16px;
 font-weight: 400;
 line-height: 21px;
 letter-spacing: 0;
 text-align: left;
   color: #FFFFFF;
+  width: 73px;
+  height: 21px;
+padding-left: 28.5px;
+background-image: url("/images/icons/breadcrumbs-arrow.svg");
+background-repeat: no-repeat;
+background-size: 6.39px 9.94px;
+background-position: center left 10px;
+  cursor: pointer;
 }
+
+.breadcrumbs-hotels:hover {
+  color: #FFFFFF99;
+
+}
+
+.breadcrumbs-hotels:focus {
+color:  #FFFFFF;
+}
+
+.breadcrumbs-hotels:active {
+  color: #FFFFFF4D;
+}
+
+/* ! СЕКЦИЯ ФИЛЬТРОВ */
 
 .filter {
   display: flex;
@@ -949,7 +1053,6 @@ text-align: left;
   align-items: center;
   min-width: 1060px;
   min-height: 160px;
-  /*padding: 35px 70px 70px;*/
 }
 
 .catalog-hotels {
@@ -975,7 +1078,7 @@ text-align: left;
 }
 
 .catalog-filter-group-2 {
-  margin-right: 498.15px;
+  margin-right: auto/*498.15px*/;
 }
 
 .catalog-filter-list {
@@ -993,14 +1096,35 @@ text-align: left;
   margin-bottom: 32px;
 }
 
+.catalog-filter-item {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #FFFFFF;
+  }
+
+  .catalog-filter-item:hover {
+    opacity: 60%;
+  }
+
+  .catalog-filter-item:focus {
+    color: #FFFFFF;
+  }
+
+  .catalog-filter-item:active {
+    opacity: 30%;
+}
+
 .form-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-width: 191px;
-  min-height: 104px;
-  margin-bottom: 70px;
+  width: 191px;
+  height: 104px;
+  margin: 0 auto 70px auto;
 }
 
 /* СОРТИРОВКА */
@@ -1012,7 +1136,6 @@ text-align: left;
   justify-content: space-between;
   align-items: center;
   padding: 50px 70px 40px;
-  /*margin-left: auto;*/
 }
 
 .hotels-numbers {
@@ -1027,16 +1150,20 @@ margin-right: 200px;
 .select-control {
 width: 292px;
 height: 49px;
-padding: 14px, 20px;
-border-radius: 4px;
 border: 2px solid #E5E5E5;
-display: flex;
+border-radius: 4px;
+
 justify-content: space-between;
 margin-right: 70px;
-/*
-<img src="images/icons/select.svg" width="11.93" height="7.02"
-                alt="#">
-*/
+}
+
+.option-text {
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0;
+text-align: left;
+color: #333333;
 }
 
 .cheap {
@@ -1114,7 +1241,7 @@ line-height: 21px;
 color: #333;
 }
 
-a.hotel-card-title { /* ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
+a.hotel-card-title { /* ! ВОПРОС: как точно писать несколько классов подряд? в теории и тренажерах информация не сошлась.
   сделал наугад, получилось удалить подчеркивание в названиях гостиниц, но не уверен, что оформление корректно */
 font-size: 24px;
 font-style: normal;
@@ -1144,13 +1271,6 @@ color: #333;
   justify-content: space-between;
 
 }
-/*
-.result-counter {
-  display: flex;
-  justify-content: space-between;
-  width: 1060px;
-  min-height: 49px;
-}*/
 
 .hotel-list {
   display: grid;
@@ -1172,19 +1292,9 @@ color: #333;
 
 .hotel-card-image-link,
 .hotel-card-title-link
-/*
-.hotel-card-subscription,
-.hotel-card-price,
-.hotel-card-button,
-.rating-area
-*/ {
+{
   grid-column: 1 / 3;
 }
-
-/*.hotel-card-image {
-  width: 300px;
-object-fit: contain;
-}*/
 
 .hotel-card-title-link {
 font-size: 24px;
@@ -1226,11 +1336,6 @@ gap: 10px;
 
 
 .rating-area {
-  /*
-  grid-column: 1 / -1;
-  justify-content: end;
-  margin-bottom: 20px;
-  */
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -1246,15 +1351,14 @@ line-height: 20px;
 letter-spacing: 0;
 text-align: center;
 text-transform: uppercase;
+width: 140px;
+height: 37px;
 display: flex;
 justify-content: center;
 align-items: center;
-width: 140px;
-height: 37px;
+
 border-radius: 4px;
 background-color: #F2F2F2;
-  /*grid-column: 2 / -1;
-  justify-self: end;*/
 }
 
 /* ПАГИНАЦИЯ */

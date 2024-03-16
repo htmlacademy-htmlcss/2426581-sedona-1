@@ -17,7 +17,7 @@
             src="images/icons/logo-header.svg"
             width="140"
             height="70"
-            alt="логотип Sedona" />
+            alt="логотип Sedona." />
         </a>
         <!--NAV-->
         <nav class="navigation">
@@ -39,11 +39,6 @@
               <a
                 class="navigation-user-link navigation-user-wrapper"
                 href="#">
-                <!--<img
-                  src="images/icons/search.svg"
-                  width="20"
-                  height="20"
-                  alt="#" />-->
                 <svg class="navigation-icon" aria-hidden="true"
                   focusable="false"
                   xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -56,11 +51,6 @@
               <a
                 class="navigation-user-link navigation-user-wrapper"
                 href="#">
-                <!--<img
-                  src="images/icons/chosen.svg"
-                  width="18"
-                  height="17"
-                  alt="#" />-->
                 <svg class="navigation-icon" aria-hidden="true"
                   focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="20" height="20"
@@ -78,13 +68,13 @@
           </ul>
         </nav>
       </header>
-      <!--MAIN-->
+      <!--! MAIN-->
       <main class="main-inner">
         <div class="filter-area">
           <div class="filter-content">
             <header class="filter-header">
               <h1 class="filter-header-title">Гостиницы Седоны</h1>
-              <!--ХЛЕБНЫЕ КРОШКИ-->
+              <!--! ХЛЕБНЫЕ КРОШКИ-->
               <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link breadcrumbs-main"
@@ -104,7 +94,7 @@
                 </li>
               </ul>
             </header>
-            <!--ДИВ СЕКЦИЯ для всего каталога-->
+            <!--! ДИВ СЕКЦИЯ для всего каталога-->
             <div class="filter">
               <section class="catalog-hotels">
                 <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
@@ -116,23 +106,25 @@
                       class="catalog-filter-title">Инфраструктура:</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox"
-                            name="swimming-pool" checked>
+                        <input class="control-input" type="checkbox"
+                          name="swimming-pool" id="swimming-pool" checked>
+                        <label class="control" for="swimming-pool">
                           Бассейн
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox"
-                            name="parking"
-                            checked>Парковка
+                        <input class="control-input" type="checkbox"
+                          name="parking" id="parking"
+                          checked>
+                        <label class="control" for="parking">
+                          Парковка
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox"
-                            name="wi-fi">Wi-Fi
+                        <input class="control-input" type="checkbox"
+                          name="wi-fi" id="wi-fi">
+                        <label class="control" for="wi-fi">
+                          Wi-Fi
                         </label>
                       </li>
                     </ul>
@@ -142,30 +134,33 @@
                     <legend class="catalog-filter-title">Тип жилья:</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="radio"
-                            name="housing-type"
-                            value="hotel" checked>Гостиница
+                        <input class="control-input" type="radio"
+                          name="housing-type" id="hotel"
+                          value="hotel" checked>
+                        <label class="control" for="hotel">
+                          Гостиница
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="radio"
-                            name="housing-type"
-                            value="motel">Мотель
+                        <input class="control-input" type="radio"
+                          name="housing-type" id="motel"
+                          value="motel">
+                        <label class="control" for="motel">
+                          Мотель
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="radio"
-                            name="housing-type"
-                            value="apartments">Апартаменты
+                        <input class="control-input" type="radio"
+                          name="housing-type" id="apartments"
+                          value="apartments">
+                        <label class="control" for="apartments">
+                          Апартаменты
                         </label>
                       </li>
                     </ul>
                   </fieldset>
                   <div class="form-buttons">
-                    <button class="button button-blue"
+                    <button class="button button-blue button-submit"
                       type="submit">Применить</button>
                     <button class="button button-reset"
                       type="reset">Сбросить</button>
@@ -178,16 +173,14 @@
         <div class="hotels-searching">
           <section class="sorting">
             <span class="hotels-numbers">Найдено гостиниц: 38</span>
-            <select class="select-control" aria-label="сортировка">
-              <option value="cheap">Сначала дешевые</option>
+            <select class="select-control" name="сортировка">
+              <option class="option-text" value="cheap">Сначала дешевые</option>
               <option value="#">#</option>
               <option value="#">#</option>
             </select>
             <div class="button-icon-view">
               <button class="button button-icon button-icon-light"
                 type="button">
-                <!--ЗДЕСЬ нужно подумать с точным названием класса,
-                    чтобы общая стилизация .button здесь не проявлялась-->
                 <img src="images/icons/view-1.svg" width="48" height="48"
                   alt="#">
                 <span class="visually-hidden">Показать мелкие значки</span>
@@ -204,7 +197,6 @@
               </button>
             </div>
           </section>
-          <!--оборачиваю секцию hotel-list в див (ul пока в комменты)-->
           <div class="hotel-list">
             <div class="hotel-card">
               <a class="hotel-card-image-link" href="hotel.html">
@@ -221,7 +213,7 @@
                 type="button">в избранное</button>
               <div class="rating-area">
                 <span class="visually-hidden">Четыре звезды</span>
-                <img src="images/4-stars.svg" width="18" height="17"
+                <img src="images/4-stars.svg"
                   alt="оценка - четыре звезды из пяти.">
                 <span class="rating-number">Рейтинг: 8,5</span>
               </div>
@@ -242,7 +234,7 @@
                 избранном</button>
               <div class="rating-area">
                 <span class="visually-hidden">Четыре звезды</span>
-                <img src="images/4-stars.svg" width="18" height="17"
+                <img src="images/4-stars.svg"
                   alt="оценка - четыре звезды из пяти.">
                 <span class="rating-number">Рейтинг: 9,2</span>
               </div>
@@ -263,7 +255,7 @@
                 избранное</button>
               <div class="rating-area">
                 <span class="visually-hidden">Три звезды</span>
-                <img src="images/3-stars.svg" width="18" height="17"
+                <img src="images/3-stars.svg"
                   alt="оценка - три звезды из пяти.">
                 <span class="rating-number">Рейтинг: 6,9</span>
               </div>
@@ -284,7 +276,7 @@
                 избранное</button>
               <div class="rating-area">
                 <span class="visually-hidden">Две здвезды</span>
-                <img src="images/2-stars.svg" width="18" height="17"
+                <img src="images/2-stars.svg"
                   alt="оценка - две звезды из пяти.">
                 <span class="rating-number">Рейтинг: 5,0</span>
               </div>
