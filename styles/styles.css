@@ -802,14 +802,12 @@ outline: 2px solid red;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  /*margin-bottom: 48px;*/
   }
 
 .search-form {
 width: 577px;
 height: auto;
 margin: 0;
-/*gap: 48px;*/
 }
 
 .field-group {
@@ -827,16 +825,31 @@ margin-bottom: 48px;
 }
 
 .search-form-field {
+font-size: 18px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0;
+text-align: left;
+color: #000000;
 width: 443px;
 height: 51px;
+/*
+padding-left: 20px;
+padding-right: 20px;
+*/
 border-radius: 4px;
 border-style: none;
 background-color: #F2F2F2;
+background-image: url("../images/icons/date-icon.svg");
+background-repeat: no-repeat;
+background-position: right;
+/*opacity: 30%;*/
 outline: 3px transparent #F2F2F2;
 }
 
 .search-form-field:hover {
   background-color: #E6E6E6;
+  outline: 3px transparent #F2F2F2;
 }
 
 .search-form-field:focus {
@@ -845,7 +858,7 @@ outline: 3px transparent #F2F2F2;
 }
 
 .search-form-field:active {
-  color: #F2F2F2;
+  background-color: #F2F2F2;
   outline: 2px solid #000000;
 }
 
@@ -858,6 +871,12 @@ padding: 0;
 }
 
 .number-form-field {
+  font-size: 18px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0;
+text-align: left;
+color: #000000;
   width: 113px;
   height: 51px;
 border-radius: 4px;
@@ -881,10 +900,18 @@ outline: 3px transparent #F2F2F2;
   outline: 2px solid #000000
 }
 
-
 .mature,
 .kids {
   margin-right: 46px;
+}
+
+.kids {
+  padding-right: 30px;
+  background-image: url("../images/icons/icon-info.svg");
+  background-repeat: no-repeat;
+  background-position: center right 0;
+  background-size: 20px 20px;
+cursor: pointer;
 }
 
 .search-form-button {
@@ -1055,7 +1082,7 @@ background-image: url("/images/icons/breadcrumbs-arrow.svg");
 background-repeat: no-repeat;
 background-size: 6.39px 9.94px;
 background-position: center left 10px;
-  cursor: pointer;
+cursor: pointer;
 }
 
 .breadcrumbs-hotels:hover {
@@ -1227,7 +1254,8 @@ background-position: center right 99.7px;
 .button-icon-light {
   padding: 14px, 12px;
   border-radius: 4px;
-  border: 2px solid #000000
+  border: 2px solid #000000;
+  border-style: none;
 }
 
 .button-icon:last-child {
