@@ -30,10 +30,6 @@ body {
   background-color:#F2F2F2;
 }
 
-button, input {
-  font-family: 'PT Sans', 'Arial', sans-serif;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -87,6 +83,7 @@ button, input {
 }
 
 .button-blue {
+  font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 16px;
 font-weight: 700;
 line-height: 20px;
@@ -112,6 +109,7 @@ cursor: pointer;
 }
 
 .button-green {
+  font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 16px;
 font-weight: 700;
 line-height: 20px;
@@ -136,6 +134,7 @@ cursor: pointer;
 }
 
 .button-submit {
+  font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 16px;
 font-weight: 700;
 line-height: 20px;
@@ -151,6 +150,7 @@ text-align: center;
 }
 
 .button-reset {
+font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 16px;
 font-weight: 700;
 line-height: 20px;
@@ -631,6 +631,7 @@ padding-top:183px;
   }
 
 .button-search.button-big {
+  font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 20px;
 font-weight: 700;
 line-height: 36px;
@@ -703,6 +704,7 @@ padding: 8px 50px;
 }
 
 .newsletter-field {
+font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 18px;
 font-weight: 400;
 line-height: 24px;
@@ -730,6 +732,7 @@ box-sizing: border-box;
 }
 
 .newsletter-button {
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -868,6 +871,7 @@ margin-bottom: 48px;
 }
 
 .search-form-field {
+  font-family: 'PT Sans', 'Arial', sans-serif;
 font-size: 18px;
 font-weight: 700;
 line-height: 24px;
@@ -920,6 +924,7 @@ gap: 20px;
 }
 
 .number-form-field {
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
 font-weight: 700;
 line-height: 24px;
@@ -1099,6 +1104,7 @@ padding: 15px 18px 18px 22px;
 }
 
 .search-form-button {
+  font-family: 'PT Sans', 'Arial', sans-serif;
 width: 577px;
 height: 60px;
 font-size: 20px;
@@ -1178,15 +1184,15 @@ cursor: pointer;
     align-items: center;
   }
 
-.footer-social-link:hover svg path {
+.footer-social-link:hover path {
     fill: #68A2CA;
   }
 
-  .footer-social-link:focus svg path {
+  .footer-social-link:focus path {
     fill: #68A2CA;
   }
 
-.footer-social-link:active svg path {
+.footer-social-link:active path {
     fill: #68A2CA4D;
   }
 
@@ -1220,15 +1226,15 @@ align-items: center;
   color: #7561574D;
 }
 
-.copyright:hover svg path {
+.copyright:hover path {
   fill: #756157;
 }
 
-.copyright:focus svg path {
+.copyright:focus path {
   fill: #756157;
 }
 
-.copyright:active svg path {
+.copyright:active path {
   fill: #7561574D
 }
 
@@ -1397,6 +1403,7 @@ border: 0;
 width: 294px;
 display: flex;
 flex-direction: column;
+border: none
 }
 
 .slider-form-title {
