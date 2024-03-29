@@ -961,6 +961,8 @@ outline: 3px transparent #F2F2F2;
 
 .number-form-count-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 110px;
   height: 48px;
   border-radius: 4px;
@@ -971,10 +973,11 @@ outline: 3px transparent #F2F2F2;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 48px;
+  width: 17px;
+  height: 17px;
   padding: 0;
-  border: none;
+  border: 3px solid transparent;
+  border-radius: 4px;
   background: transparent;
 }
 
@@ -983,7 +986,7 @@ outline: 3px transparent #F2F2F2;
 }
 
 .number-form-count-minus:focus {
-  outline: 3px solid #82B3D3;
+  border: 3px solid #82B3D3;
 }
 
 .number-form-count-minus:focus path {
@@ -993,23 +996,32 @@ outline: 3px transparent #F2F2F2;
 .number-form-count-minus:active path {
   fill: #000000;
   opacity: 20%;
-  outline: none;
 }
 
-.number-form-count-plus:hover svg path {
+.number-form-count-minus:active {
+border: 3px solid transparent;
+}
+
+.number-form-count-plus:hover path {
   fill: #000000;
 }
 
-.number-form-count-plus:focus svg path {
+.number-form-count-plus:focus path {
   fill: #000000;
+}
+
+.number-form-count-plus:focus {
   border: 3px solid #82B3D3;
-  border-radius: 4px;
+
 }
 
-.number-form-count-plus:active svg path {
+.number-form-count-plus:active path {
   fill: #000000;
   opacity: 20%;
-  outline: none;
+}
+
+.number-form-count-plus:active {
+  border: 3px solid transparent;
 }
 
 .number-form-count-field {
@@ -1031,7 +1043,7 @@ margin: 0;
 }
 
 .number-form-count-field {
- -moz-appearance:textfield; /* Firefox */
+ -moz-appearance:textfield; /* для Firefox */
 }
 
 .tooltip {
