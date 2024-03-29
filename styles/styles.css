@@ -1397,6 +1397,7 @@ border: 0;
 width: 294px;
 display: flex;
 flex-direction: column;
+border: none;
 }
 
 .slider-form-title {
