@@ -650,8 +650,9 @@ padding: 8px 50px;
   text-align: center;
   color: #FFFFFF;
   background-image: url("../images/subscribe.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-color: #82B3D3;
 }
 
 .newsletter-inner {
