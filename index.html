@@ -26,7 +26,7 @@
             class="logo"
             src="images/icons/logo-header.svg"
             width="140"
-            height="70"
+            height="70" loading="lazy"
             alt="логотип Sedona." />
         </a>
         <!--! NAV-->
@@ -88,11 +88,11 @@
             class="welcome-img"
             src="images/icons/welcome-hero.svg"
             width="458"
-            height="352"
+            height="352" loading="lazy"
             alt="добро пожаловать в великолепную Седону." />
           <div class="hero-divider">
             <img src="images/divider.png" width="1200" height="57"
-              alt="декоративная лесенка под изображением.">
+              loading="lazy" alt="декоративная лесенка под изображением.">
           </div>
         </div>
         <div class="hero-bottom">
@@ -122,7 +122,7 @@
                 class="advantages-img"
                 src="images/photo-1.jpg"
                 width="800"
-                height="385"
+                height="385" loading="lazy"
                 alt="домики на фоне гор." />
             </div>
             <div class="advantages-item advantages-item-2">
@@ -151,7 +151,7 @@
                 class="advantages-img"
                 src="images/photo-2.jpg"
                 width="800"
-                height="385"
+                height="385" loading="lazy"
                 alt="горы и каньон." />
             </div>
             <div class="advantages-item advantages-item-5">
@@ -292,6 +292,7 @@
           </div>
         </div>
       </footer>
+      <!--! МОДАЛЬНОЕ ОКНО-->
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
           <section class="modal-content">
@@ -301,28 +302,52 @@
             </button>
             <form class="search-form" action="https:echo.htmlacademy.ru/"
               method="post">
-              <p class="field-group">
+              <div class="field-group">
                 <label class="search-in" for="search-in">Дата
                   Заезда:</label>
-                <input class="search-form-field field" type="date"
-                  id="search-in" name="search-in" placeholder="27 апреля 2020">
-              </p>
+                <div class="search-form-date-wrapper">
+                  <input class="search-form-field field" type="date"
+                    id="search-in" name="search-in"
+                    placeholder="27 апреля 2020">
+                  <span class="search-form-date-icon"></span>
+                </div>
+              </div>
               <div class="field-group">
                 <label class="search-out" for="search-out">Дата
                   Выезда:</label>
-                <input class="search-form-field field" type="date"
-                  id="search-out" name="search-out"
-                  placeholder="1 сентября 2023">
+                <div class="search-form-date-wrapper">
+                  <input class="search-form-field field" type="date"
+                    id="search-out" name="search-out"
+                    placeholder="1 сентября 2023">
+                  <span class="search-form-date-icon"></span>
+                </div>
               </div>
               <div class="number-form">
-                <p class="field-group">
+                <div class="field-group">
                   <label class="mature" for="mature">Взрослые:</label>
-                  <input class="number-form-field field" type="number"
-                    name="mature-number" id="mature" placeholder="2">
-                </p>
-                <p class="field-group">
+                  <div class="number-form-count-wrapper">
+                    <button type="button" class="number-form-count-minus">
+                      <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157"
+                          fill-opacity="0.3" />
+                      </svg>
+                    </button>
+                    <input class="number-form-count-field" min="1" max="10"
+                      type="number"
+                      name="mature-number" id="mature" placeholder="2">
+                    <button type="button" class="number-form-count-plus">
+                      <svg width="14" height="14" viewBox="0 0 14 14"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"
+                          fill="#756157" fill-opacity="0.3" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="field-group">
                   <span class="kids">
-                    <label class="kids" for="kids">Дети:</label>
+                    <label for="kids">Дети:</label>
                     <span class="tooltip">
                       <svg class="tooltip-icon"
                         xmlns="http://www.w3.org/2000/svg" width="26"
@@ -341,10 +366,26 @@
                       </span>
                     </span>
                   </span>
-                  <input class="number-form-field field" type="number"
-                    name="kids-number"
-                    id="kids" placeholder="2">
-                </p>
+                  <div class="number-form-count-wrapper">
+                    <button type="button" class="number-form-count-minus">
+                      <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157"
+                          fill-opacity="0.3" />
+                      </svg>
+                    </button>
+                    <input class="number-form-count-field" min="1" max="10"
+                      type="number"
+                      name="mature-number" id="mature" placeholder="2">
+                    <button type="button" class="number-form-count-plus">
+                      <svg width="14" height="14" viewBox="0 0 14 14"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"
+                          fill="#756157" fill-opacity="0.3" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
               <button class="button search-form-button"
                 type="button">Найти</button>
