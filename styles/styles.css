@@ -240,7 +240,6 @@ cursor: default;
 
 .navigation-list{
   display: flex;
-  flex-wrap: wrap;
   min-width: 339px;
   margin: 0;
   margin-right: auto;
@@ -269,7 +268,7 @@ cursor: default;
   position: relative;
 }
 
-.navigation-link-current::after {
+hegation-link-current::after {
   position: absolute;
   content: "";
   right: 16px;
@@ -284,7 +283,6 @@ cursor: default;
 
 .navigation-user-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-width: 268px;
@@ -351,6 +349,7 @@ background-color: #7DB54F;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #82B3D3;
+  margin-bottom: 69px;
 }
 
 .welcome-img {
@@ -375,7 +374,8 @@ margin: 51px 371px 25px;
   flex-direction: column;
   align-items: center;
   width: 1200px;
-  min-height: 261px;
+  /*min-height: 261px;*/
+  margin-bottom: 21px;
 }
 
 .hero-bottom-content {
@@ -391,22 +391,23 @@ margin: 51px 371px 25px;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-  margin: 69px 290px 25px;
+  margin: 0 auto 25px;
 }
+
+.cool-advantages {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 69px;
+  }
 
 /*! ПРЕИМУЩЕСТВА !*/
 
 .advantages {
 margin-bottom: 64px;
-}
-
-.cool-advantages {
-font-size: 22px;
-font-weight: 400;
-line-height: 26px;
-letter-spacing: 0;
-text-align: center;
-color: #333333;
 }
 
 /* ! РЯДЫ */
@@ -1403,7 +1404,9 @@ border: 0;
 width: 294px;
 display: flex;
 flex-direction: column;
-border: none
+border: none;
+margin: 0;
+padding: 0;
 }
 
 .slider-form-title {
