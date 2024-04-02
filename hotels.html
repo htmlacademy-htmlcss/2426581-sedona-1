@@ -243,12 +243,16 @@
         <div class="hotels-searching">
           <section class="sorting">
             <span class="hotels-numbers">Найдено гостиниц: 38</span>
-            <select class="select-control" name="сортировка">
-              <option class="option-text" value="cheap">Сначала
-                дешевые</option>
-              <option value="#">#</option>
-              <option value="#">#</option>
-            </select>
+            <div class="select sorting-type">
+              <select class="select-control"
+                aria-label="сортировка">
+                <option class="option-text" value="cheap">Сначала
+                  дешевые</option>
+                <option value="expencive">Сначала
+                  дорогие</option>
+                <option value="popular">Сначала
+                  популярные</option>
+              </select></div>
             <div class="button-icon-view">
               <button class="button-icon button-icon-light"
                 type="button">
