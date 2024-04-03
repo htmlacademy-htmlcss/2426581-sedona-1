@@ -1395,13 +1395,13 @@ border: 0;
   padding-left: 36px;
 }
 
-.control-input-box-checked + .control-mark-box {
+.control-input:checked + .control-mark-box {
   background-image: url("../images/icons/control-tick.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.control-input-radio-checked + .control-mark-radio {
+.control-input:checked + .control-mark-radio {
   background-image: url("../images/icons/control-tick-radio.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1525,19 +1525,25 @@ border-radius:  0 4px 4px 0;
 padding-left: 20px;
 }
 
+.slider-range::-webkit-inner-spin-button,
+.slider-range::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
 /* ! RANGE*/
 
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: #FFFFFF;
-  opacity: 0.3;
+  background-color: RGBA(255,255,255,0.3);
   border-radius: 5px;
 }
 
 .range-bar {
   position: absolute;
-
+  right: 61px;
+  left: 10px;
   height: 4px;
   background-color: #FFFFFF;
 }
@@ -1566,12 +1572,12 @@ padding-left: 20px;
 
 .toggle-min {
   top: -8px;
-  left: -21px;
+  left: -10px;
 }
 
 .toggle-max {
   top: -8px;
-  right: 0;
+  right: -10px;
 }
 
 /*! КНОПКИ ФОРМЫ */
@@ -1778,10 +1784,10 @@ color: #333;
 .hotel-card {
   display: flex;
   flex-direction: column;
-  /*display: grid;
-  grid-template-columns: repeat(2, 140px);*/
   gap: 16px 20px;
   padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .hotel-card-image-link,
