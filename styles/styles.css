@@ -1790,8 +1790,8 @@ color: #333;
 
 .hotels-searching {
   width: 1200px;
-  min-height: 1235px;
-  padding: 50px, 70px, 60px;
+  /*min-height: 1235px;*/
+  padding: 0 70px, 60px;
 }
 
 .hotels-search-result {
@@ -1806,7 +1806,7 @@ color: #333;
   width: 1060px;
   list-style-type: none;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 77px;
   padding: 0 70px;
   gap: 20px;
 }
@@ -1814,7 +1814,6 @@ color: #333;
 .hotel-card {
   display: flex;
   flex-direction: column;
-  gap: 16px 20px;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
@@ -1830,10 +1829,9 @@ color: #333;
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
-letter-spacing: 0;
 color: #000000;
 text-align: left;
-margin: 0;
+margin: 10px 0 15px;
 }
 
 .hotel-card-price {
@@ -1897,8 +1895,8 @@ background-color: #F2F2F2;
   display: flex;
   width: 1060px;
   height: 60px;
-  margin: 0 70px 60px;
-  padding: 0;
+  margin: 0 0 60px;
+  padding: 0 70px;
   list-style-type: none;
 }
 
@@ -1920,6 +1918,7 @@ background-color: #F2F2F2;
   box-sizing: border-box;
   width: 60px;
   height: 60px;
+  border-radius: 4px;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
