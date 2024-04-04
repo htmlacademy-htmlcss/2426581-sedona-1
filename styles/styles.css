@@ -702,7 +702,6 @@ padding: 8px 50px;
   width: 684px;
   min-height: 214.86px;
   margin: auto;
-  gap: 10px;
 }
 
 .newsletter-subscribe {
@@ -1173,12 +1172,11 @@ cursor: pointer;
 
 .footer-elements {
     display: flex;
-    flex-direction: row;
     justify-content:space-between;
     align-items: center;
     width: 1060px;
     min-height: 50px;
-    padding: 40px 70px 30px;
+    padding: 40px 0 30px;
   }
 
 .footer-social {
@@ -1186,7 +1184,6 @@ cursor: pointer;
     min-height: 40px;
     display: flex;
     align-items: center;
-    padding: 0 10px;
   }
 
 .footer-social-list {
@@ -1255,6 +1252,11 @@ align-items: center;
   color: #7561574D;
 }
 
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
 .copyright:hover path {
   fill: #756157;
 }
@@ -1307,19 +1309,19 @@ align-items: center;
 }
 
 .breadcrumbs {
+  display: flex;
+  align-items: center;
+  min-width: 114px;
+  min-height: 21px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   color: #FFF;
-  display: flex;
-  align-items: center;
-  min-width: 114px;
-  min-height: 21px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  gap: 10px;
+  gap: 12px;
 }
 
 .breadcrumbs-item {
@@ -1328,6 +1330,7 @@ align-items: center;
 
 .breadcrumbs-main {
   position: absolute;
+  top: -8px;
 }
 
 .breadcrumbs-hotels {
@@ -1342,7 +1345,6 @@ text-align: left;
 padding-left: 28.5px;
 background-image: url("../images/icons/breadcrumbs-arrow.svg");
 background-repeat: no-repeat;
-background-size: 6.39px 9.94px;
 background-position: center left 10px;
 cursor: pointer;
 }
