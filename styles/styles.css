@@ -326,14 +326,14 @@ cursor: default;
   top: 0;
   right: 45px;
   bottom: 0;
-  left: -5px;
+  left: 1px;
   margin: auto;
 }
 
 .notification-badge {
 position: absolute;
 top: -20px;
-right: -21px;
+right: -31px;
 width: 20px;
 height: 20px;
 border-radius: 10px;
@@ -347,10 +347,9 @@ color:#FFF;
 background-color: #7DB54F;
 }
 
-/*.navigation-button {
-  position: absolute;
-  width: 160px;
-}*/
+.navigation-button {
+  width: 110px; /*! задал размер кнопки не по макету ради совпадения */
+}
 
 /*! MAIN !*/
 
