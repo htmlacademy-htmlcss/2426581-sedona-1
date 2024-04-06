@@ -883,7 +883,11 @@ margin-bottom: 47px;
 
 .search-form-date-wrapper {
   position: relative;
+}
 
+.search-in {
+position: relative;
+top: 2px;
 }
 
 .search-form-field {
@@ -904,7 +908,7 @@ box-sizing: border-box;
 cursor: pointer;
 outline: 3px transparent #F2F2F2;
 position: relative;
-top: 0;
+top: 2px;
 left: 2px;
 }
 
