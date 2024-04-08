@@ -309,7 +309,7 @@ cursor: default;
   list-style-type: none;
 }
 
-.navigation-user-wrapper { /* ! ОБЕРТКУ СДЕЛАЛ, ЧТОБЫ ОТДЕЛИТЬ ОТ КНОПКИ ВНТУРИ СПИСКА*/
+.navigation-icon-wrapper { /* ! ОБЕРТКУ СДЕЛАЛ, ЧТОБЫ ОТДЕЛИТЬ ОТ КНОПКИ ВНТУРИ СПИСКА*/
   position: relative;
   display: block;
 }
