@@ -228,6 +228,12 @@ cursor: default;
 
 /* ЛОГО */
 
+.page-area {
+  position: absolute;
+  top: 0;
+  left: 70px;
+}
+
 .logo {
   display:block;
   margin: 0 auto;
@@ -251,6 +257,7 @@ cursor: default;
   min-width: 339px;
   margin: 0;
   margin-right: auto;
+  margin-left: 168px;
   padding: 0;
   list-style-type: none;
 }
@@ -289,15 +296,7 @@ cursor: default;
 
 /* ! НАВИГАЦИЯ 2*/
 
-.navigation-user-wrapper {
-  position: relative;
-  display: flex;
-}
-
 .navigation-user-list {
-  position: absolute;
-  top: 12px;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -335,7 +334,7 @@ cursor: default;
 .notification-badge {
 position: absolute;
 top: -20px;
-right: -31px;
+right: -30px;
 width: 20px;
 height: 20px;
 border-radius: 10px;
@@ -350,7 +349,7 @@ background-color: #7DB54F;
 }
 
 .navigation-button {
-  width: 110px; /*! задал размер кнопки не по макету ради совпадения */
+  width: 108px; /*! задал размер кнопки не по макету ради совпадения */
 }
 
 /*! MAIN !*/
