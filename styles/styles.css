@@ -206,12 +206,12 @@ cursor: default;
 /*ПЭЙДЖ_КОНТЕЙНЕР*/
 
 .page-container {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  width: 1200px;
   min-height: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
 }
 
 /* ШАПКА СТРАНИЦЫ */
@@ -220,10 +220,12 @@ cursor: default;
   z-index: 1;
   display: flex;
   justify-content: center;
-  width: 1060px;
-  height: 64px;
-  padding: 0 70px;
+  width: 1200px;
+  padding: 0 /*70px;*/
 }
+
+/* ! НАВИГАЦИЯ 1*/
+
 /* ЛОГО */
 
 .logo {
@@ -232,25 +234,27 @@ cursor: default;
   margin-right: 30px;
 }
 
-/* ! НАВИГАЦИЯ 1*/
-
 .navigation {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
-  width: 892px;
-  min-height: 64px;
+  width: 1200px; /*! */
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0 70px;
 }
 
 .navigation-list{
   display: flex;
+  flex-wrap: wrap;
   min-width: 339px;
   margin: 0;
   margin-right: auto;
   padding: 0;
   list-style-type: none;
 }
+
 .navigation-list a {
   font-size: 20px;
   font-weight: 700;
@@ -260,7 +264,7 @@ cursor: default;
   text-decoration: none;
 }
 
-.navigation-item {   /* ТРУДНО ПОНЯТЬ КАК ВЗАИМОДЕЙСТВУЮТ ВЛОЖЕННЫЕ ДРУГ В ДРУГА РАЗНЫЕ ТИПЫ ДИСПЛЕЕВ*/
+.navigation-item {
   display: inline-block;
 }
 
@@ -283,10 +287,17 @@ cursor: default;
   background-color: #756257;
 }
 
-
 /* ! НАВИГАЦИЯ 2*/
 
+.navigation-user-wrapper {
+  position: relative;
+  display: flex;
+}
+
 .navigation-user-list {
+  position: absolute;
+  top: 12px;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -302,15 +313,6 @@ cursor: default;
   position: relative;
   display: block;
 }
-
-/*.navigation-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}*/
 
 .navigation-icon-search {
   position: absolute;
