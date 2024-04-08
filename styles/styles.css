@@ -228,6 +228,12 @@ cursor: default;
 
 /* ЛОГО */
 
+.page-area {
+  position: absolute;
+  top: 0;
+  left: 70px;
+}
+
 .logo {
   display:block;
   margin: 0 auto;
@@ -251,6 +257,7 @@ cursor: default;
   min-width: 339px;
   margin: 0;
   margin-right: auto;
+  margin-left: 168px;
   padding: 0;
   list-style-type: none;
 }
@@ -289,20 +296,13 @@ cursor: default;
 
 /* ! НАВИГАЦИЯ 2*/
 
-.navigation-user-wrapper {
-  position: relative;
-  display: flex;
-}
-
 .navigation-user-list {
-  position: absolute;
-  top: 12px;
-  right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   min-width: 268px;
   margin: 0;
+  margin-top: 13px;
   padding: 0;
   box-sizing: content-box;
   text-decoration: none;
@@ -316,8 +316,8 @@ cursor: default;
 
 .navigation-icon-search {
   position: absolute;
-  top: 0;
-  right: -50px;
+  top: 19px;
+  right: -52px;
   bottom: 0;
   left: -8px;
   margin: auto;
@@ -325,8 +325,8 @@ cursor: default;
 
 .navigation-icon-favorite {
   position: absolute;
-  top: 0;
-  right: 45px;
+  top: 19px;
+  right: -8px;
   bottom: 0;
   left: 1px;
   margin: auto;
@@ -334,8 +334,8 @@ cursor: default;
 
 .notification-badge {
 position: absolute;
-top: -20px;
-right: -31px;
+top: -1px;
+right: -30px;
 width: 20px;
 height: 20px;
 border-radius: 10px;
@@ -350,7 +350,7 @@ background-color: #7DB54F;
 }
 
 .navigation-button {
-  width: 110px; /*! задал размер кнопки не по макету ради совпадения */
+  width: 108px; /*! задал размер кнопки не по макету ради совпадения */
 }
 
 /*! MAIN !*/
@@ -692,7 +692,6 @@ padding: 8px 50px;
   flex-direction: column;
   align-items: center;
   width: 1200px;
-  min-height: 414.86px;
   background-color: #FFF;
 }
 
@@ -701,8 +700,7 @@ padding: 8px 50px;
   flex-direction: column;
   align-items: center;
   width: 684px;
-  min-height: 214.86px;
-  margin: auto;
+  margin: 0 auto 104px;
 }
 
 .newsletter-subscribe {
@@ -712,7 +710,6 @@ padding: 8px 50px;
   text-align: left;
   text-transform: uppercase;
   width: 404px;
-  min-height: 36.35px;
   margin: 0 auto 20px;
   }
 
@@ -943,7 +940,7 @@ left: 2px;
 
 .search-form-date-icon {
   position: absolute;
-  top: 11px;
+  top: 10px;
   right: 15px;
   width: 30px;
   height: 30px;
@@ -1819,8 +1816,6 @@ color: #333;
 
 .hotels-searching {
   width: 1200px;
-  /*min-height: 1235px;*/
-  padding: 0 70px, 60px;
 }
 
 .hotels-search-result {
@@ -1830,14 +1825,25 @@ color: #333;
 }
 
 .hotel-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 340px);
   width: 1060px;
   list-style-type: none;
   margin: 0;
-  margin-bottom: 77px;
+  margin-bottom: 79px;
   padding: 0 70px;
   gap: 20px;
+}
+
+.hotel-list::after {
+  position: absolute;
+  content: "";
+  right: 70px;
+  left: 70px;
+  height: 1px;
+  bottom: -39px;
+  background-color: #E6E6E6;
 }
 
 .hotel-card {
@@ -1866,7 +1872,6 @@ margin: 10px 0 15px;
 .hotel-card-price {
   justify-self: end;
 }
-
 
 .rating-area {
 display: flex;
@@ -1923,8 +1928,7 @@ background-color: #F2F2F2;
 .pagination-container {
   display: flex;
   width: 1060px;
-  height: 60px;
-  margin: 0 0 60px;
+  margin: 0 0 156px;
   padding: 0 70px;
   list-style-type: none;
 }
